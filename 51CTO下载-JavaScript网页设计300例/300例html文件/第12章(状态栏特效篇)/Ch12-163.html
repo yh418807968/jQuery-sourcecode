@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--文字不停闪烁</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=StatuMessageFlash()>
+
+<br><br>
+<center>
+<h2>状态栏特效篇--文字不停闪烁</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var index = 1;
+
+function StatuMessageFlash(){
+  if (index == 1)  {
+<!-- [Step1]: 在此能够更改闪烁的状态栏信息 -->
+    window.status="状态栏特效篇--文字不停闪烁";
+    index=0;   }  
+  else   {
+    window.status=" ";
+    index=1;    }
+<!-- [Step2]: 这里可以设置闪烁的速度 -->
+  setTimeout("StatuMessageFlash()",500);
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

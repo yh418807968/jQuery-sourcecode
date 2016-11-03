@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>菜单导航篇--加亮链接效果</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>菜单导航篇--加亮链接效果</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function HighLightLink(which,color){
+  if (document.all||document.getElementById) which.style.backgroundColor=color;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以设置链接对应的网址 -->
+<!-- [Step2]: 在此能够修改链接加亮的颜色 -->
+<!-- [Step3]: 这里可以更改链接名称 -->
+<a href="http://www.263.net.cn/"  onMouseover=HighLightLink(this,'yellow') onMouseout="HighLightLink(this,document.bgColor)">263 在线</a><br>
+<a href="http://www.sina.com.cn/" onMouseover=HighLightLink(this,'yellow') onMouseout="HighLightLink(this,document.bgColor)">新 浪 网</a><br>
+<a href="http://cn.yahoo.com/"    onMouseover=HighLightLink(this,'yellow') onMouseout="HighLightLink(this,document.bgColor)">雅 虎 网</a><br>
+<a href="http://www.sohu.com/"    onMouseover=HighLightLink(this,'yellow') onMouseout="HighLightLink(this,document.bgColor)">搜 狐 网</a>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

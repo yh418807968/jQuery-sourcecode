@@ -1,0 +1,1316 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD>
+<BODY>
+   <OBJECT type="text/site properties">
+     <param name="Window Styles" value="0x800025">
+     <param name="comment" value="title:">
+     <param name="comment" value="base:">
+   </OBJECT>
+   <UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第10章(警报对话框篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="警报对话框篇--提示重要信息">
+               <param name="Local" value="第10章(警报对话框篇)/Ch10-135.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="警报对话框篇--点击OK后才可继续">
+               <param name="Local" value="第10章(警报对话框篇)/Ch10-136.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="警报对话框篇--说明窗口">
+               <param name="Local" value="第10章(警报对话框篇)/Ch10-137.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="警报对话框篇--有趣的警告框">
+               <param name="Local" value="第10章(警报对话框篇)/Ch10-138.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="警报对话框篇--制作书签">
+               <param name="Local" value="第10章(警报对话框篇)/Ch10-139.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="警报对话框篇--用用户名来欢迎登录">
+               <param name="Local" value="第10章(警报对话框篇)/Ch10-140.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第11章(菜单导航篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--设计树形菜单">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-141.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--顶部菜单">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-142.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--设为首页">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-143.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--GO按钮">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-144.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--加亮链接效果">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-145.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--随机链接按钮">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-146.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--随机链接滚轮">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-147.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--旋转菜单">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-148.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--页面在框架内">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-149.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--页面在框架外">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-150.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--滑出的菜单条">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-151.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--左面滑出的左右菜单">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-152.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--左面滑出的上下菜单">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-153.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--下拉式菜单">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-154.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--分层菜单">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-155.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--依据位置显示信息">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-156.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="菜单导航篇--跳动显示链接">
+               <param name="Local" value="第11章(菜单导航篇)/Ch11-157.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第12章(状态栏特效篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--提示窗口">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-158.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--从左依次弹出">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-159.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--从右到左移动">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-160.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--依次快速弹出">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-161.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--文字组合弹出">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-162.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--文字不停闪烁">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-163.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--显示链接">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-164.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--变化弹出标题栏">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-165.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--滚动特效">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-166.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--动态显示信息">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-167.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--依次变成大写">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-168.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--文字逐个弹出">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-169.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--显示状态信息">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-170.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--闪动的状态栏">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-171.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--显示工作进度">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-172.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--显示坐标">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-173.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--显示滑动效果">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-174.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--逐词打出效果">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-175.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--来回滚动效果">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-176.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--显示箭头效果">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-177.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--显示时间">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-178.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--飘动的状态栏">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-179.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--跑马灯">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-180.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--逐字飞出效果">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-181.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="状态栏特效篇--输入并删除效果">
+               <param name="Local" value="第12章(状态栏特效篇)/Ch12-182.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第13章(浏览器篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="浏览器篇--图形淡入淡出">
+               <param name="Local" value="第13章(浏览器篇)/Ch13-183.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="浏览器篇--链接背景色">
+               <param name="Local" value="第13章(浏览器篇)/Ch13-184.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="浏览器篇--颜色变化链接">
+               <param name="Local" value="第13章(浏览器篇)/Ch13-185.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="浏览器篇--无下划线链接">
+               <param name="Local" value="第13章(浏览器篇)/Ch13-186.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="浏览器篇--加入到收藏夹">
+               <param name="Local" value="第13章(浏览器篇)/Ch13-187.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="浏览器篇--查看资源">
+               <param name="Local" value="第13章(浏览器篇)/Ch13-188.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="浏览器篇--设为首页">
+               <param name="Local" value="第13章(浏览器篇)/Ch13-189.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="浏览器篇--辨别浏览器类型">
+               <param name="Local" value="第13章(浏览器篇)/Ch13-190.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="浏览器篇--显示占用区域">
+               <param name="Local" value="第13章(浏览器篇)/Ch13-191.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="浏览器篇--访问者信息检测器">
+               <param name="Local" value="第13章(浏览器篇)/Ch13-192.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="浏览器篇--登陆不同页面">
+               <param name="Local" value="第13章(浏览器篇)/Ch13-193.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第14章(页面背景篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--背景向下移动">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-194.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--背景图形">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-195.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--手动变换背景色">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-196.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--鼠标变换链接色">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-197.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--选择背景图形">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-198.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--页面转换">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-199.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--百叶窗页面">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-200.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--用户选择背景色">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-201.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--背景色安全测试">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-202.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--背景图形居中">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-203.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--变色文本特效">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-204.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--按钮显示背景色">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-205.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--颜色选择器">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-206.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--闪烁星空">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-207.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--平铺背景图形">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-208.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--自制色彩模式">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-209.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--逐渐减弱效果">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-210.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--调色板">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-211.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--获取色彩模式">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-212.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面背景篇--定制色彩间隔">
+               <param name="Local" value="第14章(页面背景篇)/Ch14-213.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第15章(页面导航篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--显示站点信息">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-214.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--重要信息说明">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-215.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--滚动链接导航">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-216.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--页面内部导航">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-217.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--图形代替按钮">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-218.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--打开窗口等待">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-219.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--目录式菜单导航">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-220.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--层叠式菜单导航">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-221.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--下拉式菜单导航">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-222.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--显示导航信息">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-223.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--隐现导航">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-224.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--动态导航">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-225.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--动态图形导航">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-226.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--动态导航框">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-227.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--滚动导航链接">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-228.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--友情链接导航框">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-229.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--登录不同页面">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-230.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--重新链接本页">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-231.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面导航篇--定时进入页面">
+               <param name="Local" value="第15章(页面导航篇)/Ch15-232.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第16章(页面搜索篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面搜索篇--设计搜索引擎">
+               <param name="Local" value="第16章(页面搜索篇)/Ch16-233.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面搜索篇--定制搜索引擎">
+               <param name="Local" value="第16章(页面搜索篇)/Ch16-234.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面搜索篇--实现搜索引擎">
+               <param name="Local" value="第16章(页面搜索篇)/Ch16-235.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面搜索篇--设置搜索引擎">
+               <param name="Local" value="第16章(页面搜索篇)/Ch16-236.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面搜索篇--调用搜索引擎">
+               <param name="Local" value="第16章(页面搜索篇)/Ch16-237.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面搜索篇--文本搜索">
+               <param name="Local" value="第16章(页面搜索篇)/Ch16-238.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第17章(页面特效篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面特效篇--自动滚屏效果">
+               <param name="Local" value="第17章(页面特效篇)/Ch17-239.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面特效篇--五彩缤纷页面">
+               <param name="Local" value="第17章(页面特效篇)/Ch17-240.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面特效篇--状态栏跑马灯">
+               <param name="Local" value="第17章(页面特效篇)/Ch17-241.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面特效篇--滚动显示按钮">
+               <param name="Local" value="第17章(页面特效篇)/Ch17-242.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面特效篇--文本闪烁">
+               <param name="Local" value="第17章(页面特效篇)/Ch17-243.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面特效篇--表格边框闪动">
+               <param name="Local" value="第17章(页面特效篇)/Ch17-244.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面特效篇--文本特殊字体">
+               <param name="Local" value="第17章(页面特效篇)/Ch17-245.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="页面特效篇--振动页面">
+               <param name="Local" value="第17章(页面特效篇)/Ch17-246.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第18章(技巧篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--光标选择输入框">
+               <param name="Local" value="第18章(技巧篇)/Ch18-247.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--便捷的单选框">
+               <param name="Local" value="第18章(技巧篇)/Ch18-248.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--跳转到本地路径">
+               <param name="Local" value="第18章(技巧篇)/Ch18-249.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--打印当前页面">
+               <param name="Local" value="第18章(技巧篇)/Ch18-250.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--发送定制信件">
+               <param name="Local" value="第18章(技巧篇)/Ch18-251.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--层的显示和隐藏">
+               <param name="Local" value="第18章(技巧篇)/Ch18-252.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--定制窗口大小">
+               <param name="Local" value="第18章(技巧篇)/Ch18-253.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--基本信息">
+               <param name="Local" value="第18章(技巧篇)/Ch18-254.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--获得窗口信息">
+               <param name="Local" value="第18章(技巧篇)/Ch18-255.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--动态生成表格">
+               <param name="Local" value="第18章(技巧篇)/Ch18-256.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--获取源代码">
+               <param name="Local" value="第18章(技巧篇)/Ch18-257.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--加载新标识">
+               <param name="Local" value="第18章(技巧篇)/Ch18-258.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--标识图形交换">
+               <param name="Local" value="第18章(技巧篇)/Ch18-259.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--处理点击事件">
+               <param name="Local" value="第18章(技巧篇)/Ch18-260.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--设计多选框特效">
+               <param name="Local" value="第18章(技巧篇)/Ch18-261.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--页面缩放">
+               <param name="Local" value="第18章(技巧篇)/Ch18-262.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--打开页面">
+               <param name="Local" value="第18章(技巧篇)/Ch18-263.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="技巧篇--立体窗口特效">
+               <param name="Local" value="第18章(技巧篇)/Ch18-264.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第19章(游戏篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="游戏篇--一款流行游戏">
+               <param name="Local" value="第19章(游戏篇)/Ch19-265.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="游戏篇--双人小游戏">
+               <param name="Local" value="第19章(游戏篇)/Ch19-266.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="游戏篇--动脑小游戏">
+               <param name="Local" value="第19章(游戏篇)/Ch19-267.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="游戏篇--测试点击速度">
+               <param name="Local" value="第19章(游戏篇)/Ch19-268.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="游戏篇--模拟跳舞游戏">
+               <param name="Local" value="第19章(游戏篇)/Ch19-269.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第20章(Java Applet篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Java Applet篇--水波状图形">
+               <param name="Local" value="第20章(Java%20Applet篇)/Ch20-270.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Java Applet篇--原子运动">
+               <param name="Local" value="第20章(Java%20Applet篇)/Ch20-271.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Java Applet篇--飘扬的红旗">
+               <param name="Local" value="第20章(Java%20Applet篇)/Ch20-272.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Java Applet篇--变幻的星云">
+               <param name="Local" value="第20章(Java%20Applet篇)/Ch20-273.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Java Applet篇--闪烁页面">
+               <param name="Local" value="第20章(Java%20Applet篇)/Ch20-274.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Java Applet篇--魔法盒">
+               <param name="Local" value="第20章(Java%20Applet篇)/Ch20-275.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Java Applet篇--怪异的页面">
+               <param name="Local" value="第20章(Java%20Applet篇)/Ch20-276.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Java Applet篇--变形图形">
+               <param name="Local" value="第20章(Java%20Applet篇)/Ch20-277.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Java Applet篇--旋转的虫孔">
+               <param name="Local" value="第20章(Java%20Applet篇)/Ch20-278.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第21章(综合篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="HTML转换为javascript">
+               <param name="Local" value="第21章(综合篇)/Ch21-279.htm">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="网页电邮地址防扫描">
+               <param name="Local" value="第21章(综合篇)/Ch21-280.htm">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--加密源代码">
+               <param name="Local" value="第21章(综合篇)/Ch21-281.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--搜索引擎">
+               <param name="Local" value="第21章(综合篇)/Ch21-282.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--搜索引擎登记">
+               <param name="Local" value="第21章(综合篇)/Ch21-283.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--计算下载时间">
+               <param name="Local" value="第21章(综合篇)/Ch21-284.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--限制访问时间">
+               <param name="Local" value="第21章(综合篇)/Ch21-285.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--首字母转为大写">
+               <param name="Local" value="第21章(综合篇)/Ch21-286.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--设计运动窗口">
+               <param name="Local" value="第21章(综合篇)/Ch21-287.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--Ftp 登录页面">
+               <param name="Local" value="第21章(综合篇)/Ch21-288.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--改变文本框大小">
+               <param name="Local" value="第21章(综合篇)/Ch21-289.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--动态雨景">
+               <param name="Local" value="第21章(综合篇)/Ch21-290.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--十二生肖">
+               <param name="Local" value="第21章(综合篇)/Ch21-291.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--波动文本">
+               <param name="Local" value="第21章(综合篇)/Ch21-292.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--模拟文本框">
+               <param name="Local" value="第21章(综合篇)/Ch21-293.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--公告信息栏">
+               <param name="Local" value="第21章(综合篇)/Ch21-294.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--计算器">
+               <param name="Local" value="第21章(综合篇)/Ch21-295.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--日历特效">
+               <param name="Local" value="第21章(综合篇)/Ch21-296.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--容错脚本">
+               <param name="Local" value="第21章(综合篇)/Ch21-297.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--登录页面验证">
+               <param name="Local" value="第21章(综合篇)/Ch21-298.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--QQ 型导航菜单">
+               <param name="Local" value="第21章(综合篇)/Ch21-299.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="综合篇--页面加载进度">
+               <param name="Local" value="第21章(综合篇)/Ch21-300.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第2章(时间日期篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--显示时钟">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-001.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--显示日期">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-002.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--当前时间">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-003.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--距离某天时间">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-004.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--显示特殊节日">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-005.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--按日期显示提示">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-006.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--在背景上加时钟">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-007.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--日历生成器">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-008.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--表形时钟">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-009.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--显示登陆时间">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-010.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--浏览某页所用时间">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-011.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--退出时显示访问时间">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-012.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--显示全中文日期">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-013.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--倒计时1">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-014.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--倒计时2">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-015.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--计算站点的开业时间">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-016.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="时间日期篇--显示日期和时间">
+               <param name="Local" value="第2章(时间日期篇)/Ch2-017.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第3章(文本特效篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--显示随机文本">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-018.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--显示随机文本链接">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-019.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--文本连续消隐">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-020.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--鼠标经过时文本变色">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-021.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--随日期变换文本">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-022.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--文本不停变色">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-023.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--颜色渐变的文本">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-024.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--文本上下弹跳">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-025.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--旋转变换文本">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-026.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--显示文本输出">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-027.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--隐藏显示文本">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-028.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--打字机式文本输出">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-029.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--文本自动输出">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-030.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--文本自动滚屏">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-031.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--文本框中控制输入字数">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-032.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--显示倒置文本">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-033.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--大小渐变的文本">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-034.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--闪动的文本">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-035.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--变换的文本内容">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-036.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--左右滚动的文本">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-037.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--上下滚动的文本">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-038.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--文本跑马灯">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-039.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="文本特效篇--下落的文本">
+               <param name="Local" value="第3章(文本特效篇)/Ch3-040.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第4章(图形篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--禁止下载图形">
+               <param name="Local" value="第4章(图形篇)/Ch4-041.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--随意选择图形">
+               <param name="Local" value="第4章(图形篇)/Ch4-042.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--左右晃动">
+               <param name="Local" value="第4章(图形篇)/Ch4-043.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--选择图形">
+               <param name="Local" value="第4章(图形篇)/Ch4-044.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--翻滚图形">
+               <param name="Local" value="第4章(图形篇)/Ch4-045.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--定期消失">
+               <param name="Local" value="第4章(图形篇)/Ch4-046.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--定制大小">
+               <param name="Local" value="第4章(图形篇)/Ch4-047.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--响应鼠标变换">
+               <param name="Local" value="第4章(图形篇)/Ch4-048.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--自由运动">
+               <param name="Local" value="第4章(图形篇)/Ch4-049.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--显示隐现效果">
+               <param name="Local" value="第4章(图形篇)/Ch4-050.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--雷达扫描">
+               <param name="Local" value="第4章(图形篇)/Ch4-051.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--变形扭曲">
+               <param name="Local" value="第4章(图形篇)/Ch4-052.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--鼠标点击效果">
+               <param name="Local" value="第4章(图形篇)/Ch4-053.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--逐渐显现">
+               <param name="Local" value="第4章(图形篇)/Ch4-054.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--图形选择器">
+               <param name="Local" value="第4章(图形篇)/Ch4-055.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--循环渐显">
+               <param name="Local" value="第4章(图形篇)/Ch4-056.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--图形翻转">
+               <param name="Local" value="第4章(图形篇)/Ch4-057.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--动态修改">
+               <param name="Local" value="第4章(图形篇)/Ch4-058.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--卷帘方式显示">
+               <param name="Local" value="第4章(图形篇)/Ch4-059.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="图形篇--闪动的图形">
+               <param name="Local" value="第4章(图形篇)/Ch4-060.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第5章(播放音乐篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="播放音乐篇--播放Midi音乐">
+               <param name="Local" value="第5章(播放音乐篇)/Ch5-061.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="播放音乐篇--设置控制页面">
+               <param name="Local" value="第5章(播放音乐篇)/Ch5-062.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="播放音乐篇--无控制页面">
+               <param name="Local" value="第5章(播放音乐篇)/Ch5-063.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="播放音乐篇--选择音乐">
+               <param name="Local" value="第5章(播放音乐篇)/Ch5-064.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="播放音乐篇--音乐播放器">
+               <param name="Local" value="第5章(播放音乐篇)/Ch5-065.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="播放音乐篇--图形导航">
+               <param name="Local" value="第5章(播放音乐篇)/Ch5-066.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="播放音乐篇--页面加载音乐">
+               <param name="Local" value="第5章(播放音乐篇)/Ch5-067.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第6章(按钮特效篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--定制打开窗口">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-068.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--打开全屏窗口">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-069.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--随意打开窗口">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-070.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--返回默认首页">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-071.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--按频道打开窗口">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-072.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--显示特殊效果">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-073.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--站点栏目跑马灯">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-074.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--窗口开关">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-075.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--说明浮动条">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-076.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--窗口按钮">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-077.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--状态栏信息">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-078.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--按序点击按钮">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-079.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--查看源代码">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-080.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--前进/后退">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-081.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--对话框输入限制">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-082.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--组合框跳转">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-083.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--全部选取">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-084.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--字段清除">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-085.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--地址确认">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-086.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--显示滚动字段">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-087.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--显示时间">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-088.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--改变按钮">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-089.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--发送 Email">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-090.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--新型按钮">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-091.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--多功能按钮">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-092.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="按钮特效篇--旋转按钮">
+               <param name="Local" value="第6章(按钮特效篇)/Ch6-093.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第7章(密码篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="密码篇--访问相应页面的控制">
+               <param name="Local" value="第7章(密码篇)/Ch7-094.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="密码篇--输入密码后才能访问页面">
+               <param name="Local" value="第7章(密码篇)/Ch7-095.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="密码篇--输入正确进入保护页">
+               <param name="Local" value="第7章(密码篇)/Ch7-096.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第8章(鼠标特效篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--打开新页面">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-097.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--右键打开收藏夹">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-098.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--禁用右键并自动导航">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-099.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--禁用左右键">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-100.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--文本围绕鼠标">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-101.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--图形跟随鼠标">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-102.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--文本跟随鼠标">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-103.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--星星跟随鼠标">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-104.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--窗口开关控制">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-105.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--激活警告框">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-106.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--右键自动链接页面">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-107.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--依据位置显示标志">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-108.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--状态栏显示信息">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-109.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--选择颜色变换背景">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-110.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--显示图形">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-111.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--点击链接">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-112.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--播放声音">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-113.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="鼠标特效篇--改变图形内容">
+               <param name="Local" value="第8章(鼠标特效篇)/Ch8-114.html">
+             </OBJECT>
+      </UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="第9章(Cookie脚本篇)">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--进入时显示信息">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-115.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--确认链接按钮">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-116.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--链接弹出警告框">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-117.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--随次数变化提示">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-118.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--设置默认首页">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-119.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--屏蔽Copy">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-120.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--离开页面弹出窗口">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-121.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--弹出窗口自动关闭">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-122.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--离开启动收藏夹">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-123.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--记录页面更新时间">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-124.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--关闭窗口链接">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-125.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--显示器分辨率检测">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-126.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--定制打开窗口">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-127.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--控制窗口打开日期">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-128.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--打开窗口居左">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-129.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--仅弹出一次窗口">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-130.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--上次登录时间">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-131.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--页面载入等待">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-132.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--离开时显示信息">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-133.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Cookie脚本篇--签名提示">
+               <param name="Local" value="第9章(Cookie脚本篇)/Ch9-134.html">
+             </OBJECT>
+      </UL>
+   </UL>
+</BODY>
+</HTML>

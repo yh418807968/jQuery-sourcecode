@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>页面特效篇--状态栏跑马灯</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=ScrollStatus(100)>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面特效篇--状态栏跑马灯</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+function ScrollStatus(index) {
+<!-- [Step1]: 这里可以更改跑马灯的状态栏信息 -->
+  var statusmessage="页面特效篇----状态栏跑马灯";
+  var stamsg = " ";
+  var i = 1;
+  if (index <= 100 && index > 0) {
+     for (i=0 ; i < index ; i++) { stamsg+=" "; }
+     stamsg+=statusmessage;
+     index--;
+     window.status=stamsg;
+<!-- [Step2]: 在此能够设置跑马灯的速度，数值大速度慢 -->
+     window.setTimeout("ScrollStatus("+index+")",150);}
+   else if (index <= 0) {
+       if (-index < statusmessage.length) {
+          stamsg+=statusmessage.substring(-index,statusmessage.length);
+          index--;
+          window.status=stamsg;
+          window.setTimeout("ScrollStatus("+index+")",150); }
+      else {
+          window.status=" ";
+          window.setTimeout("ScrollStatus(100)",150); }  }
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

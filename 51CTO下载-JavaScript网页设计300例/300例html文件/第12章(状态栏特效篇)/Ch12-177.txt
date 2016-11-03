@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--显示箭头效果</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=ArrowMessage()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>状态栏特效篇--显示箭头效果</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改状态栏显示的信息 -->
+var message="状态栏特效篇----显示箭头效果"
+var themessage=" "
+var started=false
+var step=0
+var index=1
+
+function showstatusmessage(txt)  {
+  themessage = txt;
+  setTimeout("ArrowMessage()",3000)
+  index++
+}
+
+function ArrowMessage() {
+  index--
+  if (index==0)    { 
+     if (started==false)    {
+        started = true;
+        window.status = message;
+        setTimeout("ArrowAnimation()",1);      }
+      themessage = message;    }
+}
+
+function ArrowAnimation()  {
+  step++
+  if (step==7) {step=1}
+  if (step==1) {window.status='>==='+themessage+'===<'}
+  if (step==2) {window.status='=>=='+themessage+'==<='}
+  if (step==3) {window.status='>=>='+themessage+'=<=<'}
+  if (step==4) {window.status='=>=>'+themessage+'<=<='}
+  if (step==5) {window.status='==>='+themessage+'=<=='}
+  if (step==6) {window.status='===>'+themessage+'<==='}
+<!-- [Step2]: 在此能够设置箭头运动的速度 -->
+  setTimeout("ArrowAnimation()",200);
+}
+ 
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--标识图形交换</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>技巧篇--标识图形交换</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以按序增加图形标识的名称和网址 -->
+var picurl = new PictureArray("Picture001.jpg", "http://www.sohu.com", "Picture002.jpg", "http://www.sina.com.cn");
+
+function PictureArray() {
+  for (i=0; i*2<PictureArray.arguments.length; i++) {
+     this[i] = new Object();
+     this[i].src = PictureArray.arguments[i*2];
+     this[i].href = PictureArray.arguments[i*2+1];  }
+  this.length = i;
+}
+
+function ChangePicture() {
+  if (document.images) {
+     ad_num = (ad_num+1)%picurl.length;
+     document.js_ad.src = picurl[ad_num].src;
+     document.links[document.links.length-1].href = picurl[ad_num].href;
+<!-- [Step2]: 在此能够设置图形变换的速度，数值大速度慢 -->
+     setTimeout("ChangePicture()",2002);  }
+}
+
+var ad_num = GetPicNum(); 
+
+function GetPicNum() {
+   dat = new Date();
+   dat = (dat.getTime()+"").charAt(8);
+   if (dat.length == 1)   ad_num = dat%picurl.length;
+   else   ad_num = 0;
+   return ad_num;
+}
+<!-- [Step3]: 这里可以更改图形标识的宽度和高度，边界框 -->
+ document.write('<a HREF="'+picurl[ad_num].href+'"><img SRC="'+picurl[ad_num].src+'"'+'width=200 height=50 border=1 name=js_ad></a>');
+
+setTimeout("ChangePicture()",2002);
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

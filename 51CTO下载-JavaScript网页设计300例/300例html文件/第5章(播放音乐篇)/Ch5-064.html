@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>播放音乐篇--选择音乐</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background8.jpg" >
+<br>
+<br>
+<center>
+<font color="ffaafa">
+  <h2><font color="#FF0000">播放音乐篇--选择音乐</font></h2>
+  </font> 
+  <hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 这里可以更改页面显示的提示信息 -->
+<!-- [Step2]: 在此能够设置提示信息的大小 -->
+<font face="Helvetica" size=2>请选择并播放音乐：</font>
+  <p align="center">
+   <font face="Helvetica" >
+     <form>
+       <select name=list>
+<!-- [Step3]: 这里可以按序增加选择播放的音乐 -->
+		  <option value=Music01.mid selected>音乐一
+          <option value=Music02.mid>音乐二
+          <option value=Music03.mid>音乐三  
+       </select>
+       <input onclick=top.location.href=this.form.list.options[this.form.list.selectedIndex].value type=button value="播放"> 
+     </form>
+   </font>
+  <p></p>
+
+<!-- 案例代码结束 -->
+
+
+</center></BODY>
+
+</HTML>

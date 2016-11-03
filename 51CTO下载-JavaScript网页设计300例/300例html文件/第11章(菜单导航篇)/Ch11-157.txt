@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<TITLE>菜单导航篇--跳动显示链接</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload="ScrollMenu(),ScrollItems()">
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>菜单导航篇--跳动显示链接</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function ScrollMenu() {
+<!-- [Step1]: 这里可以设置第一个菜单的上下位置 -->
+   topdistance=120;
+   y=-50;
+   ob=1;
+   v=".pixelTop=",dS="",sD=".style";  
+}
+
+function ScrollItems() {
+   if (ob<5) {
+   objectX="object"+ob; y+=10; eval(dS + objectX + sD + v + y);
+<!-- [Step2]: 在此可以设置菜单跳动的速度 -->
+   if (y<topdistance) setTimeout("ScrollItems()",50);
+   else y=-50, topdistance+=30, ob+=1, setTimeout("ScrollItems()",50);   }
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step3]: 在此可以按序增加跳动的菜单 -->
+<div id="object1" style="position:absolute; visibility:show; left:10px; top:-50px; z-index:2">
+<!-- [Step4]: 这里能够设置菜单表格的边界框 -->
+<!-- [Step5]: 在此可以设置菜单表格的宽度 -->
+<!-- [Step6]: 这里能够设置菜单表格的颜色 -->
+  <table border=1 width=120 bgcolor=#99FF66>
+    <td><center>
+<!-- [Step7]: 在此可以修改菜单的链接名称和对应的网址 -->
+       <a href=http://yoursite.com/page1.html>链接菜单1</a>
+    </center></td>
+  </table>
+</div>
+<div id="object2" style="position:absolute; visibility:show; left:10px; top:-50px; z-index:2">
+  <table border=1 width=120 bgcolor=#99FF66>
+    <td><center>
+       <a href=http://yoursite.com/page2.html>链接菜单2</a>
+    </center></td>
+  </table>
+</div>
+<div id="object3" style="position:absolute; visibility:show; left:10px; top:-50px; z-index:2">
+ <table border=1 width=120 bgcolor=#99FF66>
+   <td><center>
+      <a href=http://yoursite.com/page3.html>链接菜单3</a>
+   </center></td>
+  </table>
+</div>
+<div id="object4" style="position:absolute; visibility:show; left:10px; top:-50px; z-index:2">
+  <table border=1 width=120 bgcolor=#99FF66>
+    <td><center>
+      <a href=http://yoursite.com/page4.html>链接菜单4</a>
+    </center></td>
+  </table>
+</div>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

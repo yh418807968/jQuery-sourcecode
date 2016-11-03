@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--显示随机文本</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background3.jpg" >
+<br>
+<br>
+<center>
+<font color="ffaafa">
+  <h2><font color="#FF0000">文本特效篇--显示随机文本</font></h2>
+  </font> 
+  <hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language="JavaScript">
+
+var xxxx = Math.random() + ""
+var index = xxxx.charAt(3)
+RandomMsg = new Array
+<!-- [Step1]: 这里可以更该显示的文本信息 -->
+RandomMsg[1] = '天若有情天亦老，人间正道是沧桑！'
+RandomMsg[2] = '天生我才必有用，千金散尽还复来！'
+RandomMsg[3] = '路漫漫其修远兮，吾将上下而求索！'
+RandomMsg[4] = '随机文本信息四'
+RandomMsg[5] = '随机文本信息五'
+RandomMsg[6] = '随机文本信息六'
+RandomMsg[7] = '随机文本信息七'
+RandomMsg[8] = '随机文本信息八'
+RandomMsg[9] = '随机文本信息九'
+RandomMsg[0] = '随机文本信息十'
+var msg = RandomMsg[index]
+</script>
+                    
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<script language="JavaScript">
+document.write( msg )
+</script>
+
+<!-- 案例代码2结束 -->
+
+</center></BODY>
+
+</HTML>

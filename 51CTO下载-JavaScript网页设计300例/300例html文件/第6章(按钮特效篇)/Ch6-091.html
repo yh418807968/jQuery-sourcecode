@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--新型按钮</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=NewTypeButton()>
+
+<br><br>
+<center>
+<font color="red"><h2>按钮特效篇--新型按钮</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var max=0;
+
+function ButtonList(){
+  max=ButtonList.arguments.length;
+  for (i=0; i<max; i++)  this[i]=ButtonList.arguments[i];
+}
+
+<!-- [Step1]: 在此可以设置按钮显示的滚动信息 -->
+tl=new ButtonList( "263 在线", "中国人的网上家园");
+var x=0; pos=0;
+var l=tl[0].length;
+
+function NewTypeButton() {        
+  document.form1.typebutton.value=tl[x].substring(0,pos)+"";
+  if(pos++==l) { pos=0; setTimeout("NewTypeButton()",1500); x++;  if(x==max) x=0;l=tl[x].length;} 
+<!-- [Step2]: 这里能够设置滚动信息的速度，数值大速度慢 -->
+  else setTimeout("NewTypeButton()",100);
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step3]: 在此可以更改按钮对应的网址 -->
+<form name="form1" action="http://www.263.net.cn">
+   <input type="submit" name="typebutton" value="Submit" > 
+</form>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

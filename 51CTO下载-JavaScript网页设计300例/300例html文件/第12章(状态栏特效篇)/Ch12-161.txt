@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--依次快速弹出</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>状态栏特效篇--依次快速弹出</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+function statusMessageObject(p,d) {
+<!-- [Step1]: 这里可以更改状态栏显示的文本信息 -->
+  this.msg = "状态栏特效篇----依次快速弹出" 
+<!-- [Step2]: 在此能够设置弹出的速度 -->
+  this.delay = 2
+  this.out = " "
+  this.pos = 150  
+  this.i = 0
+  this.reset = clearMessage
+}
+
+function snapIn(jumpSpaces,position) {
+  var msg = scroll.msg
+  var out = ""
+  for (var i=0; i<position; i++)     {out += msg.charAt(i)}
+  for (i=1;i<jumpSpaces;i++)     {out += " "}
+  out += msg.charAt(position)
+  window.status = out
+  if (jumpSpaces <= 1) {    position++
+    if (msg.charAt(position) == ' ')       {position++ }
+    jumpSpaces = 100-position  }
+  else if (jumpSpaces >  3)       {jumpSpaces *= .76}
+       else   {jumpSpaces--}
+  if (position != msg.length) {
+    var cmd = "snapIn(" + jumpSpaces + "," + position + ")";
+    scrollID = window.setTimeout(cmd,scroll.delay);  } 
+  else {
+    window.status=""
+    jumpSpaces=0
+    position=0
+    cmd = "snapIn(" + jumpSpaces + "," + position + ")";
+    scrollID = window.setTimeout(cmd,scroll.delay);
+    return false   }
+  return true
+}
+
+function clearMessage() { this.pos = POSITION }
+
+var scroll = new statusMessageObject()
+
+function scroller() {
+  for (scroll.i = 0; scroll.i < scroll.pos; scroll.i++) {  scroll.out += " "  }
+  if (scroll.pos >= 0)   scroll.out += scroll.msg
+  else scroll.out = scroll.msg.substring(-scroll.pos,scroll.msg.length)
+  window.status = scroll.out
+  scroll.out = " "
+  scroll.pos--
+  if (scroll.pos < -(scroll.msg.length)) {   scroll.reset()  }
+  setTimeout ('scroller()',scroll.delay)
+}
+
+snapIn(100,0);
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>Java Applet篇--变幻的星云</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>Java Applet篇--变幻的星云</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 这里可以更改页面的宽度和高度 -->
+<applet archive="galaxy.jar" code="galaxy.class" width=240 height=150>
+   [Step2]: 在此能够设置星云的变幻强度，数值大强度大 
+  <param name=dinamic_persist value=0.5>
+   [Step3]: 这里可以修改变幻的速度，数值大速度慢 
+  <param name=MinSYNC value=10>
+  <param name=persist value=300>
+  <param name=dinamic_min value=4>
+  <param name=dinamic_max value=50>
+  <param name=memdelay value=1000>
+  <param name=priority value=30>
+  <param name=overimg value=NO>
+  <param name=overimgX value=0>
+  <param name=overimgY value=0>
+  <param name=regnewframe value="YES">
+  <param name=credits value="Applet by Andrea Fasce (www.anfyteam.com)">
+</applet>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

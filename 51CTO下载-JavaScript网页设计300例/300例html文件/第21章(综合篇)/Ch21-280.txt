@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0041)http://yeships.myrice.com/technic/084.htm -->
+<HTML><HEAD><TITLE>网页电邮地址防扫描</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="Microsoft FrontPage 5.0" name=GENERATOR></HEAD>
+<BODY vLink=#0000ff aLink=#0000ff>
+<DIV align=center>
+<CENTER>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="100%">
+      <P align=center><b><font size="5">综</font><SPAN 
+      style="FONT-SIZE: 18pt">合篇--防止扫描网页电子邮件地址</SPAN></b></P>
+      <P align=center><SPAN style="FONT-SIZE: 11pt; font-weight:700">
+      <font face="Times New Roman">（</font>用于纯文字链接点，兼容<FONT 
+      face="Times New Roman">IE</FONT>和<FONT face="Times New Roman">NS）</FONT></SPAN></P>
+      <DIV align=center>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=0 width=150 bgColor=#e1e1e1 border=1>
+        <TBODY>
+        <TR>
+          <TD borderColor=#e1e1e1>
+            <P style="LINE-HEIGHT: 25px" align=center><FONT 
+            face="Times New Roman"><SPAN style="FONT-SIZE: 13pt"><!--代码开始，安排到适当位置上，可在多点设置，使用不同的 user 和 site 编号。字体属性可在相应位置上赋值（颜色无效），也可写入链接点文字的代码串中（颜色也有效）-->
+            <SCRIPT language=JavaScript>
+<!--
+user1 = "123456"; // 电邮用户名 1
+user2 = "abc"; // 电邮用户名 2
+site1 = "163.net"; // 电邮服务器名 1
+site2 = "263.net"; // 电邮服务器名 2
+
+document.write('<a href=\"mailto:' + user1 + '@' + site1 + '\">'); // 合成电邮地址 1 链接指令
+document.write('<font color="#FF0000">' +user1 + '@' + site1 + '</font></a><br>'); // 合成电邮地址 1 链接点文字，写入了颜色代码
+document.write('<a href=\"mailto:' + user2 + '@' + site2 + '?subject=来自网页电邮\">'); // 合成电邮地址 2 链接指令，另加电邮标题
+document.write('第二电子邮件地址</a>'); // 不使用合成，而是另写电邮地址 2 的链接点文字
+// -->
+            </SCRIPT>
+<!--代码结束--></SPAN></FONT></P></TD></TR></TBODY></TABLE></CENTER></DIV>
+      </TD></TR></TBODY></TABLE></CENTER></DIV></BODY></HTML>

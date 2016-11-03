@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--友情链接导航框</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面导航篇--友情链接导航框</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function FriendLink(form) {    
+  location=form.linkname.options[form.linkname.selectedIndex].value;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name="friendform"> 
+<!-- [Step1]: 这里可以设置选择框的行数 -->
+   <select name="linkname" size=4>   
+<!-- [Step2]: 在此能够按序增加友情链接的名称和网址 -->
+     <option value="http://cn.yahoo.com">雅 虎 网 
+	 <option value="http://www.263.net.cn">263 在线 
+	 <option value="http://www.sohu.com">搜 狐 网
+	 <option value="http://www.sina.com.cn">新 浪 网 
+	 <option value="http://cn.yahoo.com">雅 虎 网 
+	 <option value="http://www.263.net.cn">263 在线 
+   </select>
+<!-- [Step3]: 这里可以更改按钮的名称 -->
+   <input type="button" value="链 接" onclick="FriendLink(this.form)">
+</form> 
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+<TITLE>菜单导航篇--设计树形菜单</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>菜单导航篇--设计树形菜单</h2>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+scores = new Array(20);
+var numTotal=0;
+IE4 = (document.all) ? 1 : 0;
+ver4 = (IE4) ? 1 : 0;
+if (ver4) {
+    with (document) {
+        write("<STYLE TYPE='text/css'>");
+        write(".child {display:none}")
+        write("</STYLE>");
+    }
+} 
+
+function expandIt(el) {
+    if (!ver4) return;
+    if (IE4) {
+        whichEl1 = eval(el + "Child");
+        for(i=1;i<=numTotal;i++){
+            whichEl = eval(scores[i] + "Child");
+            if(whichEl!=whichEl1) {
+                whichEl.style.display = "none";
+            }
+        }
+        whichEl1 = eval(el + "Child");
+        if (whichEl1.style.display == "none") {
+            whichEl1.style.display = "block";
+        }
+        else {
+            whichEl1.style.display = "none";
+        }
+    }  
+}
+
+function getIndex(el) {
+    ind = null;
+    for (i=0; i<document.layers.length; i++) {
+        whichEl = document.layers[i];
+        if (whichEl.id == el) {
+            ind = i;
+            break;
+        }
+    }
+    return ind;
+} 
+
+function arrange() {
+    nextY = document.layers[firstInd].pageY +document.layers[firstInd].document.height;
+    for (i=firstInd+1; i<document.layers.length; i++) {
+        whichEl = document.layers[i];
+        if (whichEl.visibility != "hide") {
+            whichEl.pageY = nextY;
+            nextY += whichEl.document.height;
+        }
+    }
+} 
+
+function initIt(){
+    if (!ver4) return;    
+    divColl = document.all.tags("DIV");
+    for (i=0; i<divColl.length; i++) {
+        whichEl = divColl(i);
+        if (whichEl.className == "child") whichEl.style.display = "none";
+    }  
+} 
+onload = initIt;
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以按序增加树形菜单的数目 -->
+<div id='TreeMenu1Parent' class='parent'>
+   <a href="#" onClick="expandIt('TreeMenu1'); return false">
+<!-- [Step2]: 在此能够修改图形标志的名称 -->
+<!-- [Step3]: 这里可以设置图形标志的宽度和高度 -->
+<!-- [Step4]: 在此能够更改图形标志的边界框 -->
+      <img src="Picture001.jpg" width=20 height=15 border=1>警报窗口篇
+   </a>
+</div>
+<div id='TreeMenu1Child' class='parent'>
+   <a href="../Ch10/Ch10-135.html" target='_target'> 
+      <img src="Picture002.jpg" width=20 height=15  border=1>提示信息
+   </a><br>
+   <a href="../Ch10/Ch10-137.html"  target='_target'> 
+      <img src="Picture002.jpg" width=20 height=15  border=1>警告窗口
+   </a><br>
+   <a href="../Ch10/Ch10-139.html"  target='_target'> 
+      <img src="Picture002.jpg" width=20 height=15  border=1>制作书签
+   </a><br>
+</div>
+
+<div id='TreeMenu2Parent' class='parent'>
+   <a href="#" onClick="expandIt('TreeMenu2'); return false">
+<!-- [Step5]: 这里可以更改显示菜单的名称 -->
+      <img src="Picture001.jpg" width=20 height=15  border=1>菜单导航篇
+   </a>
+</div>
+<!-- [Step6]: 在此能够按序增加子菜单的数目 -->
+<div id='TreeMenu2Child' class='child'>
+<!-- [Step7]: 这里可以更改菜单链接对应的页面 -->
+   <a href="Ch11-141.html"  target='_target'> 
+      <img src="Picture002.jpg" width=20 height=15  border=1>设计树形菜单
+   </a><br>
+   <a href="Ch11-148.html"  target='_target'> 
+      <img src="Picture002.jpg" width=20 height=15  border=1>随机链接按钮
+   </a><br>
+   <a href="Ch11-156.html"  target='_target'> 
+      <img src="Picture002.jpg" width=20 height=15  border=1>下拉形式菜单
+   </a>
+</div>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

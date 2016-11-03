@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--搜索引擎</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>综合篇--搜索引擎</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<form Name="InputForm">
+   <script language=JavaScript>
+     var FirstForm;
+     function StartSearch(){
+        document.forms[FirstForm+document.InputForm.SearchSelect.selectedIndex].elements[0].value= document.InputForm.SearchWords.value;
+        document.forms[FirstForm+document.InputForm.SearchSelect.selectedIndex].submit();
+     }
+   </script>
+   <span style="font-size:">查找内容：</span>
+<!-- [Step1]: 这里可以更改文本框的列长度 -->
+   <input name="SearchWords" type="text" size=10 style=" margin-left: 1px"><br>
+   <span style="font-size:">搜索引擎：</span>
+   <select Name="SearchSelect" size=1>
+<!-- [Step2]: 在此能够按序增加搜索引擎的名称 -->
+      <option selected>新 浪 网</option>
+      <option>搜 狐 网</option>
+      <option>雅 虎 网</option>     
+   </select><br><br>
+   <input type="button" value="搜 索" onClick="StartSearch()">
+   <script language=JavaScript>
+      FirstForm=document.forms.length
+   </script>
+</form>
+<form METHOD="GET" action="http://202.130.245.213/cgi-bin/newspage.exe?word=" >
+   <input type="hidden" name="word" value>
+</form>
+<form action="http://page.search.sohu.com/cgi-bin/pagesearch.cgi?tn=sohu&si=gi&word=" >
+   <input type="hidden" name="tn" value><input type="hidden" name="si" value><input type="hidden" name="word" value>
+</form>
+<form action="http://cn.search.yahoo.com/search/cn?p=" >
+<input type="hidden" name="p" value>
+</form>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

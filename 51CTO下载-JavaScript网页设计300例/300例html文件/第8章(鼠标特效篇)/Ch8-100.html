@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>鼠标特效篇--禁用左右键</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background3.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>鼠标特效篇--禁用左右键</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+function LeftRightClick() {
+<!-- [Step1]: 这里可以更改弹出窗口的警告信息 -->
+if (event.button==1||event.button==2) {  window.alert('对不起，此键已被禁用！')}
+}
+
+document.onmousedown=LeftRightClick
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--公告信息栏</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>综合篇--公告信息栏</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var i = 0; 
+var HelpText=""; 
+var Text = ""; 
+<!-- [Step1]: 这里可以更改显示公告信息的速度，数值大速度慢 -->
+var Speed=50;
+var message=0;
+var TextNumber = -1;
+var addPadding="\r\n";
+
+var TextInput = new Object();
+<!-- [Step2]: 在此能够按需增加浏览的公告信息 -->
+TextInput[0] = "综合篇----公告信息栏1"; 
+TextInput[1] = "综合篇----公告信息栏2";
+TextInput[2] = "综合篇----公告信息栏3";
+TextInput[3] = "综合篇----公告信息栏4";
+
+TotalTextInput = 3; 
+
+
+for (var addPause = 0; addPause <= TotalTextInput; addPause++){ TextInput[addPause]=addPadding+TextInput[addPause]; }
+
+var TimerId
+var TimerSet=false;
+
+function nextMessage() {
+   if (!TimerSet){
+     TimerSet=true;
+     clearTimeout (TimerId);
+     if (TextNumber>=TotalTextInput){ 
+<!-- [Step3]: 这里可以更改弹出警告框的信息 -->
+         window.alert("还没有最新消息！");
+         TimerSet=false; }
+	 else {
+         TextNumber+=1;
+         message=TextNumber+1;
+         document.forms[0].elements[2].value= message;
+         Text = TextInput[TextNumber];
+         HelpText = Text; }
+    teletype(); }
+}
+
+function teletype() {
+  if (TimerSet){
+     Text=rollMessage();
+     TimerId = setTimeout("teletype()", Speed);
+     document.forms[0].elements[0].value=Text; }
+}
+
+function rollMessage () {
+   i++;
+   var CheckSpace = HelpText.substring(i-1, i);
+   CheckSpace = "" + CheckSpace;
+   if (CheckSpace == " ") {i++;}
+   if (i >= HelpText.length+1) {
+     TimerSet=false;
+     Text = HelpText.substring(0, i);
+     i=0; 
+     return (Text); }
+   Text = HelpText.substring(0, i);
+   return (Text);
+}
+
+function initTeleType() {
+   Text="\r\n ";
+   document.forms[0].elements[0].value=Text;
+}
+
+function lastMessage() {
+   if (!TimerSet && TextNumber!=-1){
+       TimerSet=true;
+       clearTimeout (TimerId);
+       if (TextNumber<=0){ 
+          window.alert("这是公告信息栏的开始！");
+          TimerSet=false; }
+       else {
+          TextNumber-=1;
+		  message=TextNumber+1;
+		  document.forms[0].elements[2].value= message;
+		  Text = TextInput[TextNumber];
+		  HelpText = Text; } 
+      teletype(); }
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+  <table CELLSPACING="0" CELLPADDING="0" WIDTH="17%">
+<!-- [Step4]: 在此能够设置文本区域的行数和列数 -->
+    <tr><td width="100%" colspan="3" valign="top"><textarea name="teletype" rows=3 cols=30 wrap="yes"></textarea></td></tr>
+    <tr align="center">
+	  <td width="40%" valign="top" ><input type="button" value="公告栏" onClick="lastMessage()"></td>
+<!-- [Step5]: 这里可以更改文本框的列长度和初始值 -->
+      <td width="30%" valign="top"><input type="text" size=5 value="共4条" name="1"></td>
+      <td width="30%"  valign="top"><input type="button" value="浏 览" onClick="nextMessage()"></td>
+    </tr>
+  </table>
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--全部选取</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--全部选取</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=Javascript>
+
+function SelectAll(FieldArea) {
+var tempval=eval("document."+FieldArea)
+tempval.focus()
+tempval.select()
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form name="text">
+<!-- [Step1]: 这里能够更改按钮的名称 -->
+    <input type=button value="全部选取" onclick="SelectAll('text.select')"><br>
+<!-- [Step2]: 在此可以设置文本区域的行数和列数 -->
+    <textarea name="select" rows=10 cols=20>请在此输入您的建议：</textarea>
+</form>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

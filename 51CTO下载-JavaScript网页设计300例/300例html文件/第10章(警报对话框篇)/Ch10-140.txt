@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE>警报对话框篇--用用户名来欢迎登录</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload="window.setTimeout('scrollmsg(20)')">
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>警报对话框篇--用用户名来欢迎登录</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改JavaScript提示窗口的信息 -->
+var yourname = prompt("请输入您的名字：", "朋友")
+
+function scrollmsg(index){    
+<!-- [Step2]: 在此能够按序增加滚动的信息 -->
+var m1  = ("欢迎您，"+ yourname+"，希望在此能够有所收获！");     
+var m2  = " 请多提宝贵意见！！";      
+var msg=m1+m2;     
+var out = "";      
+var c = 0;     
+if(index > 0 ){
+    for (c=0 ; c < index ; c++) {  out+=" ";  }       
+    out+=msg;         
+    index--;            
+    var cmd="scrollmsg(" + index + ")";             
+    document.display.box.value=out;     
+<!-- [Step3]: 这里可以设置滚动的速度，数值大速度慢 -->
+    window.setTimeout(cmd,150); } 
+else if (index <= 0) {               
+    if (-index < msg.length) {            
+       out+=msg.substring(-index,msg.length);            
+       index--;                    
+       var cmd="scrollmsg(" + index + ")";              
+       document.display.box.value=out;         
+       window.setTimeout(cmd,150); }             
+    else {             
+       document.display.box.value=" ";                
+       window.setTimeout("scrollmsg(20)",150); } 
+   }
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form name="display" >  
+<!-- [Step4]: 在此能够更改文本框的列长度 -->
+  <input type="text" name="box" size="30" >   
+</form>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

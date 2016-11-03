@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>播放音乐篇--无控制页面</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>播放音乐篇--无控制页面</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以设置播放音乐的总数目 -->
+var MidiMusicNum = 3
+Now = new Date()
+index = Now.getTime()
+RandomNum = parseInt(((index - (parseInt(index/1000,10) * 1000))/10)/100*MidiMusicNum + 1,10)
+
+<!-- [Step2]： 在此能够按序增加播放的音乐 -->
+if (RandomNum == (1))    MidiMusic=("Music01.mid") 
+if (RandomNum == (2))    MidiMusic=("Music02.mid") 
+if (RandomNum == (3))    MidiMusic=("Music03.mid")  
+ 
+document.write('<embed src= "' + MidiMusic + '" autostart=true loop=true hidden=true >')
+document.write('<bgsound src= "' + MidiMusic + '"  autostart=true loop=true hidden=true >')
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

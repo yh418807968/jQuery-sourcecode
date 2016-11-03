@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--随意打开窗口</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--随意打开窗口</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function CustomizeWindow(form) {    
+   var address = document.form1.url.value;   
+   var op_wid  = document.form1.wid.value;   
+   var op_heigh = document.form1.heigh.value;
+   var op_resize  = (document.form1.resize.checked == true)  ? 1 : 0;   
+   var op_dir  = (document.form1.dir.checked == true)  ? 1 : 0;    
+   var op_stat  = (document.form1.stat.checked == true)  ? 1 : 0;    
+   var op_menu  = (document.form1.menu.checked == true)  ? 1 : 0;    
+   var op_tool  = (document.form1.tool.checked== true)  ? 1 : 0;    
+   var op_loc_box  = (document.form1.loc_box.checked == true)  ? 1 : 0;    
+   var op_scroll  = (document.form1.scroll.checked == true)  ? 1 : 0;                            
+   var option="toolbar="+ op_tool +",directories="+ op_dir +",location="+ op_loc_box +",status="+ op_stat +",scrollbars="+ op_scroll +",resizeable="+ op_resize +",menubar="+ op_menu +",width="+ op_wid +",height="+ op_heigh;
+   var win3 = window.open("", "how_are_u_doing", option);  
+   var win4 = window.open(address, "how_are_u_doing");
+}
+
+function ClearWindow(form){ 
+        document.form1.wid.value=""; 
+        document.form1.heigh.value="";
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+ <form name="form1" action="javascript:" method="post">
+    <div > 
+<!-- [Step1]: 这里可以设置表格的边界框，数值大边框粗 -->
+      <table width="100%" border="2" >
+<!-- [Step2]: 在此能够修改表格内容的对齐方式 -->
+        <tr align=center> 
+<!-- [Step3]: 这里可以更改页面的提示信息 -->
+            <td colspan="4" height="35"> 地址: 
+<!-- [Step4]: 在此能够修改地址栏的列长度 -->
+                <input type="text" size=40 name="url" value="http://">
+            </td>
+        </tr>
+        <tr align="center"> 
+            <td width="25%" height="25"> 
+                <input type="checkbox" name="tool" value="ON">: 快捷键
+	        </td>
+            <td width="25%" height="25"> 
+                <input type="checkbox" name="loc_box" value="ON">: 地址栏
+	   	    </td>
+            <td width="25%" height="25"> 
+                <input type="checkbox" name="dir" value="ON">: 链 接 
+		    </td>
+            <td width="25%" height="25"> 
+                <input type="checkbox" name="stat" value="ON">: 状态栏
+		    </td>
+        </tr>
+        <tr align="center"> 
+            <td width="25%" height="25"> 
+                <input type="checkbox" name="resize" value="ON">: 调大小 
+			</td>
+            <td width="25%" height="25"> 
+                <input type="checkbox" name="scroll" value="ON">: 滚动条
+			</td>
+            <td width="25%" height="25"> 
+                <input type="checkbox" name="menu" value="ON">: 菜 单 
+			</td>
+            <td width="25%" height="25">
+			</td>
+         </tr>
+         <tr align="center"> 
+            <td colspan="2" height="25"> 
+                 宽度: <input type="text" name="wid" size="10">
+			</td>
+            <td colspan="2" height="25"> 
+                 高度: <input type="text" name="heigh" size="10">
+			</td>
+         </tr>
+         <tr align="center"> 
+            <td colspan="4" height="25"> 
+<!-- [Step5]: 这里可以更改按钮的名称 -->
+                <input type="button" value="确 认" onClick="CustomizeWindow(this.form)" name="button">
+                <input type="reset"  value="取 消" onClick="ClearWindow(this.form)" name="reset">
+            </td>
+         </tr>
+      </table>
+    </div>
+ </form>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

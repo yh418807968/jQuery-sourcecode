@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--逐渐显现</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=GradPicture()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>图形篇--逐渐显现</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function GradPicture(){
+    Picture1.filters.item(0).apply()
+    Picture1.filters.item(0).transition = 12
+    Picture1.style.visibility = ""
+    Picture1.filters(0).play(2.0)
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以设置欲显示的图形 -->
+<!-- [Step2]: 在此能够修改图形的宽度、高度 -->
+<!-- [Step3]: 这里可以更改图形的边界框 -->
+<img id="Picture1" src="Picture002.jpg"  width=150 height=100 border=2 style="visibility:hidden; filter:revealTrans(Duration=4.0, Transition=25);">
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

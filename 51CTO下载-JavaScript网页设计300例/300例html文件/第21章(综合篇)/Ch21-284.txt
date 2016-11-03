@@ -1,0 +1,144 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--计算下载时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+
+<center>
+<font color="ffaafa"><h2>综合篇--计算下载时间</h2></font>
+<hr width=300>
+
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function DownloadTime(form, index){
+   for (i=1; i < 13; i++){
+     if (form.size.value==null||form.size.value.length==0){ form.size.value=0;}
+     if (form[i+"hour"].value==null||form[i+"hour"].value.length==0){ form[i+"hour"].value=0;}       
+     if (form[i+"minute"].value==null||form[i+"minute"].value.length==0){ form[i+"minute"].value=0;}
+     if (form[i+"second"].value==null||form[i+"second"].value.length==0){ form[i+"second"].value=0;}
+     if (index != 0 && form.size.value != 0){
+        with (Math){
+          var speed = speedarray[i];
+          var TotalTime = ((form.size.value*index)/speed);
+          var TotalHours = floor((TotalTime/3600));
+          var TotalHoursMod = (TotalTime%3600);
+          var TotalMin = floor(TotalHoursMod/60);
+          var TotalMinMod = (TotalHoursMod%60);
+          var TotalSec = floor(TotalMinMod);
+          form[i+"hour"].value=TotalHours;
+          form[i+"minute"].value=TotalMin;
+          form[i+"second"].value=TotalSec;   }   }  }
+   return;
+}
+
+function MakeArray(n) {
+   this.length = n;
+   for (var i = 1; i <= n; i++) { this[i] = 0 }
+   return this
+}
+
+speedarray = new MakeArray(11);
+  speedarray[1] = "1.1719"
+  speedarray[2] = "1.7578"
+  speedarray[3] = "3.5156"
+  speedarray[4] = "4.1016"
+  speedarray[5] = "6.8359"
+  speedarray[6] = "7.8125"
+  speedarray[7] = "16.6250"
+  speedarray[8] = "187.9883"
+  speedarray[9] = "1220.7031"
+  speedarray[10] = "3295.8984"
+  speedarray[11] = "5493.1641"
+  speedarray[12] = "18920.8984"
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form METHOD="POST" name="s">  
+  <input type="hidden" name="8hour" value>
+  <input type="hidden" name="8minute" value>
+  <input type="hidden" name="8second" value>
+  <input type="hidden" name="9hour" value>
+  <input type="hidden" name="9minute" value>
+  <input type="hidden" name="9second" value>
+  <input type="hidden" name="10hour" value>
+  <input type="hidden" name="10minute" value>
+  <input type="hidden" name="10second" value>
+  <input type="hidden" name="11hour" value>
+  <input type="hidden" name="11minute" value>
+  <input type="hidden" name="11second" value>
+  <input type="hidden" name="12hour" value>
+  <input type="hidden" name="12minute" value>
+  <input type="hidden" name="12second" value>
+
+  <div align=center>
+<!-- [Step1]: 这里可以设置表格的边界框 -->
+     <table border=2>
+        <tr> 
+          <td>文件大小：
+<!-- [Step2]: 在此能够修改文本框的列长度 -->
+		    <input TYPE="TEXT" NAME="size" size=5>
+            <input TYPE="BUTTON" OnClick="DownloadTime(this.form, 1)" VALUE="KB">
+            <input TYPE="BUTTON" OnClick="DownloadTime(this.form, 1024)" VALUE="MB">
+          </td>
+          <script language=JavaScript>
+             document.s.size.focus();
+          </script>
+          <td colspan=3>
+            <div align="center">需要下载时间</div>
+          </td>
+        </tr>
+<!-- [Step3]: 这里可以更改表格内容的对齐方式 -->
+        <tr align=center> 
+           <td>调制解调器速率种类</td>
+           <td>时</td><td>分</td><td>秒</td>
+        </tr>
+        <tr align="center"> 
+           <td>9.6 Kb</td>
+		   <td><input TYPE="TEXT" NAME="1hour" SIZE=5></td>
+           <td><input TYPE="TEXT" NAME="1minute" SIZE=5></td>
+           <td><input TYPE="TEXT" NAME="1second" SIZE=5></td>
+        </tr>
+        <tr align="center"> 
+           <td>14.4 Kb</td>
+           <td><input TYPE="TEXT" NAME="2hour" SIZE=5></td>
+           <td><input TYPE="TEXT" NAME="2minute" SIZE=5></td>
+           <td><input TYPE="TEXT" NAME="2second" SIZE=5></td>
+        </tr>
+        <tr align="center"> 
+           <td>28.8 Kb</td>
+           <td><input TYPE="TEXT" NAME="3hour" SIZE=5></td>
+           <td><input TYPE="TEXT" NAME="3minute" SIZE=5></td>
+           <td><input TYPE="TEXT" NAME="3second" SIZE=5></td>
+        </tr>
+        <tr align="center">
+           <td>33.6K</td>
+           <td><input type="TEXT" name="4hour" size=5></td>
+           <td><input type="TEXT" name="4minute" size=5></td>
+           <td><input type="TEXT" name="4second" size=5></td>
+        </tr>
+        <tr align="center"> 
+           <td>56 Kb</td>
+           <td><input TYPE="TEXT" NAME="5hour" SIZE=5></td>
+           <td><input TYPE="TEXT" NAME="5minute" SIZE=5></td>
+           <td><input TYPE="TEXT" NAME="5second" SIZE=5></td>
+        </tr>       
+      </table>
+   </div>
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--获得窗口信息</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>技巧篇--获得窗口信息</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改页面显示的提示信息 -->
+   document.writeln("当前窗口的位置：",window.location,"<br>");
+   document.writeln("当前标题栏信息：",document.title,"<br>");
+   document.writeln("当前状态栏信息：",window.status,"<br>");
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

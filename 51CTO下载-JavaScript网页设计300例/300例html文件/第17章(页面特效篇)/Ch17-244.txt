@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>页面特效篇--表格边框闪动</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面特效篇--表格边框闪动</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function TabBorderColor(){
+   if (!document.all) return
+<!-- [Step1]: 在此能够更改表格边界框的颜色 -->
+   if (bordcor.style.borderColor=="yellow") bordcor.style.borderColor="#FF0000"
+   else bordcor.style.borderColor="yellow"
+}
+<!-- [Step2]: 这里可以设置闪动的速度，数值小速度快 -->
+setInterval("TabBorderColor()", 500)
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step3]: 在此能够设置表格的边界框 -->
+<table id="bordcor" style="border:5px solid yellow">
+<!-- [Step4]: 这里可以更改表格中的信息 -->
+   <tr><td>页面特效篇--表格边框闪动<br>
+           页面特效篇--表格边框闪动<br>
+   </td></tr>
+</table>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<TITLE>菜单导航篇--依据位置显示信息</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>菜单导航篇--依据位置显示信息</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+messages=new Array(4)
+<!-- [Step1]: 这里可以按序增加位置信息 -->
+messages[0]="中国人的网上家园"
+messages[1]="力争找到任何事，沟通所有人"
+messages[2]="全球最大华人网站"
+messages[3]="中国互联网第一品牌"
+messages[4]=" "
+
+ie=document.all?1:0
+n=document.layers?1:0
+
+function makeChangeTextObj(obj){												
+   	this.writeref=(n) ? eval('document.'+obj+'.document'):eval(obj);		
+	this.writeIt=b_writeIt;					
+}
+
+function b_writeIt(text){
+	if(n){
+		this.writeref.write(text)
+		this.writeref.close()
+	}
+	if(ie)this.writeref.innerHTML=text		
+}
+
+function changeText(num){
+	if(ie || n) oMessage.writeIt('<span style="font-size:' +"12"+'px; font-family:' +'Arial,helvetiva' +'; color:' +"#003300"+'">'+messages[num]+'</span>')
+}
+
+function changeTextInit(){
+	if(ie || n) oMessage=new makeChangeTextObj('divMessage')	
+}
+
+onload=changeTextInit
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<style>DIV{font-family:arial,helvetica; font-size:10pt}</style>
+<!-- [Step2]: 在此能够设置菜单条的位置 -->
+<div id="divlinks" style="position:absolute; left:20; top:150">
+<!-- [Step3]: 这里可以更改链接对应的网址 -->
+<!-- [Step4]: 在此能够修改菜单中的链接名称 -->
+   <a href="http://www.263.net.cn"  onmouseover="changeText(0); return true;"    onMouseout="changeText(4,0) ;return true;" onclick="window.focus()">263 在线</a><br>
+   <a href="http://cn.yahoo.com"    onmouseover="changeText(1); return true;" onMouseout="changeText(4,0);return true;" onclick="window.focus()">雅 虎 网</a><br>
+   <a href="http://www.sina.com.cn" onmouseover="changeText(2); return true;"  onMouseout="changeText(4,0); return true;" onclick="window.focus()">新 浪 网</a><br>
+  <a href="http://www.sohu.com"     onmouseover="changeText(3) ;return true;"  onMouseout="changeText(4,0); return true;" onclick="window.focus()">搜 狐 网</a><br>
+</div>
+
+<table Border=0 cellpadding=0 cellspacing=0 width="400" height="130">
+  <td align=center >
+<!-- [Step5]: 这里可以更改位置信息显示的位置 -->
+  <div id="divMessage" style="position:absolute; left:200; top:180"></div>
+</table>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

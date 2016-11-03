@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--从右到左移动</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>状态栏特效篇--从右到左移动</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+function RightLeftScroll(seed){ 
+<!-- [Step1]: 这里可以设置状态栏显示的文本信息 -->
+   var StatuMessage="状态栏特效篇----从右到左移动" ;
+   var out = " "; 
+   var c = 1;  
+   if (seed > 100){    
+       seed-=2;
+       var cmd="RightLeftScroll(" + seed + ")";   
+<!-- [Step2]: 在此能够更改移动的速度 -->
+       window.setTimeout(cmd,150);}     
+   else if (seed <= 100 && seed > 0)  {       
+       for (c=0 ; c < seed ; c++)  {   out+=" ";}   
+       out+=StatuMessage; 
+       seed-=2;      
+       var cmd="RightLeftScroll(" + seed + ")";      
+       window.status=out;         
+       window.setTimeout(cmd,150); }        
+       else if (seed <= 0) {               
+	       if (-seed < StatuMessage.length)   { 
+               out+=StatuMessage.substring(-seed,StatuMessage.length);        
+               seed-=2;                        
+               var cmd="RightLeftScroll(" + seed + ")";         
+               window.status=out;                     
+               window.setTimeout(cmd,150);}
+           else {    window.status=" ";       
+                 window.setTimeout("RightLeftScroll(100)",150);}
+      }
+}
+
+RightLeftScroll(90);
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

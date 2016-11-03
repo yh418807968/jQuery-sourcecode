@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--表形时钟</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2"  onLoad="Timeclock(),setNum(),setInterval('timer()',100);setInterval('runTimeClock()',100)">
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>时间日期篇--表形时钟</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<SCRIPT language=javascript>
+<!-- [Step1]:这里可以改变时钟的位置 -->
+pX=300;pY=200
+Timeclocks = new Array(13)
+
+function Timeclock () {
+for (i=0; i<13; i++) {
+    if (document.all) Timeclocks[i]=new Array (eval('Timeclock'+i).style,-100,-100)
+    else Timeclocks[i] = new Array (eval('document.Timeclock'+i),-100,-100)
+    }
+}
+
+function runTimeClock() {
+    for (i=0; i<13; i++) {
+        Timeclocks[i][0].left=Timeclocks[i][1]+pX
+        Timeclocks[i][0].top=Timeclocks[i][2]+pY
+    }
+}
+
+function cl(a,b,c){
+    if (document.all) {
+        if (a!=0) b+=-1
+        eval('c'+a+'.style.pixelTop='+(pY+(c)))
+        eval('c'+a+'.style.pixelLeft='+(pX+(b)))
+        }
+else{
+    if (a!=0) b+=10
+    eval('document.c'+a+'.top='+(pY+(c)))
+    eval('document.c'+a+'.left='+(pX+(b)))
+}
+if (document.all) c0.style.pixelLeft=26
+}
+
+function setNum(){
+cl (0,-67,-65);
+cl (1,10,-51);
+cl (2,28,-33);
+cl (3,35,-8);
+cl (4,28,17);
+cl (5,10,35);
+cl (6,-15,42);
+cl (7,-40,35);
+cl (8,-58,17);
+cl (9,-65,-8);
+cl (10,-58,-33);
+cl (11,-40,-51);
+cl (12,-16,-56);
+}
+
+var lastsec
+function timer() {
+    time = new Date ()
+    sec = time.getSeconds()
+    if (sec!=lastsec) {
+        lastsec = sec
+        sec=Math.PI*sec/30
+        min=Math.PI*time.getMinutes()/30
+        hr =Math.PI*((time.getHours()*60)+time.getMinutes())/360
+        for (i=1;i<6;i++) {
+            Timeclocks[i][1] = Math.sin(sec) * (44 - (i-1)*11)-16;
+            if (document.layers)Timeclocks[i][1]+=10;
+            Timeclocks[i][2] = -Math.cos(sec) * (44 - (i-1)*11)-27;
+        }
+        for (i=6;i<10;i++) {
+            Timeclocks[i][1] = Math.sin(min) * (40 - (i-6)*10)-16;
+            if (document.layers)Timeclocks[i][1]+=10;
+            Timeclocks[i][2] = -Math.cos(min) * (40 - (i-6)*10)-27;
+        }
+        for (i=10;i<13;i++) {
+            Timeclocks[i][1] = Math.sin(hr) * (37 - (i-10)*11)-16;
+            if (document.layers)Timeclocks[i][1]+=10;
+            Timeclocks[i][2] = -Math.cos(hr) * (37 - (i-10)*11)-27;
+        }   }}
+</SCRIPT>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+<div id="c0" style="position:absolute;right:6;top:6; z-index:2;">    </div>
+<!-- [Step2]: 这里可以更该时钟数的大小、字体 -->
+        <div id="c1" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>1</b></div>
+        <div id="c2" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>2</b></div>
+        <div id="c3" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>3</b></div>
+        <div id="c4" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>4</b></div>
+        <div id="c5" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>5</b></div>
+        <div id="c6" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>6</b></div>
+        <div id="c7" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>7</b></div>
+        <div id="c8" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>8</b></div>
+        <div id="c9" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>9</b></div>
+        <div id="c10" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>10</b></div>
+        <div id="c11" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>11</b></div>
+        <div id="c12" style="position:absolute;left:20;top:-20; z-index:5;font-size:11px;"><b>12</b></div>
+        <div id="Timeclock0" style="position:absolute;left:-20;top:-20;z-index:1">  </div>
+<!-- [Step3]: 这里可以更该秒针的大小、颜色、字体 -->
+        <div id="Timeclock1" style="position:absolute;left:-20;top:-20;z-index:8"> <font size="+3" color="#0000FF"><b>.</b></font></div>
+        <div id="Timeclock2" style="position:absolute;left:-20;top:-20;z-index:8"> <font size="+3" color="#0000FF"><b>.</b></font></div>
+        <div id="Timeclock3" style="position:absolute;left:-20;top:-20;z-index:8"> <font size="+3" color="#0000FF"><b>.</b></font></div>
+        <div id="Timeclock4" style="position:absolute;left:-20;top:-20;z-index:8"> <font size="+3" color="#0000FF"><b>.</b></font></div>
+        <div id="Timeclock5" style="position:absolute;left:-20;top:-20;z-index:8"> <font size="+3" color="#0000FF"><b>.</b></font></div>
+<!-- [Step4]: 这里可以更该分针的大小、颜色、字体 -->
+        <div id="Timeclock6" style="position:absolute;left:-20;top:-20;z-index:7"> <font size="+3" color="#00FFFF"><b>.</b></font></div>
+        <div id="Timeclock7" style="position:absolute;left:-20;top:-20;z-index:7"> <font size="+3" color="#00FFFF"><b>.</b></font></div>
+        <div id="Timeclock8" style="position:absolute;left:-20;top:-20;z-index:7"> <font size="+3" color="#00FFFF"><b>.</b></font></div>
+        <div id="Timeclock9" style="position:absolute;left:-20;top:-20;z-index:7"> <font size="+3" color="#00FFFF"><b>.</b></font></div>
+<!-- [Step5]: 这里可以更该时针的大小、颜色、字体 -->
+        <div id="Timeclock10" style="position:absolute;left:-20;top:-20;z-index:6"> <font size="+3" color="#F30000"><b>.</b></font></div>
+        <div id="Timeclock11" style="position:absolute;left:-20;top:-20;z-index:6"> <font size="+3" color="#F30000"><b>.</b></font></div>
+        <div id="Timeclock12" style="position:absolute;left:-20;top:-20;z-index:6"> <font size="+3" color="#F30000"><b>.</b></font></div>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

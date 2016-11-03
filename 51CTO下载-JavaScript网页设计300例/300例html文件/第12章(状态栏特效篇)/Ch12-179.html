@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--飘动的状态栏</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>状态栏特效篇--飘动的状态栏</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 在此能够更改状态栏的源信息 -->
+var ResourceMsg="abcdefghigklmn";
+<!-- [Step2]: 这里可以设置飘动的速度 -->
+var speed=100;
+var index=1;
+
+function statusIn(text){
+  if (index){
+   	index = 0;
+	PasswordChange(text, 2, speed,  0, 2);}
+}
+
+function statusOut(){
+  self.status='';
+  index=1;
+}
+
+function PasswordChange(text, runsleft, speed, charvar, max){
+  if (!index){
+	 runsleft = runsleft - 1;
+	 var status = text.substring(0,charvar);
+	 for(var currentchar = charvar; currentchar < text.length; currentchar++){status += ResourceMsg.charAt(Math.round(Math.random()*ResourceMsg.length));		}
+	 window.status = status;
+	 var rerun = "PasswordChange('" + text + "'," + runsleft + "," + speed + "," + charvar + "," + max + ");"
+	 var newchar = charvar + 1;
+	 var nextchar = "PasswordChange('" + text + "'," + max + "," + speed + "," + newchar + "," + max + ");"
+	 if(runsleft > 0){		setTimeout(rerun, speed);		}
+	 else{
+		if (charvar < text.length){	setTimeout(nextchar, Math.round(speed*(charvar+3)/(charvar+1)));}
+		else{	index = 1;	}		}
+	}
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step3]: 在此能够修改状态栏显示的飘动后信息 -->
+<!-- [Step4]: 这里可以更改页面显示的链接信息 -->
+<a href="" onmouseover="statusIn('状态栏特效篇----飘动的状态栏');return true" onmouseout="statusOut();">飘动的状态栏</a>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--动态导航</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面导航篇--动态导航</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+urlname = new Array(4);
+<!-- [Step1]: 这里可以按序增加动态导航的链接名称 -->
+urlname[0] ='263 在线'
+urlname[1] ='搜 狐 网'
+urlname[2] ='新 浪 网'
+urlname[3] ='雅 虎 网'
+
+url = new Array(4);
+<!-- [Step2]: 在此能够按序增加链接名称对应的网址 -->
+url[0] ='http://www.263.net.cn'
+url[1] ='http://www.sohu.com'
+url[2] ='http://www.sina.com.cn'
+url[3] ='http://cn.yahoo.com'
+
+<!-- [Step3]: 这里可以设置导航链接的运动速度，数值大速度慢 -->
+document.write ("<marquee scrollamount='1' scrolldelay='10' width='100' height='80' direction= 'down'>");
+for (i=0;i<4;i++){
+   document.write ("<a href="+url[i]+">");
+   document.write (urlname[i] + "</a><br><br>"); }
+document.write ("</marquee>")
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

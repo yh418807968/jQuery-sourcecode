@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--在背景上加时钟</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onLoad=bgclock()>
+<br><br>
+<center>
+<font color="ffaafa"><h2>时间日期篇--在背景上加时钟</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=javaScript>
+function bgclock() {
+thistime= new Date()
+var hours=thistime.getHours()
+var minutes=thistime.getMinutes()
+var seconds=thistime.getSeconds()
+if (eval(hours) <10) {hours="0"+hours}
+if (eval(minutes) < 10) {minutes="0"+minutes}
+if (seconds < 10) {seconds="0"+seconds}
+thistime = hours+":"+minutes+":"+seconds
+
+if(document.all) {
+bgclocknoshade.innerHTML=thistime
+bgclockshade.innerHTML=thistime
+}
+
+if(document.layers) {
+document.bgclockshade.document.write('<div id="bgclockshade" style="position:absolute;visibility:visible;font-family:Verdana;color:FFAAAAA;font-size:120px;top:10px;left:150px">'+thistime+'</div>')
+document.bgclocknoshade.document.write('<div id="bgclocknoshade" style="position:absolute;visibility:visible;font-family:Verdana;color:DDDDDD;font-size:120px;top:10px;left:150px">'+thistime+'</div>')
+document.close()
+}
+var timer=setTimeout("bgclock()",200)
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以改变时钟的字体 -->
+<!-- [Step2]: 这里可以改变时钟的颜色 -->
+<!-- [Step3]: 这里可以改变时钟的位置和大小 -->
+<div id="bgclockshade" style="position:absolute;visibility:visible;font-family:Arial;color:FF8888;font-size:70px;top:102px;left:152px"></div>
+
+<!-- [Step1]: 这里可以改变时钟的字体 -->
+<!-- [Step2]: 这里可以改变时钟的颜色 -->
+<!-- [Step3]: 这里可以改变时钟的位置和大小 -->
+<div id="bgclocknoshade" style="position:absolute;visibility:visible;font-family:Arial;color:DDDDDD;font-size:70px;top:100px;left:150px"></div>
+
+<div id="mainbody" style="position:absolute; visibility:visible">
+</div>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

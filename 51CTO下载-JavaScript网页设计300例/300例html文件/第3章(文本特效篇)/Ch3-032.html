@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--文本框中控制输入字数</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>文本特效篇--文本框中控制输入字数</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+ 
+<script language="JavaScript">
+
+<!-- [Step1]: 这里可以更改输入字符的最大字数 -->
+maxLength = 99; 
+function MaxInput(form) {
+if (form.message.value.length > maxLength) 
+form.message.value = form.message.value.substring(0, maxLength);
+else form.TLength.value = maxLength - form.message.value.length;
+}
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name=myform>
+<!-- [Step2]: 这里能够改变页面显示信息的大小和字体 -->
+<font size="2" face="arial, helvetica, sans-serif">仅允许您输入100个字符<br>
+<!-- [Step3]: 在此可以更改文本区域的行和列 -->
+<textarea name=message wrap=physical rows=5 cols=30  onKeyDown="MaxInput(this.form)" onKeyUp="MaxInput(this.form)"></textarea>
+<!-- [Step4]: 这里能够修改页面显示的文本信息 -->
+<br>还剩下
+<!-- [Step5]: 在此可以改变只读文本显示的列长度 -->
+<!-- [Step6]: 这里能够更改只读文本的数值 -->
+<input readonly type=text name=TLength size=3  value="100">个字符</font>
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--来回滚动效果</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>状态栏特效篇--来回滚动效果</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=Javascript>
+
+var index = 0
+<!-- [Step1]: 在此能够更改滚动的状态栏信息 -->
+var message = "状态栏特效篇--来回滚动效果"
+var samemessage = message
+
+function StatuMessageGo() {
+   window.status = samemessage.substring(0, samemessage.length)
+   if (100 < samemessage.length) { 
+<!-- [Step2]: 这里可以设置滚动的速度 -->
+     setTimeout("StatuMessageBack()", 80) }
+   else {
+     samemessage = " " + samemessage
+     setTimeout("StatuMessageGo()", 80); }
+}
+
+function StatuMessageBack() {
+   window.status = samemessage.substring(index, samemessage.length)
+   if (samemessage.length - index == message.length) { 
+     samemessage = message
+     index = 0
+     setTimeout("StatuMessageGo()", 80); }
+   else {
+     index ++
+     setTimeout("StatuMessageBack()", 80); }
+}
+
+StatuMessageGo()
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

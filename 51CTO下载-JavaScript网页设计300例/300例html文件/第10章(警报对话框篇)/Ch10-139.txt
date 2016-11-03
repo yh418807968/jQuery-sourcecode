@@ -1,0 +1,18 @@
+<HTML>
+<HEAD>
+<TITLE>警报对话框篇--制作书签</TITLE>
+</HEAD>
+
+<!-- [Step1]: 这里可以更改警报对话框的显示信息 -->
+<BODY bgcolor="#fef4d2" onunload="window.alert('不要忘记制作本页的书签！')">
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>警报对话框篇--制作书签</h2></font>
+<hr width=300>
+<br><br>
+
+
+</BODY>
+
+</HTML>

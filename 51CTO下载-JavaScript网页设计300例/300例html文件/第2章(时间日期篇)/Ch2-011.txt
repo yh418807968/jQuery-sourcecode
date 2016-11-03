@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--浏览某页所用时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=Timetrack()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>时间日期篇--浏览某页所用时间</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=javascript>
+
+var entered = new Date()
+
+function Timetrack(){
+var now = new Date()
+var seconds = Math.floor((now.getTime() - entered.getTime()) / 1000)
+var minutes = Math.floor(seconds /60)
+var second = seconds % 60
+var minute = minutes % 60
+document.time.timer.value = minutes + ":" + seconds
+var timeID= setTimeout("Timetrack()",1000)
+}
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<table >
+  <tr>
+    <td WIDTH="100%">
+	 <font FACE="ARIEL,HELVETICA" SIZE="-1">	
+      <form NAME="time">
+ <!-- [Step1]: 这里可以更该页面显示的信息 -->
+ <!-- [Step2]: 这里可以设置显示时间的列长度 -->
+        <div align="center"><center><p>浏览本页总共用去 <input TYPE="text" NAME="timer"
+        SIZE="6" VALUE="0:00"> 秒.</p>
+       </center></div>
+      </form> 
+	 </font>
+	</td>
+  </tr>
+</table>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

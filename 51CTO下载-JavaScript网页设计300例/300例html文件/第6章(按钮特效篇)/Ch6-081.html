@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--前进/后退</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background8.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>按钮特效篇--前进/后退</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function GoForward(){
+ form1.Button2.value="前进中"
+ history.go(1)
+}
+
+function GoBack(){
+ form1.Button1.value="后退中"
+ history.go(-1)
+}
+
+</script>                  
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form name=form1>
+<!-- [Step1]: 这里可以更改按钮的名称 -->
+    <input type="button"  name="Button1" value="<<后退" onClick="GoBack()">
+    <input type="button"  name="Button2" value="前进>>" onClick="GoForward()">
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

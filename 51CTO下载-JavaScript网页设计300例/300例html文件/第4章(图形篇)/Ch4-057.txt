@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--图形翻转</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>图形篇--图形翻转</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=Javascript>
+
+if (document.images) {
+button1 = new Image
+button2 = new Image
+<!-- [Step1]: 这里可以按序增加翻转的图形 -->
+button1.src = 'Picture001.jpg'
+button2.src = 'Picture002.jpg'
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<a onmouseover="document.rollover.src=button2.src" onmouseout="document.rollover.src=button1.src">
+<!-- [Step2]: 在此能够更换翻转的缺省图形 -->
+<!-- [Step3]: 这里可以更改图形的边界框 -->
+<!-- [Step4]: 在此能够设置图形的宽度、高度 -->
+<img src="Picture001.jpg" border=2 width=150 height=100 name="rollover"></a> 
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

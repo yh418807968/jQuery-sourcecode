@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--显示随机文本链接</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>文本特效篇--显示随机文本链接</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language="JavaScript">
+<!-- [Step1]: 在此设置网址总数目 -->
+TotalNum = 5
+var RandomNum = Math.random();
+var index = Math.round(RandomNum * (TotalNum-1))+1;
+
+function create()
+{
+  this.src = ''    
+}
+
+AAA = new Array()
+for(var i=1; i<=TotalNum; i++) { AAA[i] = new create() }
+<!-- [Step2]: 这里可以更改随机显示的网址 -->
+AAA[1].src = "<a href='http://www.sohu.com'>"
+AAA[2].src = "<a href='http://www.263.net.cn'>"
+AAA[3].src = "<a href='http://www.sina.com.cn'>"
+AAA[4].src = "<a href='http://cn.yahoo.com'>"
+AAA[5].src = "<a href='http://www.cctv.com.cn'>"
+
+var vis = "";
+vis += AAA[index].src;
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<script language="JavaScript">
+document.write(vis+"随机文本链接"+"</a>");
+</script>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

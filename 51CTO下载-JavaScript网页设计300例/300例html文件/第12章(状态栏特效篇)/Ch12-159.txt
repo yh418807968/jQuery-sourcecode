@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--从左依次弹出</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>状态栏特效篇--从左依次弹出</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改状态栏显示的文本 -->
+var StatuMessage  = "状态栏特效篇----从左依次弹出" ;
+var seq=0;
+
+function LeftScroll() {
+   len = StatuMessage.length;
+   window.status = StatuMessage.substring(0, seq+1);
+   seq++;
+   if ( seq >= len ) { 
+        seq = 0; 
+        window.status = '';
+<!-- [Step2]: 在此能够设置弹出文字的速度 -->
+        window.setTimeout("LeftScroll();", 200 );  }
+   else window.setTimeout("LeftScroll();", 200 );
+} 
+
+LeftScroll();
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

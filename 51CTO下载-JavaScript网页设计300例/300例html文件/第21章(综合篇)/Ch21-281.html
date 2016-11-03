@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--加密源代码</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<center>
+<h2>综合篇--加密源代码</h2>
+<hr width=300>
+
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var Words;
+
+function SetWords(word){
+  Words = escape(word.value);
+}
+
+function SetNewWords(form){
+  var NewWords;
+  NewWords = Words
+  form.NewWords.value = NewWords;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form method="POST">
+  <div>请将页面源代码全部粘贴到下面的文本区域内。</div>
+  <div>
+<!-- [Step1]: 这里可以设置文本区域的行数和列数 -->
+    <textarea name="Word" rows=5 cols=40  onChange="SetWords(this)"></textarea>    
+  </div>
+  <div> 
+    <input type="BUTTON" onClick="SetNewWords(this.form)" value="转 换" name="BUTTON">     
+  </div>
+  <div> 
+    <textarea name="NewWords" rows=5 cols=40></textarea>   
+  </div>
+</form>
+请将转换后的代码加入到如下脚本的双引号&quot;&quot;之间。
+<!-- [Step2]: 在此能够更改表格的宽度和边界框 -->
+<table width="50%" border=1>
+  <tr><td>
+     <font face="Arial, Helvetica, sans-serif">&lt;HTML&gt;<br>
+      &lt;HEAD&gt;<br>
+      &lt;script language=JavaScript&gt;<br>
+      var codes =&quot; &quot; //请将转换后的代码放到这里<br>  
+      function Setcodes() {<br>   
+      var newcodes;<br>
+      newcodes = unescape(codes);<br>
+      document.write(newcodes);<br>
+      } <br>
+      Setcodes();<br>      
+      &lt;/script&gt;<br>
+      &lt;/HEAD&gt;<br>
+      &lt;BODY&gt;<br>
+      &lt;/BODY&gt;<br>
+      &lt;/HTML&gt;</font>
+  </td></tr>
+</table>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

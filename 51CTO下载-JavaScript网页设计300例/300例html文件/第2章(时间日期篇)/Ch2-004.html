@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--距离某天时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background3.JPG" >
+<br>
+<br>
+<center>
+<font color="ffaafa">
+  <h2><b><font color="#FF0000">时间日期篇--距离某天时间</font></b></h2>
+  </font> 
+  <hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<SCRIPT language=javascript>
+<!-- [Step1]: 这里可以改变您的计时日期 -->
+BirthDay=new Date("january 01,2002");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=Math.floor(e_hrsold);
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=Math.floor((e_hrsold-hrsold)*60);
+seconds=Math.floor((e_minsold-minsold)*60);
+</SCRIPT>
+
+<SCRIPT language=javascript>
+document.write("2002年已经过去了"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒啦!");
+
+</SCRIPT>
+
+<!-- 案例代码结束 -->
+
+</center></BODY>
+
+</HTML>

@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--设计运动窗口</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>综合篇--设计运动窗口</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>      
+
+window.moveTo(0,0)    
+window.resizeTo(0,0)    
+window.scrollBy(0, 100) 
+setTimeout("MoveWindow()", 1);      
+var mx=0      
+var my=0      
+var szx=0      
+var szy=0      
+var mxm=50      
+var mym=25      
+var sv=50      
+var c=255      
+var sm=30      
+var done=2      
+var cycle=2      
+var status=1      
+
+function MoveWindow()	{      
+  if (status == 1) {      
+    mxm=mxm/1.05
+	mym=mym/1.05      
+    mx+=mxm      
+	my-=mym      
+	mxm+=(400-mx)/100      
+	mym-=(300-my)/100      
+	window.moveTo(mx,my)      
+	rmxm=Math.round(mxm/10)      
+	rmym=Math.round(mym/10)      
+	if (rmxm == 0) {      
+		if (rmym == 0) { status=2}    }  } 
+  if (status == 2){      
+	sv=sv/1.1      
+	window.moveTo(mx-sv*(1+1/3)/2,my-sv/2)      
+	window.resizeTo(szx+sv*(1+1/3),szy+sv)      
+	if (sv < 0.1) {  status=3}    }      
+  if (status == 3){      
+	c=c-16      
+	if (c<0)   {status=8}    }      
+  if (status == 4)  {      
+	c=c+16      
+	if (c > 239) {status=5}   }      
+  if (status == 5)  {      
+	c=c-16      
+	if (c < 0) {      
+		status=6      
+		cycle=cycle-1      
+		if (cycle > 0) {      
+			if (done == 1)    {status=7}      
+			else    {status=4}  }   }}    
+  if (status == 6) {      
+	cycle=2      
+	status=4      
+	done=1    }    
+  if (status == 7) {      
+	c=c+4      
+	if (c > 128)  	{status=8}   }      
+  if (status == 8)   {      
+	window.moveTo(0,0)      
+	window.resizeTo(screen.availWidth,screen.availHeight)      
+	status=9   }      
+<!-- [Step1]: 这里可以设置窗口运动的速度，数值大速度慢 -->
+  setTimeout("MoveWindow()",100) 
+}      
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

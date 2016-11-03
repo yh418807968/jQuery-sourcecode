@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--多功能按钮</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background8.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>按钮特效篇--多功能按钮</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以设置弹出窗口的信息 -->
+function AlertButton(){window.alert("欢迎您光临我的主页！");}
+<!-- [Step2]: 在此能够更改默认首页的网址 -->
+function HomePageButton(){location.href="http://www.263.net.cn";}
+<!-- [Step3]: 这里可以修改新窗口打开的网址 -->
+<!-- [Step4]: 在此能够更改新窗口的宽度、高度 -->
+<!-- [Step5]: 这里可以设置新窗口的参数 -->
+function NewWindowButton(){window.open("http://www.sina.com.cn", "", "width=300, height=200, status=yes, location=no, toolbar=yes, directories=no, menubar=yes");}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step6]: 在此可以设置按钮的名称 -->
+<input TYPE="button" VALUE="弹出欢迎框" ONCLICK="AlertButton()"><br><br>
+<input TYPE="button" VALUE="回默认首页" ONCLICK="HomePageButton()"><br><br>
+<input TYPE="button" VALUE="打开新窗口" ONCLICK="NewWindowButton()">
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

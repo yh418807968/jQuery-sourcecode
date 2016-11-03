@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--跳转到本地路径</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>技巧篇--跳转到本地路径</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 这里可以更改按钮的名称 -->
+<form action="file:///a|/"><input type="submit" value="软盘(A:)"></form>
+<form action="file:///c|/"><input type="submit" value="Sys(C:)"></form>
+<form action="file:///d|/"><input type="submit" value="User(D:)"></form>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

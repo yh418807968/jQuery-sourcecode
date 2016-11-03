@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>页面特效篇--文本闪烁</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=TextFlash()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面特效篇--文本闪烁</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function TextFlash(){
+   if (document.all.flashtext&&flashtext.length){
+      for (i=0;i<flashtext.length;i++) eval('setInterval("TxtFlash1('+i+')",150)') }
+<!-- [Step1]: 这里可以设置文本闪烁的速度，数值小速度快 -->
+   else if (flashtext) setInterval("TxtFlash2(0)",100)
+}
+
+function TxtFlash1(which){
+  if (document.all.flashtext[which].filters[0].strength==2) document.all.flashtext[which].filters[0].strength=1
+  else document.all.flashtext[which].filters[0].strength=2 
+}
+
+function TxtFlash2(which){
+  if (document.all.flashtext.filters[0].strength==2) document.all.flashtext.filters[0].strength=1
+  else document.all.flashtext.filters[0].strength=2
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step2]: 在此能够更改文本的颜色 -->
+<style>#flashtext{filter:glow(color=#CC6600);width:100%;}</style>
+<!-- [Step3]: 这里可以设置文本信息的大小 -->
+<!-- [Step4]: 在此能够修改页面显示的文本信息 -->
+<span id="flashtext"><font size=5 >文本闪烁</font></span>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>鼠标特效篇--打开新页面</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>鼠标特效篇--打开新页面</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function OpenWindow () {
+<!-- [Step1]: 这里可以设置要打开的新页面 -->
+<!-- [Step2]: 在此能够更改新窗口的参数 -->
+<!-- [Step3]: 这里可以修改新窗口的宽度和高度 -->
+msg=open("http://www.263.net.cn", "NewWindow", "toolbar=yes, location=no, directories=yes, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=420, height=240");
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<a href="" onMouseOver="OpenWindow(); return true;">
+<!-- [Step4]: 这里可以设置页面上显示的图形名称 -->
+<!-- [Step5]: 在此能够更改图形的边界框，数值大边框粗 -->
+<!-- [Step6]: 这里可以修改图形的宽度和高度 -->
+<img src="Picture001.jpg" border=2 width=150 height=100></a>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

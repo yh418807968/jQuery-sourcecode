@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>Java Applet篇--飘扬的国旗</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Java Applet篇--飘扬的国旗</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 在此可以更改页面的宽度和高度 -->
+<applet code="flags.class" width=100 height=100>
+<!-- [Step2]: 在此能够设置页面的背景色 -->
+  <param name="background" value="#FFCC00">
+  <param name="background2" value="#003366">
+<!-- [Step3]: 这里可以修改国旗的名称 -->
+  <param name="bitmap" value="flag.gif">
+<!-- [Step4]: 在此能够更改飘扬的速度，数值小速度快 -->
+  <param name="sleeptime" value=10>
+<!-- [Step5]: 这里可以设置飘扬的强度，数值大强度大 -->
+  <param name="shadingstrength" value=10>
+<!-- [Step6]: 在此能够修改飘扬的梯度，数值小梯度小 -->
+  <param name="waveamplitude" value=16>
+  <param name="demicron" value="www.demicron.se">
+  <param name="reg" value="A00010">
+</applet>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

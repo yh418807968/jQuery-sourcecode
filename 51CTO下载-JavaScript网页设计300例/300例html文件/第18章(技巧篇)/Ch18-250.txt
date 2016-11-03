@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--打印当前页面</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>技巧篇--打印当前页面</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改按钮的名称 -->
+if (window.print) {document.write('<input type=button name=print value="打印页面"'+ 'onClick="javascript:window.print()">');}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

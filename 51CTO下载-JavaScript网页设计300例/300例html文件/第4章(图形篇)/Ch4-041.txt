@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--禁止下载图形</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>图形篇--禁止下载图形</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 在此可以更改弹出窗口的信息 -->
+<A HREF="javascript:void(0)" onMouseover="alert('对不起，此图形禁止下载。')">
+<!-- [Step2]: 这里能够修改显示的图形名称 -->
+<!-- [Step3]: 在此可以改动图形的对齐方式 -->
+<!-- [Step4]: 这里能够修改图形显示的宽度、高度 -->
+<!-- [Step5]: 在此可以更改图形的边界框 -->
+<IMG SRC="Picture001.jpg"  Align="center" width="150" height="100" Border="2"></A>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

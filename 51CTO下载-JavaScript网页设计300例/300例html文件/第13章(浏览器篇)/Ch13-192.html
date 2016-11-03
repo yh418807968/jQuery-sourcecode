@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<TITLE>浏览器篇--访问者信息检测器</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=UserLogoIn() onunload=UserLogoOut()>
+
+<br><br>
+<center>
+<h2>浏览器篇--访问者信息检测器</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+function UserLogoIn() {
+   logoin=new Date();
+}
+
+function UserLogoOut() {
+   logoout=new Date();
+<!-- [Step1]: 这里可以更改警告框中显示的信息 -->
+   window.alert ("您已在此逗留： " + Math.round((logoout.getTime()-logoin.getTime())/1000) + " 秒！")
+}
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

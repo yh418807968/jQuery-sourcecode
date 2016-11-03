@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--变形扭曲</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=DistortPicture()>
+
+<br><br>
+<center>
+<h2>图形篇--变形扭曲</h2>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var i = 1;
+var j = true;
+
+function DistortPicture(){
+if(document.all)
+if(j == true)  {i++;         }
+if(i == 100)   {i--;j = false}
+if(i == 10)    {i++;j = true }
+if(j == false) {i--;         }
+Picture.width =150 + i;
+Picture.height=100 - i;
+setTimeout("DistortPicture()",60);
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 在此可以设置欲扭曲的图形 -->
+<!-- [Step2]: 这里能够更改图形的边界框 -->
+<img src="Picture001.jpg"  name="Picture" border=2 width="381" height="356" >
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

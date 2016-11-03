@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE>游戏篇--测试点击速度</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<center>
+<font color="ffaafa"><h2>游戏篇--测试点击速度</h2></font>
+<hr width=300>
+
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改多选框的个数 -->
+var number=8
+var TotNum = 0
+var index = false
+
+function StartGame(form) {
+   TotNum = 0
+   index = false
+   for (var i = 1; i <= 64; ++i) {   form.elements[i].checked = false    }
+}
+
+function TestSpeed(element) {
+   var now = new Date()
+   if (!index) {
+      index = true
+      startTime = now.getTime() }
+<!-- [Step2]: 在此能够设置定时的时间 -->
+   if (now.getTime() - startTime > 10000) {
+      element.checked = !element.checked
+      return window.alert("测试时间已到！")}
+   if (element.checked) TotNum++
+   else TotNum--
+   element.form.num.value = TotNum
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<script language=JavaScript>
+
+  document.write("<form>")
+  document.write('已经选中：<input type="text" value="0" ');
+  document.write('name="num" size=2 onfocus="this.blur()"><br>')
+  document.write("<hr size=1 width=200>")
+  for (var i = 0; i < number; ++i) {
+     for (var j = 0; j < number; ++j) {
+       document.write('<input type="checkbox" ');
+       document.write('onclick="TestSpeed(this)">') }
+     document.write("<br>")  }
+  document.write("<hr size=1 width=200>")
+  document.write('<input type="button" value="重新开始" ');
+  document.write('onclick="StartGame(this.form)">')
+  document.write("</form>")
+
+</script>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

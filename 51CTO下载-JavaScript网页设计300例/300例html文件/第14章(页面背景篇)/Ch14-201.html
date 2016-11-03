@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--用户选择背景色</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" > 
+
+<br><br>
+<center>
+<h2>页面背景篇--用户选择背景色</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function UserBGColor(form) {
+   document.bgColor=(""+form.text.value+"");
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+<!-- [Step1]: 这里可以更改页面显示的提示信息 -->
+  输入背景颜色代码：<br>
+<!-- [Step2]: 在此能够设置文本框的列长度 -->
+  <input type="text" name="text" size=15>
+<!-- [Step3]: 这里可以修改按钮的名称 -->
+  <input type="button" name="button" value="更换" onClick="UserBGColor(this.form)">
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

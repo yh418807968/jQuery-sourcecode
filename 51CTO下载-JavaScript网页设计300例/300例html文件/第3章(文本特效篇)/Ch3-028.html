@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--隐藏显示文本</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background3.jpg" >
+<br>
+<br>
+<center>
+<font color="ffaafa">
+  <h2><font color="#FF0000">文本特效篇--隐藏显示文本</font></h2>
+  </font> 
+  <hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+ 
+<script language="JavaScript">
+
+if (document.all) {
+        layerRef='document.all'
+        styleRef='.style.'  }
+else{
+    alert("您使用的浏览器类型不支持这种特效。")  }
+
+function ShowText(){  eval(layerRef+'["SandHText"]'+styleRef+'visibility="visible"') }
+
+function HideText(){  eval(layerRef+'["SandHText"]'+styleRef+'visibility="hidden"') }
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<p align="center"><br>
+<!-- [Step1]: 这里可以更改页面的显示信息 -->
+  <a href="javascript:HideText('divText.html')">隐藏文本</a> <a href="javascript:ShowText('divText.html')">显示文本</a> 
+<!-- [Step2]:  这里可以改变隐藏显示文本的位置 -->
+<div id="SandHText" style="position:absolute; left:168px; width:440px; height:32px; top:210px; visibility: hidden"> 
+<!-- [Step3]:  这里能够改变隐藏显示文本的对齐方式 -->
+<!-- [Step4]:  这里可以改变隐藏显示文本的内容信息 -->
+    <p align="center"><b><font color="#3300FF">天若有情天亦老，人间正道是沧桑！</font></b></p>
+
+<!-- 案例代码2结束 -->
+
+
+</div>
+</center></BODY>
+
+</HTML>

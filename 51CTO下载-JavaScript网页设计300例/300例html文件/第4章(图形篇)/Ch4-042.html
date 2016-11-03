@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--随意选择图形</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background3.jpg" >
+<br>
+<br>
+<center>
+<font color="ffaafa">
+  <h2><font color="#FF0000">图形篇--随意选择图形</font></h2>
+  </font> 
+  <hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+x=false;
+old="";
+
+function ChangePicture() {
+if (x) {
+document.JpgAnimation.src=old;
+document.anim.boton.value="返 回 原 图";
+x=false;
+
+}
+else {
+old=document.JpgAnimation.src;
+<!-- [Step1]: 这里可以更改要选择的图形名称 -->
+document.JpgAnimation.src="Picture003.jpg";
+document.anim.boton.value="选 择 图 形";
+x=true;
+}
+}
+
+</script>
+  <!-- 案例代码1结束 -->
+  <!-- 案例代码2开始 -->
+  <!-- [Step2]: 在此能够修改图形的宽度、高度 -->
+  <!-- [Step3]: 这里可以更改图形的边界框 -->
+  <!-- [Step4]: 在此能够修改原图的图形名称 -->
+  <img name="JpgAnimation" alt="选择.jpg图形" width="187" height="280" border=2 src="Picture004.jpg"> 
+  <form name="anim">
+   <input name="boton" type="button" value="返 回 原 图" onClick="ChangePicture()">
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</center></BODY>
+
+</HTML>

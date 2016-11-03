@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE>浏览器篇--颜色变化链接</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>浏览器篇--颜色变化链接</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<style>
+<!-- [Step1]: 这里可以设置链接的颜色 -->
+  a:hover {color:#CC9933;}
+</style> 
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step2]: 在此能够更改链接对应的网址 -->
+<!-- [Step3]: 这里可以修改页面显示的链接名称 -->
+<a href="http://www.263.net.cn">颜色变化链接</a>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

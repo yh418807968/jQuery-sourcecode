@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--显示状态信息</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>状态栏特效篇--显示状态信息</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function MessageDisapper(msg) {
+   window.status = msg;
+<!-- [Step1]: 这里可以设置状态栏信息停留的时间 -->
+   setTimeout("BackStatuMessage()",1000);
+}
+
+function BackStatuMessage() {
+   window.status=" ";
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step2]: 在此能够更改状态栏中显示的信息 -->
+<!-- [Step3]: 这里可以修改页面显示的链接信息 -->
+<a href="" onMouseOver="MessageDisapper('状态栏信息仅显示片刻！');return true;">显示状态信息</a>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

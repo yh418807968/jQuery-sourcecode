@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--背景向下移动</TITLE>
+</HEAD>
+
+<!-- [Step1]: 这里可以更改背景的图形名称 -->
+<BODY bgcolor="#fef4d2" background="Picture003.gif" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面背景篇--背景向下移动</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var index = 0;
+
+function scrollBG(maxSize) {
+  index = index + 2;
+  if (index > maxSize) index = 0;
+  eval('document.body').style.backgroundPosition = "0 " + index;
+}
+<!-- [Step2]: 在此能够设置移动的速度 -->
+window.setInterval("scrollBG(300)", 50);
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

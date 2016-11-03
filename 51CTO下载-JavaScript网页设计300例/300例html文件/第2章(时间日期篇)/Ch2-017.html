@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--显示日期和时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>时间日期篇--显示日期和时间</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language="JavaScript">
+
+function DandTArray() 
+{
+ for(i=0;i<DandTArray.arguments.length; i++)
+  this[i] = DandTArray.arguments[i];
+}
+var DandTMonths=new DandTArray("1","2","3","4","5","6","7","8","9","10","11","12");
+var DandTDays= new DandTArray("星期日","星期一","星期二","星期三","星期四","星期五","星期六","星期日");
+Now=new Date();
+hrs=Now.getHours();
+min=Now.getMinutes();
+sec=Now.getSeconds();
+DandTClockh=""+((hrs>12)?hrs-12:hrs); 
+DandTClockm=((min<10)?"0":"")+min;
+DandTClocks=((sec<10)?"0":"")+sec;
+DandTClock=(hrs>=12)?"P.M.":"A.M.";
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<script language="JavaScript">
+<!-- [Step1]: 这里可以改变页面显示的提示信息 -->
+document.write("当前系统的日期和时间分别是:<br><br>"
++Now.getYear()+"年"+DandTMonths[Now.getMonth()]+"月"+Now.getDate()+"日 "+DandTDays[Now.getDay()]+", "+DandTClockh+":"+DandTClockm+":"+DandTClocks+" "+DandTClock+"<P></TD></TR>");
+</script>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

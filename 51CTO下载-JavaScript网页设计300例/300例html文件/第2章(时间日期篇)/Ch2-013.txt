@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--显示全中文日期</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>时间日期篇--显示全中文日期</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language="JavaScript">
+
+function CurrentDate(point){
+var numberstring="一二三四五六七八九十";
+  if(point ==0) {document.write("十")}
+  if(point < 10){
+    document.write(numberstring.substring(0+(point-1),point))}
+  else if(point < 20 ){
+    document.write("十"+numberstring.substring(0+(point-11),(point-10)))}
+  else if(point < 30 ){
+    document.write("二十"+numberstring.substring(0+(point-21),(point-20)))}
+  else{
+    document.write("三十"+numberstring.substring(0+(point-31),(point-30)))}
+  }
+var today = new Date()
+var month = today.getMonth()+1
+var date = today.getDate()
+var day = today.getDay()
+<!-- [Step1]: 在此可以更该显示的年份 -->
+document.write(" 公元 二零零二 年 ")
+CurrentDate(month)
+document.write(" 月 ")
+CurrentDate(date)
+document.write(" 日 ")
+</script>
+
+<!-- 案例代码结束 -->
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<TITLE>Java Applet篇--旋转的虫孔</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Java Applet篇--旋转的虫孔</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 这里可以更改页面的宽度和高度 -->
+<applet code="wormhole.class" width=150 height=150>
+<!-- [Step2]: 在此能够设置虫孔的密集程度，数值越小越密集 -->
+  <param name="dotden" value=10>
+<!-- [Step3]: 这里可以修改页面的背景颜色 -->
+  <param name="backR" value=100>
+  <param name="backG" value=80>
+  <param name="backB" value=60>
+<!-- [Step4]: 在此能够更改旋转的速度，数值大速度快 -->
+  <param name="xspeed" value=2>
+  <param name="yspeed" value=3>
+  <param name="negative" value="yes">
+
+</applet>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

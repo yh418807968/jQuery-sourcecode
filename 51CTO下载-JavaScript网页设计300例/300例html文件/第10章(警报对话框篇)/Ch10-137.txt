@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE>警报对话框篇--说明窗口</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>警报对话框篇--说明窗口</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里能够按序增加网址的名称 -->
+var Names = new Array(3)
+Names[1] = "263 在线"                       
+Names[2] = "新 浪"                         
+Names[3] = "搜 狐"                          
+
+var Address = new Array(3)
+Address[1] = "www.263.net.cn"         
+Address[2] = "www.sina.com.cn"                
+Address[3] = "www.sohu.com"         
+
+var Notes = new Array(3)
+Notes[1] = "中国人的网上家园"        
+Notes[2] = "全球最大的华人网站"              
+Notes[3] = "中国互联网第一品牌"          
+
+function SetPopUp(index){
+  SetPopUpWin();
+  PUP.document.write("<HTML>\n<HEAD>\n<TITLE> " + Names[index] + "</TITLE>");
+  PUP.document.write("\n</HEAD>\n<BODY BGCOLOR=\"" + "#FFCC66" + "\" TEXT=\"" + "#993366" + "\">");
+  PUP.document.write("\n<CENTER>\n<TABLE WIDTH=\"250\" BORDER=\"1\" HEIGHT=\"100\">\n<TR>\n<TD>名 称：</TD> <TD><CENTER>" + Names[index] + "</CENTER></TD>");
+  PUP.document.write("\n<\TR>\n<TR>\n<TD>网 址：</TD><TD><CENTER>" + Address[index] + "</CENTER></TD>");
+  PUP.document.write("\n<\TR>\n<TR>\n<TD>口 号：</TD><TD><CENTER>" + Notes[index] + "</CENTER></TD>");
+  PUP.document.write("\n<\TR>\n</TABLE>\n<FORM>\n<INPUT TYPE=\"button\" VALUE=\"关 闭\" onClick=\"self.close();\">\n</FORM>\n</BODY>\n</HTML>");
+  PUP.status=(Names[index]);
+  PUP.document.close();
+}
+
+function SetPopUpWin(){
+  PUP = window.open('','PUP','width=300,height=160,toolbar=0,directories=0,status=1,menu=0,scrollbars=no,resizable=no,copyhistory=no,location=0');
+}
+
+</script>
+
+<CENTER>
+  <FORM>
+<!-- [Step2]: 在此可以修改按钮的名称 -->
+   <input TYPE="button" value="263 在线" onClick="SetPopUp(1)"><P>
+   <INPUT TYPE="button" VALUE="新 浪 网" onClick="SetPopUp(2)"><P>
+   <INPUT TYPE="button" VALUE="搜 狐 网" onClick="SetPopUp(3)"><P>
+  </FORM>
+</CENTER>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

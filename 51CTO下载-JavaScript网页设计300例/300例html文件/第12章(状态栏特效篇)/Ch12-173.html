@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--显示坐标</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>状态栏特效篇--显示坐标</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=Javascript>
+
+var where = ""; 
+function checkwhere(e) {
+    if (document.layers){
+        xCoord = e.x;
+        yCoord = e.y;}
+    else if (document.all){
+        xCoord = event.clientX;
+        yCoord = event.clientY;}
+      else if (document.getElementById){
+        xCoord = e.clientX;
+        yCoord = e.clientY;}
+    window.status = "当前 X 坐标："+ xCoord + " ，Y 坐标： " + yCoord ; 
+}
+
+document.onmousemove = checkwhere;
+if(document.captureEvents) {document.captureEvents(Event.MOUSEMOVE);}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

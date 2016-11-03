@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--翻滚图形</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onLoad=StretchPicture() background="../images/background9.jpg">
+<br>
+<br>
+<center>
+<font color="ffaafa">
+  <h2><font color="#FF0000">图形篇--翻滚图形</font></h2>
+  </font> 
+  <hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以修改图形显示的宽度、高度 -->
+var imgwidth=350;
+var imgheight=60;
+<!-- [Step2]: 在此能够按序增加任意的图形 -->
+var imgname=new Array()
+imgname[0]="Picture003.jpg"
+imgname[1]="Picture004.jpg"
+
+<!-- [Step3]: 这里可以更改停顿时间 -->
+var pause=2000
+<!-- [Step4]: 在此能够修改图形的显示速度，数值小速度快 -->
+var speed=50
+var i_loop=0
+var i_image=0
+
+function StretchPicture() {
+    if (i_loop<=imgwidth) {
+        if (document.all) {
+            imgcontainer.innerHTML="<a href='"+"' target='_blank'><img width='"+i_loop+"' height='"+imgheight+"' src='"+imgname[i_image]+"' border='2'></a>"
+        }
+        i_loop=i_loop+10
+        var timer=setTimeout("StretchPicture()",speed)
+      }
+    else {
+        i_loop=imgwidth
+        clearTimeout(timer)
+        imgcontainer.innerHTML="<a href='"+"' target='_blank'><img width='"+i_loop+"' height='"+imgheight+"' src='"+imgname[i_image]+"' border='2'></a>"
+        var timer=setTimeout("ShrinkPicture()",pause)
+    }
+}
+
+function ChangePicture() {
+    i_image++
+    if (i_image>=imgname.length) {i_image=0}
+    if (document.layers) {
+        document.imgcontainer.document.write("<a href='"+"' target='_blank'><img src='"+imgname[i_image]+"' border='2'></a>")    
+        document.imgcontainer.document.close()
+    }        
+   StretchPicture()
+}
+
+function ShrinkPicture() {
+    if (i_loop>=0) {
+        if (document.all) {
+            imgcontainer.innerHTML="<a href='"+"' target='_blank'><img width='"+i_loop+"' height='"+imgheight+"' src='"+imgname[i_image]+"' border='2'></a>"
+        }
+        i_loop=i_loop-10
+        var timer=setTimeout("ShrinkPicture()",speed)
+      }
+    else {
+        i_loop=0
+        clearTimeout(timer)
+        ChangePicture()
+    }
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<style>
+<!-- [Step5]: 这里可以修改图形的最初位置 -->
+.containerstyle {    position:absolute;   left:100px;   top:120px;}
+</style>
+
+<span id="imgcontainer" class="containerstyle"></span> 
+
+<!-- 案例代码2结束 -->
+
+
+</center></BODY>
+
+</HTML>

@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--文本上下弹跳</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>文本特效篇--文本上下弹跳</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+ 
+<script language="JavaScript">
+Do = 0;
+MoveStep = 4;
+
+function TextStartMove()
+{
+ if(Do) return
+ Do = 1;
+ TextMove.style.left=80;
+ TextAnimal(100,document.body.offsetHeight - 100)
+}
+
+function TextAnimal(Tp,Tk)
+{
+ if(document.layers) document.layers["TextMove"].top=Tp;
+ else  document.all["TextMove"].style.top=Tp;
+ if(Tp>Tk) MoveStep = -4
+ if(Tp<60) MoveStep = 4
+ setTimeout('TextAnimal('+(Tp+MoveStep)+','+Tk+')', 10);
+}
+</script>
+
+<script language="JavaScript">
+ setTimeout('TextStartMove()',10);
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 在此可以更改弹跳文本的位置-->
+<div id="TextMove" style="position: absolute; top: 209px; width: 400px; height: 118px; left: 115px">
+<!-- [Step2]: 这里能够更改弹跳文本的大小、文本内容 -->
+<font size="4"><b>文本上下弹跳</b></font></div>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

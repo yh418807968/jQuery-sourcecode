@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--退出时显示访问时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onunload=SeeYouLater()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>时间日期篇--退出时显示访问时间</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language="JavaScript">
+pageOpen = new Date();
+
+function SeeYouLater() {
+pageClose = new Date();
+minutes = (pageClose.getMinutes() - pageOpen.getMinutes());
+seconds = (pageClose.getSeconds() - pageOpen.getSeconds());
+time = (seconds + (minutes * 60));
+<!-- [Step1]: 这里可以改变弹出窗口显示的信息 -->
+alert('您在这里逗留了 ' + time + ' 秒。欢迎再次光临！');
+} 
+
+</script>
+
+<!-- 案例代码结束 -->
+
+</BODY>
+
+</HTML>

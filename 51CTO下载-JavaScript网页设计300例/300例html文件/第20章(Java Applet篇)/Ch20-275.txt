@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>Java Applet篇--魔法盒</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Java Applet篇--魔法盒</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 这里可以设置魔法盒的宽度和高度 -->
+<applet code="ColorBox.class" width=100 height=100>
+</applet>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

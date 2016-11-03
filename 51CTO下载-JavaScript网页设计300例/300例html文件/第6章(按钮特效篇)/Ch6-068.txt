@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--定制打开窗口</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--定制打开窗口</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 这里可以设置按钮的名称 -->
+<!-- [Step2]: 在此能够更改按钮对应的网址 -->
+<!-- [Step3]: 这里可以修改打开窗口的各种参数 -->
+<!-- [Step4]: 在此能够设置打开窗口的宽度、高度 -->
+<!-- [Step5]: 这里可以更改打开窗口的位置 -->
+<input type="button" name="Input" value="263在线" onClick="window.open('http://www.263.net.cn/', 'Sample','toolbar=yes,location=yes,directories=no,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=490,height=320,left=10,top=10')" >
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

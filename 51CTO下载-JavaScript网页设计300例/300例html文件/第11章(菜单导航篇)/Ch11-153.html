@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<TITLE>菜单导航篇--左面滑出的上下菜单</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=init()>
+
+<br><br>
+<center>
+<h2>菜单导航篇--左面滑出的上下菜单</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function OpenMenu() {
+	if (block1.x < 5) {
+		block1.x += 5
+		block1.left = block1.x
+		setTimeout("OpenMenu()",20)}
+}
+
+function init() {	
+	block1 = ownmenu.style	
+	block1.x = parseInt(block1.left)
+}
+
+function CloseMenu(){
+	block1.x = -100
+	block1.left = block1.x
+}
+
+document.writeln('<DIV ID="buttons"><a href="javascript:OpenMenu()" onclick="window.focus()"><font face="Helvetica" size=-1>打开上下菜单</font></a></DIV>')
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<style><!--#buttons{position:absolute;top:110;left:15;}--></style>
+
+<!-- [Step1]: 在此能够设置菜单的初始位置 -->
+<div id="ownmenu" style="position:absolute;top:130;left:-100;width:60;Z-index:100;">
+<!-- [Step2]: 这里可以修改边框的宽度 -->
+<!-- [Step3]: 在此能够更改边框的粗细 -->
+<table width=100 border=1 cellspacing=0 cellpadding=0><tr><td><center><font face="Helvetica" size=-1>
+<!-- [Step4]: 这里可以设置链接对应的网址 -->
+<!-- [Step5]: 在此能够设置菜单的链接名称 -->
+<a href="http://www.263.net.cn/"  onclick="window.focus()">263 在线</a><br>
+<a href="http://cn.yahoo.com/"  onclick="window.focus()">雅 虎 网</a><br>
+<a href="http://www.sohu.com/"  onclick="window.focus()">搜 狐 网</a><br>
+<a href="http://www.sina.com.cn/"  onclick="window.focus()">新 浪 网</a><br><br>
+<a href="javascript:CloseMenu()"   onclick="window.focus()">关闭菜单</a><br>
+</font></center>
+</td></tr></table>
+</div>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

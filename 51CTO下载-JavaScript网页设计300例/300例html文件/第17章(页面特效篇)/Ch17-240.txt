@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE>页面特效篇--五彩缤纷页面</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面特效篇--五彩缤纷页面</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改变色页面的名称 -->
+window.location="../Ch17/Ch17-242.html";
+var hexChars="FEDCBA9876543210";
+<!-- [Step2]: 在此能够更改变换的背景颜色 -->
+BGColor("010203","405060",50);
+BGColor("070809","0A0B0C",50);
+BGColor("F0E0D0","226644",50);
+BGColor("1A2B3C","D4E5F6",50);
+
+function BGColor (start, end, steps) {
+   steps=steps-1 ;
+   red_valA=parseInt((start.charAt(0) + start.charAt(1)),'16');
+   red_valB=parseInt((end.charAt(0) + end.charAt(1)),'16');
+   red_int=((red_valB - red_valA) / steps) * -1;
+   grn_valA=parseInt((start.charAt(2) + start.charAt(3)),'16');
+   grn_valB=parseInt((end.charAt(2) + end.charAt(3)),'16');
+   grn_int=((grn_valB - grn_valA) / steps) * -1;
+   blu_valA=parseInt((start.charAt(4) + start.charAt(5)),'16');
+   blu_valB=parseInt((end.charAt(4) + end.charAt(5)),'16');
+   blu_int=((blu_valB - blu_valA) / steps) * -1;
+   step=2;
+   red=red_valA;
+   grn=grn_valA;
+   blu=blu_valA;
+   while ( steps >= step ) {
+       red-=red_int;
+       grn-=grn_int;
+	   blu-=blu_int;
+	   red_round=Math.round(red);
+       grn_round=Math.round(grn);
+       blu_round=Math.round(blu);
+       document.bgColor=TriColor(red) + TriColor(grn) + TriColor(blu);
+       step++;   }
+}
+
+function TriColor(Dec) {
+   return "" + hexChars.charAt((Dec - Dec % 16)/16) + hexChars.charAt(Dec % 16);    
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

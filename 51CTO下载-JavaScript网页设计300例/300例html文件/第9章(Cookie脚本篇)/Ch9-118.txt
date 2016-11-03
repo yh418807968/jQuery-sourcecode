@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<TITLE>Cookie脚本篇--随次数变化提示</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Cookie脚本篇--随次数变化提示</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function GetNumMessage(name){
+  var arg=name+"=";
+  var alen=arg.length;
+  var clen=document.cookie.length;
+  var i=0;
+  while(i<clen){
+     var j=i+alen;
+	 if(document.cookie.substring(i,j)==arg)
+	 return GetNumMessageVal(j);
+	 i=document.cookie.indexOf(" ",i)+1;
+	 if(i==0) break;}
+  return null;
+}
+ 
+function GetNumMessageVal(offset){
+  var endstr=document.cookie.indexOf(";",offset);
+  if(endstr==-1) endstr=document.cookie.length;
+  return unescape(document.cookie.substring(offset,endstr));
+}
+
+function ResetCounts(name){
+   index=0;SetNumMessage("index",index,expdate,"/",null,false);
+   location.reload();
+ }
+
+function SetNumMessage(name,value){
+   var argv=SetNumMessage.arguments;
+   var argc=SetNumMessage.arguments.length;
+   var expires=(2<argc)?argv[2]:null;
+   var path=(3<argc)?argv[3]:null;
+   var domain=(4<argc)?argv[4]:null;
+   var secure=(5<argc)?argv[5]:false;
+   document.cookie=name+"="+escape(value)+((expires==null)?"":("; expires=" + expires.toGMTString())) + ((path==null)?"":("; path="+path)) + ((domain==null)?"":("; domain="+domain)) + ((secure==true)?"; secure":"");
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<script language=JavaScript>
+
+var index;
+var expdate=new Date();
+expdate.setTime(expdate.getTime()+(24*3600000*365));
+
+if(!(index=GetNumMessage("index"))) index=0;index++;SetNumMessage("index",index,expdate,"/",null,false);
+<!-- [Step1]: 这里可以更改页面显示的信息 -->
+<!-- [Step2]: 在此能够设置显示次数的颜色 -->
+   document.write("您已光临本站 "+"<font color=#FF0033>"+index+"</font>"+" 次！"+"<br><br>");
+<!-- [Step3]: 这里可以按序增加次数显示的提示信息 -->
+if(index==1)   document.write("欢迎您的光临，希望有所收获！");
+if(index==2)   document.write("欢迎再次光临，请多提宝贵意见！");
+if(index>=3)   document.write("感谢您对本站的大力支持！！");
+
+</script>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

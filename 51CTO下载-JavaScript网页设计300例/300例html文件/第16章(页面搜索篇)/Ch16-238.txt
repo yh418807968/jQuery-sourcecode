@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>页面搜索篇--文本搜索</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面搜索篇--文本搜索</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<form name="myform">
+<!-- [Step1]: 这里可以设置文本框的列长度 -->
+关键词：<input type="text" name="searchtxt" size="20">
+</form>
+搜索引擎：
+<!-- [Step2]: 在此能够按序增加搜索引擎的名称和网址 -->
+<a href = 'javascript:void(str=document.myform.searchtxt.value); if(str){ location.href= "http://202.130.245.213/cgi-bin/newspage.exe?word="+escape(str).split("%20").join("+");}'>新 浪 网</a>
+<a href = 'javascript:void(str=document.myform.searchtxt.value); if(str) { location.href = "http://page.search.sohu.com/cgi-bin/pagesearch.cgi?tn=sohu&si=gi&word="+escape(str).split("%20").join("+");}'>搜 狐 网</a>
+
+<!-- 案例代码结束 -->
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--图形代替按钮</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>页面导航篇--图形代替按钮</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function EmailBox(form) {
+   location=document.my.email.options[document.my.email.selectedIndex].value;
+}
+
+</script>                  
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name="my">
+  <select name="email" size=1>
+<!-- [Step1]: 这里可以设置下拉框的默认值 -->
+    <option selected>邮箱</option>
+<!-- [Step2]: 在此能够更改邮箱的网址 -->
+<!-- [Step3]: 这里可以修改邮箱的名称 -->
+    <option value="http://mail.sina.com.cn">新浪邮箱</option>
+    <option value="http://login.mail.sohu.com">搜狐邮箱</option>
+	<option value="http://mail.263.net">263 邮箱</option>	
+  </select>
+  <a href="javascript: EmailBox()">
+<!-- [Step4]: 在此能够设置图形按钮的名称 -->
+<!-- [Step5]: 这里可以修改图形按钮的边界框 -->
+<!-- [Step6]: 在此能够更改图形按钮的宽度和高度 -->
+  <img src="Picture002.jpg" border=1 width=25 height=25 align=absmiddle></a> 
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

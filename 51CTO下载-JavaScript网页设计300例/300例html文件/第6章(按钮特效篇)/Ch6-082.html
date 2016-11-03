@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--对话框输入限制</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background8.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>按钮特效篇--对话框输入限制</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function InputChar(cur){
+<!-- [Step1]: 这里可以设置输入字符的最大长度 -->
+var maxlength=100
+if (cur.chars.value.length>maxlength){
+<!-- [Step2]: 在此能够更改弹出窗口的警告信息 -->
+alert("已经超出了100个字符，请重新填写！")
+return false}
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form onsubmit="return InputChar(this)">
+<!-- [Step3]: 这里可以更改页面提示信息的大小 -->
+<!-- [Step4]: 在此能够修改页面提示信息的颜色 -->
+<!-- [Step5]: 这里可以更改页面的提示信息 -->
+    <font size=2.5 color=#3399CC><B>请输入您的建议（不多于100个字符）:</B></font><br>
+<!-- [Step6]: 在此能够设置文本区域的行数和列数 -->
+    <textarea rows="5" cols="40" name="chars"></textarea><br>
+<!-- [Step7]: 这里可以更改按钮的名称 -->
+    <input type="submit" value="提 交">
+</form> 
+
+<!-- 案例代码2结束 -->
+
+
+
+</BODY>
+
+</HTML>

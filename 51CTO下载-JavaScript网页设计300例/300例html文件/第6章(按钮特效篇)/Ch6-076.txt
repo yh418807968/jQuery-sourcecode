@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--说明浮动条</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--说明浮动条</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function DLinkOn(x){
+with(link[x]){
+linkmessage.innerHTML=msg;
+linkmessage.style.top=dtop;
+linkmessage.style.left=dleft;
+linkmessage.style.background=bgcolor;}
+linkmessage.style.visibility="visible";
+}
+
+function DLinkOff(){
+linkmessage.style.visibility="hidden";
+}
+
+function Display(msg,bgcolor,dtop,delft){
+this.msg=msg;
+this.bgcolor=bgcolor;
+this.dtop=dtop;
+this.dleft=delft;
+}
+
+var link=new Array();
+<!-- [Step1]: 这里可以按序增加浮动条的个数 -->
+<!-- [Step2]: 在此能够设置浮动条的显示信息 -->
+<!-- [Step3]: 这里可以更改浮动条的背景色 -->
+<!-- [Step4]: 在此能够设置浮动条的位置 -->
+link[0]=new Display('力争让每个人都成为网页特效的高手。','bisque',150,430)
+link[1]=new Display('起草于2002年7月，作者：饸饹面','bisque',190,430)
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step5]: 在此能够修改浮动条的宽度 -->
+<div id="linkmessage" style="position: absolute; visibility: hidden; width=40%">
+</div>
+<!-- [Step6]: 这里可以更改按钮的对齐方式 -->
+<p align="center">
+<!-- [Step7]: 在此能够设置按钮的名称 -->
+  <input type=button value="［本书宗旨］" href="" onmouseover="DLinkOn(0)" onmouseout="DLinkOff()">
+     <br><br>
+  <input type=button value="［关于本书］" href="" onmouseover="DLinkOn(1)" onmouseout="DLinkOff()"> 
+</p> 
+
+<!-- 案例代码2结束 -->
+
+
+
+</BODY>
+
+</HTML>

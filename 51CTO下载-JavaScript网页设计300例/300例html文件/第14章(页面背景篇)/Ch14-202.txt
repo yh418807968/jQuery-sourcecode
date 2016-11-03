@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--背景色安全测试</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面背景篇--背景色安全测试</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function BGColorArray(q){
+  for(i=1;i<=q;i++){  this[i]=0  }
+}
+
+Colors=new BGColorArray(7); 
+<!-- [Step1]: 这里可以按序增加颜色集合 -->
+Colors[1]="00"; 
+Colors[2]="33"; 
+Colors[3]="66"; 
+Colors[4]="99"; 
+Colors[5]="AA"; 
+Colors[6]="FF";
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<table cellspacing=0 cellpadding=0>
+   <script language=JavaScript>
+     for(i=1;i<=2;i++){
+       for(j=5;j<=6;j++){
+        for(k=3;k<=4;k++){
+          var thiscolor=Colors[i]+Colors[j]+Colors[k];
+<!-- [Step2]: 这里可以更改测试纸的高度 -->
+          document.writeln("<tr><td height = 20 bgcolor = \"#" + thiscolor + "\" align = right><a href = ");
+          document.writeln("\'\' onMouseOver = \"document.bgColor=\'"+ thiscolor+"\'\">"+ thiscolor+"</a></td></tr>");  }  }   }
+   </script>
+</table>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

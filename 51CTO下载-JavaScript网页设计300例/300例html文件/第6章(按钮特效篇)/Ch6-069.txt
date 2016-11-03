@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--打开全屏窗口</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--打开全屏窗口</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function OpenAllWindow(){
+<!-- [Step1]: 这里可以设置按钮对应的网页地址 -->
+var targeturl="http://www.263.net.cn/"
+<!-- [Step2]: 在此能够设置打开窗口的各种参数 -->
+NewWindow=window.open("","","scrollbars＝yes,toolbar=yes,location=yes,status=yes,menubar=yes")
+if (document.all){ NewWindow.moveTo(0,0); NewWindow.resizeTo(screen.width,screen.height)}
+NewWindow.location=targeturl
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step3]: 这里可以更改按钮的名称 -->
+<input type="button" name="button" onClick="OpenAllWindow()" value="263在线" >
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<TITLE>浏览器篇--登陆不同页面</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>浏览器篇--登录不同页面</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<Script language=JavaScript>
+
+<!-- [Step1]: 这里可以设置不同页面的网址 -->
+if (document.all)  netpage = 'http://www.263.net.cn'
+else if (document.layers)   netpage = 'http://www.sina.com.cn'
+     else if (document.images)  netpage = 'http://cn.yahoo.com'
+          else   netpage = 'http://www.sohu.com'
+window.location = netpage;
+                
+</Script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

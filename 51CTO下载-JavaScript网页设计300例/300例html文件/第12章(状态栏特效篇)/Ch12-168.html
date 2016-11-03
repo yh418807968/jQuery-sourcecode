@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--依次变成大写</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>状态栏特效篇--依次变成大写</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=Javascript>
+
+var index = 0
+<!-- [Step1]: 这里能够更改变成大写的状态栏信息 -->
+var message  = "status message can changed to upper case"
+
+function StatuUpperCase() {
+   window.status = message.substring(0,index) + message.substring(index,index+1).toUpperCase() + message.substring(index+1,message.length)
+   if (index == message.length) {index = 0}
+   else {index++}
+<!-- [Step2]: 在此可以设置改变的速度 -->
+   setTimeout("StatuUpperCase()",220)
+}
+
+StatuUpperCase();
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

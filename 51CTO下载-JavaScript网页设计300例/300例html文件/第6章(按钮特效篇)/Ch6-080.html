@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--查看源代码</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background8.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>按钮特效篇--查看源代码</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function ViewSourceCode()
+{
+var SourceCode=document.forms[0].UrlAddress.value
+window.location="view-source:"+SourceCode;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+<!-- [Step1]: 这里可以设置地址栏的列长度 -->
+   <input type="text" name="UrlAddress" value="http://" size=30 >
+</form>
+<form>
+<!-- [Step2]: 在此能够更改按钮的名称 -->
+   <input type="button" value="查看源代码" onClick=ViewSourceCode()>
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+
+</BODY>
+
+</HTML>

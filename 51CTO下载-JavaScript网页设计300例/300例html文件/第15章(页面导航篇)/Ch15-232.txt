@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--定时进入页面</TITLE>
+<!-- [Step1]: 这里可以设置定时的时间 -->
+<!-- [Step2]: 在此能够更改进入的网址 -->
+<meta content="10;url=http://www.263.net.cn" http-equiv="refresh">
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload="setTimeout('ClockLink()',1)">
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面导航篇--定时进入页面</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+now = new Date();
+clockStart = now.getTime();
+
+function ClockLink() { 
+   var mySecs = ""+ Timer(); 
+   document.clockform.spenttime.value = mySecs.substring(0,mySecs.indexOf(".")) + " 秒"; 
+   window.setTimeout('ClockLink()',1000); 
+}
+
+function Timer() { 
+   var myTime = new Date(); 
+   this.diffSecs = (myTime.getTime() - clockStart)/1000; 
+   return(this.diffSecs); 
+} 
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name="clockform">
+<!-- [Step3]: 这里可以更改文本框的列长度 -->
+   <input type="text" value="" name="spenttime" size=4>
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

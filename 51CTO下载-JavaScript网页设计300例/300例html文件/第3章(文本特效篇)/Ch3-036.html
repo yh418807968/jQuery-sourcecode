@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--变换的文本内容</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>文本特效篇--变换的文本内容</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language="JavaScript">
+
+<!-- [Step1]: 这里可以更改变换文本的缺省文本 -->
+var NowMessage = '文本特效篇--变换的文本内容';
+var index = 1;
+var indexNum = 8;
+var indexs = new ChangeArray(indexNum);
+<!-- [Step2]: 在此能够更改变换的文本信息 -->
+indexs[1] = "文本特效篇--变换的文本内容";
+indexs[2] = "传统的HTML语言不能开发交互式的动态网页，";
+indexs[3] = "而JavaScript却能很好的做到这一点。";       
+indexs[4] = "JavaScript是一门相当简单易学的网络化编程语言，";
+indexs[5] = "通过把她和HTML语言相互结合起来，";
+indexs[6] = "能够实现实时的动态网页特效，";
+indexs[7] = "这给网页浏览者在浏览网页的同时也提供了某些乐趣。"; 
+
+function ChangeMessage() {
+Change(indexs[index++]);                           
+if(index>indexNum) { index=1;    }  
+}
+
+function Change(Message) {
+var pad_str="";
+n = Message.length;
+if(n<72) {pad = (38-n)/2;for(var i=0; i<pad; i++) {pad_str+=" ";  }  }
+NowMessage = pad_str + Message;
+document.messages.field.value = NowMessage;
+clearTimeout(timer);
+timer = setTimeout("ChangeMessage()",2000);
+}
+
+function ChangeArray(n) {
+this.length=n;
+for(var i = 1; i<= n; i++) {this[i] = "";}
+return(this);
+}
+
+function nochange() {
+document.messages.field.value = NowMessage;        
+}
+
+var timer = setTimeout('ChangeMessage()',1000);
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<center><font face="Helvetica">
+<FORM name="messages" onSubmit="return false">
+<!-- [Step3]: 这里可以修改显示区域的列长度 -->
+<input type="text" name="field" size=50 value=" " onChange="nochange()">
+</FORM></font>
+</center>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

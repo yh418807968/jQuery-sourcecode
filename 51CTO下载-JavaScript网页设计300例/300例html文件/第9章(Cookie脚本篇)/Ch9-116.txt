@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>Cookie脚本篇--确认链接按钮</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Cookie脚本篇--确认链接按钮</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function ConfirmLink(){
+<!-- [Step1]: 在此能够更改弹出窗口的警告信息 -->
+    question = confirm("您确认要链接  263在线  吗？")
+<!-- [Step2]: 这里可以设置链接对应的网址 -->
+    if (question != "0"){  window.open("http://www.263.net.cn")  }
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step3]: 在此能够修改页面上的链接信息 -->
+<a href="javascript:ConfirmLink()">263 在线</a>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

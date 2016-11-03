@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<TITLE>菜单导航篇--随机链接滚轮</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>菜单导航篇--随机链接滚轮</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var count=0
+
+function PlayWheel(){
+setTimeout("document.wheel.wheel2.selectedIndex =1000",100)
+setTimeout("document.wheel.wheel2.selectedIndex =count",200)
+setTimeout("document.wheel.wheel2.selectedIndex =1000",300)
+setTimeout("document.wheel.wheel2.selectedIndex =count",400)
+setTimeout("document.wheel.wheel2.selectedIndex =1000",500)
+setTimeout("document.wheel.wheel2.selectedIndex =count",600)
+setTimeout("window.location=document.wheel.wheel2.options[document.wheel.wheel2.selectedIndex].value", 800)
+}
+
+function animate(){
+var countfinal=Math.round(Math.random()*(document.wheel.wheel2.length-1))
+document.wheel.wheel2.selectedIndex =count
+if (count==countfinal){  PlayWheel();return;}
+if (count<document.wheel.wheel2.length)  count++
+else count=0
+<!-- [Step1]: 这里可以设置滚动的速度 -->
+setTimeout("animate()",100)
+} 
+
+</script>
+
+
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form method="POST" name="wheel">
+ <div align="center">  
+<!-- [Step2]: 在此能够更改选择框的行数 -->
+   <select name="wheel2" size="5">
+<!-- [Step3]: 这里可以设置链接对应的网址 -->
+<!-- [Step4]: 在此能够更改链接的名称 -->
+    <option value="http://www.263.net.cn">263 在线</option>
+    <option value="http://www.sina.com.cn">新 浪 网</option>
+    <option value="http://www.sohu.com">搜 狐 网</option>
+    <option value="http://cn.yahoo.com">雅 虎 网</option><br>
+   </select> 
+ </div><br>
+ <div align="center">
+<!-- [Step5]: 这里可以设置按钮的名称 -->
+   <input type="button" value="转动滚轮" name="B1" onClick="animate()">
+ </div>
+</form>
+
+
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

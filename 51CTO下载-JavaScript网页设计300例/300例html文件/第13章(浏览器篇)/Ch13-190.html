@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>浏览器篇--辨别浏览器类型</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>浏览器篇--辨别浏览器类型</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function GetBrowserType()   {   
+   document.forms[0].elements[1].value ="名称："+navigator.appName+" 版本："+navigator.appVersion;     
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+<!-- [Step1]: 在此能够更改按钮的名称 -->
+   <input type="button" value="浏览器类型" onClick="GetBrowserType()"><br>
+<!-- [Step2]: 这里可以设置文本框的列长度 -->
+   <input type="text"   value="浏览器类型：" size="40" name="browser" >
+</form>
+ 
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

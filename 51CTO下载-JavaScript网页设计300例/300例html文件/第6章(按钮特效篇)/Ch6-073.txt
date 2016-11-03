@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--显示特殊效果</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--显示特殊效果</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<style type="text/css">
+<!-- [Step1]: 这里能够更改按钮显示的颜色和背景色 -->
+<!-- [Step2]: 在此可以设置按钮的字体 -->
+  .down {color:#FF99FF; background: #333300; font-style: italic}
+  .over {color:#99FF66; background: #CC00CC}
+</style>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step3]: 这里能够修改按钮的名称 -->
+<input type="Button" name="Button" value="按钮的特殊效果" onMouseOver="this.className='over';" onMouseDown="this.className='down';"  onMouseUp="this.className='over';" onMouseOut="this.className='';" > 
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

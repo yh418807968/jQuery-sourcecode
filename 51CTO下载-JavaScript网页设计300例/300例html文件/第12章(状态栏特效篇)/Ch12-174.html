@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--显示滑动效果</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=startskip()>
+
+<br><br>
+<center>
+<h2>状态栏特效篇--显示滑动效果</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var skipRunning = false
+var index = 0
+<!-- [Step1]: 这里可以更改状态栏中的滑动信息 -->
+message = "状态栏特效篇----显示滑动效果"
+var state = " "
+clearState()
+
+function startskip() {
+   stopskip()
+   showskip()
+}
+
+function stopskip() {
+   if (skipRunning)    clearTimeout()
+   skipRunning = false
+}
+
+function clearState() {
+   state = " "
+   for (var i = 0; i < message.length; i++) {   state += "0"    }
+}
+
+function showskip() {
+   if (getString()) {
+       index++
+       if (message.length <= index) index = 0
+       clearState()
+       setTimeout("showskip()", 1000)
+       skipRunning = true  } 
+   else {
+       var str = " "
+       for (var j=0; j<state.length; j++) {str += (state.charAt(j) == "1") ? message.charAt(j) : "     "   }
+       window.status = str
+<!-- [Step2]: 在此能够设置滑动的速度 -->
+       setTimeout("showskip()", 150)
+       skipRunning = true     }
+}
+
+function getString() {
+    var full = true
+    for (var j = 0; j < state.length; ++j) {
+        if (state.charAt(j) == 0)    full = false     }
+    if (full)    return true
+    while (1) {
+        var num = Math.round((message.length - 1) * Math.random())
+        if (state.charAt(num) == "0")  break   }
+    state = state.substring(0, num) + "1" + state.substring(num + 1, state.length)
+    return false
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

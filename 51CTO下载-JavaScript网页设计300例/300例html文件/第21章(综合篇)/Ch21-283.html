@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--搜索引擎登记</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>综合篇--搜索引擎登记</h2>
+<hr width=300>
+
+
+<!-- 案例代码开始 -->
+
+<form name="choose" Action="javascript:Simpleall(document.choose)//">
+  </form>
+  <table>
+    <tr>
+<!-- [Step1]: 这里可以更改文本框的列长度 -->
+      <td>站点名称：</td><td><input name="title" size=25></td>
+    </tr>
+    <tr>
+<!-- [Step2]: 在此能够修改文本框的初始值 -->
+	  <td>站点地址：</td><td><input name="http" size=25 value="http://"></td>
+    </tr>
+    <tr>
+      <td>关键词汇：</td><td><input name="keyw" size=25></td>
+    </tr>
+	<tr>
+<!-- [Step3]: 这里可以设置文本区域的行数和列数 -->
+      <td>概要描述：</td><td><textarea rows=3 cols=24 name="comm" wrap="virtual"></textarea></td>
+    </tr>    
+    <tr>
+      <td colspan=2 align=center>
+	     <input name="modify" type="radio" value="no" checked>新站登记  
+		 <input name="modify" type="radio" value="yes"> 修改已登信息
+	  </td>
+    </tr>   
+    <tr>
+      <td colspan="2"><table border=0>
+        <tr>
+<!-- [Step4]: 在此能够按序增加引擎名称和网址 -->
+          <td><input name="check" type="checkbox" value="on"><a href="cn.yahoo.com.cn">雅 虎 网</a></td>
+          <td><input name="check" type="checkbox" value="on"><A HREF="www.sohu.com">搜 狐 网</A></td>
+          <td><input name="check" type="checkbox" value="on"><A HREF="www.sina.com.cn">新 浪 网</A></td>   
+       </tr>    
+  </table>
+  <div align=center><input  name="send" type="submit" value="登 记" class="buttonface">　　
+  </div>
+</form>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

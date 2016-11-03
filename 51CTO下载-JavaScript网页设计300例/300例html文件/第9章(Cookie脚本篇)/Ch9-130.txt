@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>Cookie脚本篇--仅弹出一次窗口</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onunload=PopupWindow()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Cookie脚本篇--仅弹出一次窗口</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+function PopupWindow(){
+  if (GetCookie('popped')==''){ OpenWindow(); document.cookie="popped=yes" }
+}
+
+function OpenWindow(){
+<!-- [Step1]: 在此能够更改弹出一次窗口对应的网址 -->
+<!-- [Step2]: 这里可以设置弹出窗口的宽度和高度 -->
+  window.open("http://www.263.net.cn","","width=450,height=350")
+}
+
+function GetCookie(Name) {
+  var search = Name + "="
+  var RetValue = "";
+  if (document.cookie.length > 0) { offset = document.cookie.indexOf(search)
+    if (offset != -1) {  offset += search.length; end = document.cookie.indexOf(";", offset);  
+      if (end == -1)  end = document.cookie.length;
+      RetValue=unescape(document.cookie.substring(offset, end))
+    }
+  }
+  return RetValue;
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

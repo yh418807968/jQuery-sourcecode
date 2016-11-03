@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--显示倒置文本</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>文本特效篇--显示倒置文本</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+ 
+<script language="JavaScript">
+
+<!-- [Step1]: 在此设置要显示的倒置文本 -->
+var Msg1="显 示 倒 置 文 本";
+var Msg2="";
+for (i=Msg1.length; i >= 0; i--)
+Msg2+=Msg1.substring(i,i-1);
+document.write (Msg2);
+
+</script>
+
+<!-- 案例代码结束 -->
+
+</BODY>
+
+</HTML>

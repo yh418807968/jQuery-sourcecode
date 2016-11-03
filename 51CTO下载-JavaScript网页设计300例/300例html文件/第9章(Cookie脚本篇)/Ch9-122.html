@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<TITLE>Cookie脚本篇--弹出窗口自动关闭</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background3.jpg" >
+
+<br><br>
+<center>
+<font color="red"><h2>Cookie脚本篇--弹出窗口自动关闭</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var popup = null;
+<!-- [Step1]: 这里可以更改窗口的宽度和高度 -->
+<!-- [Step2]: 在此能够设置窗口的各种参数 -->
+popup = window.open('', 'popupnav', 'width=260,height=240,resizable=yes,scrollbars=yes');
+if (popup != null) {
+  if (popup.opener == null) {popup.opener = self; }
+<!-- [Step3]: 这里可以修改弹出窗口对应的网址 -->
+  popup.location.href = 'http://www.263.net.cn';
+}
+setTimeout("self.close()",1000)
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

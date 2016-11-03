@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--图形选择器</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>图形篇--图形选择器</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function SelectPicture(form) {
+selectionname = form.PictureName.options[form.PictureName.selectedIndex].text;
+selection = form.PictureName.options[form.PictureName.selectedIndex].value;
+<!-- [Step1]: 在此能够修改弹出窗口的宽度、高度 -->
+PreView = window.open("", "Preview", "toolbar=2,width=230,height=250,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=1,copyhistory=0,left=0, top=0");
+PreView.document.open();
+PreView.document.write("<HTML><HEAD>");
+<!-- [Step2]: 这里可以更改弹出窗口的标题栏 -->
+PreView.document.write("<TITLE>图形选择器</TITLE>");
+<!-- [Step3]: 在此能够修改弹出窗口的背景色 -->
+PreView.document.write("</HEAD><BODY bgcolor=#33FFFF TEXT=000000>");
+PreView.document.write("<FORM><CENTER><B><FONT SIZE=+1>" + 
+selectionname + "</FONT></B><HR>");
+PreView.document.write("<IMG HSPACE=0 VSPACE=0 " +
+"SRC='" + selection + "'>");
+PreView.document.write("<HR><FORM><INPUT TYPE='button' VALUE='关闭窗口' " +
+"onClick='window.close()'></FORM>");
+PreView.document.write("</CENTER>");
+PreView.document.write("</BODY></HTML>");
+PreView.document.close();
+    }
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+  <select name="PictureName" onChange="SelectPicture(this.form)">
+    <option value="" selected>请选择图形
+<!-- [Step4]: 这里可以按序增加要选择的图形 -->
+<!-- [Step5]: 在此能够更改选择框中显示的信息 -->
+    <option value="Picture001.jpg">图形一
+    <option value="Picture002.jpg">图形二
+  </select>
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

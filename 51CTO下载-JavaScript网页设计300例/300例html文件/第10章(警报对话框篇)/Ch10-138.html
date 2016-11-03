@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<TITLE>警报对话框篇--有趣的警告框</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=showAlert()>
+
+<br><br>
+<center>
+<h2>警报对话框篇--有趣的警告框</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript >
+
+  var now = new Date() 	
+  now.setHours(now.getHours()) 	
+  var min=60*now.getUTCHours()+now.getUTCMinutes()+now.getUTCSeconds()/60; 	
+<!-- [Step1]: 这里可以更改警告框中的信息 -->
+  var clock = "当前的时间是： "+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds()	 
+<!-- [Step2]: 在此能够更改警告框中的信息 -->
+  var countvisits="您已登录本页： " + Count() + " 次 " 
+
+  var expDays = 30; 
+  var exp = new Date();  
+  exp.setTime(exp.getTime() + (expDays*24*3600*1000));  
+  
+function showAlert() { 
+  var later = new Date() 	
+  var millilater=later.getTime()/1000  	
+  var loadTime=(Math.floor((millilater-now.getTime()/1000 )*100))/100 	
+<!-- [Step3]: 这里可以更改警告框中的信息 -->
+  var loadTimeResult= "页面装载用时： "+loadTime+" 秒" 	
+  window.alert(clock+"\r"+loadTimeResult+"\r"+countvisits) 
+} 
+   
+function Count(info){       
+  var psj=0;         
+  var AlertCount = GetCookie('AlertCount')            
+  if (AlertCount == null) {   AlertCount = 0;   }       
+  else{    AlertCount++;  }         
+  SetCookie ('AlertCount', AlertCount, exp);     
+  return AlertCount;
+}   
+
+function SetCookie(name, value) {  
+  var argv = SetCookie.arguments;         
+  var argc = SetCookie.arguments.length;        
+  var expires = (argc > 2) ? argv[2] : null;    
+  var path = (argc > 3) ? argv[3] : null;     
+  var domain = (argc > 4) ? argv[4] : null;     
+  var secure = (argc > 5) ? argv[5] : false;       
+  document.cookie = name + "=" + escape (value) +  ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) + ((path == null) ? "" : ("; path=" + path)) + ((domain == null) ? "" : ("; domain=" + domain)) +  ((secure == true) ? "; secure" : ""); 
+}  
+
+function getCookieVal(offset) {  
+   var endstr = document.cookie.indexOf (";", offset);        
+   if (endstr == -1)   endstr = document.cookie.length;  
+   return unescape(document.cookie.substring(offset, endstr)); 
+ }  
+
+function GetCookie(name) {  
+   var arg = name + "=";       
+   var alen = arg.length;        
+   var clen = document.cookie.length;       
+   var i = 0;         
+   while (i < clen) {    
+     var j = i + alen;   
+	 if (document.cookie.substring(i, j) == arg)   
+	 return getCookieVal (j);           
+	 i = document.cookie.indexOf(" ", i) + 1;            
+	 if (i == 0) break;   }    
+  return null; 
+} 
+	 
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

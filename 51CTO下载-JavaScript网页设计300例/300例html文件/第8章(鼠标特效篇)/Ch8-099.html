@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<TITLE>鼠标特效篇--禁用右键并自动导航</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background3.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>鼠标特效篇--禁用右键并自动导航</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+if (navigator.appName.indexOf("Internet Explorer") != -1)    
+    document.onmousedown = StopRightButton;
+    
+function StopRightButton(){
+<!-- [Step1]: 在此能够设置弹出窗口的警告信息 -->
+<!-- [Step2]: 这里可以更改自动导航的网址-->
+   if (event.button == 2 | event.button == 3) {
+   window.alert("右键已被禁用...让我们去263吧！"); location.replace("http://www.263.net.cn"); }
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--层叠式菜单导航</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面导航篇--层叠式菜单导航</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var cascadmenu=new Array()
+<!-- [Step1]: 这里可以按序增加子菜单中的链接名称和网址 -->
+cascadmenu[0]='<a href=http://www.263.net.cn>263 在线</a><br>'
+cascadmenu[1]='<a href=http://www.sina.com.cn>新 浪 网</a><br>'
+cascadmenu[2]='<a href=http://www.sohu.com>搜 狐 网</a><br>'
+
+if (document.all) document.body.onclick=HideCascadMenu
+
+function HideCascadMenu(index){
+  if (window.themenu) themenu.style.visibility="hidden"
+}
+
+function OpenCascadMenu2(index){
+   themenu=index
+   if (document.all){
+      themenu.style.left=document.body.scrollLeft+event.clientX-event.offsetX
+      themenu.style.top=document.body.scrollTop+event.clientY-event.offsetY+20
+      if (themenu.style.visibility=="hidden"){
+         themenu.style.visibility="visible"          }
+      else{ HideCascadMenu()   }   }
+}
+
+function OpenCascadMenu1(e,index){
+   themenu=eval(index)
+   if (themenu.visibility=="hide") themenu.visibility="show"
+   else themenu.visibility="hide"
+   themenu.left=e.pageX-e.layerX
+   themenu.top=e.pageY-e.layerY+20
+   return false
+}
+</script>
+<!-- [Step2]: 在此能够设置表格的背景色 -->
+<div id=dropmenu style="position:absolute; background-color:#FFFF99; width:80;visibility:hidden; border:1px solid black;padding:0px">
+    <script language=JavaScript>
+      if (document.all) dropmenu.style.padding="5px"
+      for (i=0;i<cascadmenu.length;i++) document.write(cascadmenu[i])
+    </script>
+</div>
+<script language=JavaScript>
+if (document.layers){ document.dropmenu.captureEvents(Event.CLICK) }
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step3]: 这里可以设置父菜单的位置 -->
+<style>.iewrap{position:absolute; top=140;left=220; font-family: "宋体"; }</style>
+<span class=iewrap onClick="OpenCascadMenu2(dropmenu);event.cancelBubble=true;return false">
+<!-- [Step4]: 在此能够更改父菜单的大小 -->
+  <font size=3 face=宋体>
+<!-- [Step5]: 这里可以修改父菜单的名称 -->
+   <a href="#" onClick="if(document.layers) return OpenCascadMenu1(event, 'document.dropmenu')">层叠式菜单</a>
+  </font>
+</span>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

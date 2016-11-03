@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--动态导航框</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=initiate()>
+
+<br><br>
+<center>
+<h2>页面导航篇--动态导航框</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以增加导航框的信息 -->
+var message = new Array()
+message[0]="全球最大的华人网站----新 浪 网"
+message[1]="中国人的网上家园----263 在线"
+message[2]="中国互联网第一品牌----搜 狐 网"
+
+<!-- [Step2]: 在此能够增加信息对应的网址 -->
+var messageurl = new Array()
+messageurl[0]="http://www.sina.com.cn"
+messageurl[1]="http://www.263.net.cn"
+messageurl[2]="http://www.sohu.com"
+
+var step=10
+var pause=40
+var textwidth=260
+var textheight=75
+var x_finalpos=-1
+var y_finalpos=120
+var textslices=10
+var pausetext=5
+var x_rightspans=0
+var x_leftspans=0
+var marginright
+var marginleft
+var height_slice=Math.floor(textheight/textslices)
+var cliptop=0
+var clipleft=0
+var clipbottom=cliptop+height_slice
+var clipright=textwidth
+var spannummer=0
+var spannrbefore=0
+var i_message=0
+pausetext=pausetext*1000
+
+function initiate() {
+if (document.all) {
+if (x_finalpos==-1) {
+x_finalpos=Math.floor(document.body.clientWidth/2)-Math.floor(textwidth/2)}
+changemessage()}
+}
+
+function changemessage() {
+for (i=0;i<=textslices-1;i++) {
+var thisspan=eval("span"+i)
+thisspan.innerHTML="<a href='"+messageurl[i_message]+"' target='blank'>"+message[i_message]+"</a>"}
+gostartposition()
+}
+
+function gostartposition() {
+for (i=0;i<=textslices-1;i+=2) {
+var thisspan=eval("document.all.span"+i+".style")
+thisspan.posLeft=marginright}
+for (i=1;i<=textslices-1;i+=2) {
+var thisspan=eval("document.all.span"+i+".style")
+thisspan.posLeft=marginleft}
+moveslices_IE()
+}
+
+function moveslices_IE() {
+if (x_rightspans==0 || x_leftspans==0) {
+if (x_rightspans==0) {
+for (i=0;i<=textslices-1;i+=2) {
+var thisspan=eval("document.all.span"+i+".style")
+thisspan.posLeft-=step}
+if (thisspan.posLeft<=x_finalpos) {
+x_rightspans=1
+for (i=0;i<=textslices-1;i+=2) {
+var thisspan=eval("document.all.span"+i+".style")
+thisspan.posLeft=x_finalpos}}}
+if (x_leftspans==0) {
+for (i=1;i<=textslices-1;i+=2) {
+var thisspan=eval("document.all.span"+i+".style")
+thisspan.posLeft+=step}
+if (thisspan.posLeft>=x_finalpos) {
+x_leftspans=1
+for (i=1;i<=textslices-1;i+=2) {
+var thisspan=eval("document.all.span"+i+".style")
+thisspan.posLeft=x_finalpos}}}
+var timer=setTimeout("moveslices_IE()",pause)}
+else {
+clearTimeout(timer)
+x_rightspans=0
+x_leftspans=0
+i_message++
+if (i_message > message.length-1) {i_message=0}
+var timer=setTimeout("changemessage()",pausetext)}
+}
+
+</script>
+
+<style>
+A {color : #FF0099;text-decoration : none}
+A:hover {color : white;text-decoration : none}
+.textbox {font-size : 18;font-family : Verdana;font-style : normal;color : #009933;border-width : 3;text-align : center;background-color : blue;border-style : solid;padding : 5;height : 70;width : 250;overflow : clip;font-weight : bold;}
+
+</style>
+
+<script language=JavaScript>
+
+if (document.all) {
+for (i=0;i<=textslices-1;i+=2) {
+marginright=document.body.clientWidth+50
+document.write("<span class='textbox' id='span"+i+"' style='position:absolute;visibility:visible; left:"+marginright+"px;top:"+y_finalpos+"px;clip:rect("+cliptop+"px "+clipright+"px "+clipbottom+"px "+clipleft+"px)'>")
+document.write("</span>")
+cliptop+=2*height_slice
+clipbottom+=2*height_slice}
+cliptop=height_slice
+clipbottom=2*height_slice 
+for (i=1;i<=textslices-1;i+=2) {
+marginleft=-textwidth-50
+document.write("<span class='textbox' id='span"+i+"' style='position:absolute;visibility:visible; left:"+marginleft+"px;top:"+y_finalpos+"px;clip:rect("+cliptop+"px "+clipright+"px "+clipbottom+"px "+clipleft+"px)'>")
+document.write("</span>")
+cliptop+=2*height_slice
+clipbottom+=2*height_slice}
+
+}
+
+</script>
+
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--动态生成表格</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>技巧篇--动态生成表格</h2></font>
+<hr width=300>
+
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function ProduceTable(){
+  var x=1;
+  var y=1;
+  var tot="";
+  var r_temp="";
+  var d_cell="";
+  var bgc=document.mytable.bgcolor.options[document.mytable.bgcolor.selectedIndex].value;
+  var bor=document.mytable.border.options[document.mytable.border.selectedIndex].value;
+  var cellalign=document.mytable.cellalign.options[document.mytable.cellalign.selectedIndex].value;
+  var cellvalign=document.mytable.cellvalign.options[document.mytable.cellvalign.selectedIndex].value;
+  var num_of_cols=document.mytable.cols.value
+  var num_of_rows=document.mytable.rows.value  
+<!-- [Step1]: 这里可以更改弹出警告框中的信息 -->
+  if (document.mytable.rows.value<=0){ window.alert("行数应该 >= 1")
+      return }
+  if (document.mytable.cols.value<=0){ window.alert("列数应该 >= 1")
+      return }
+  while (num_of_rows>0) {
+     while(num_of_cols>0){
+<!-- [Step2]: 在此能够修改弹出确认窗口中的信息 -->
+	   var cell_text=confirm("您确定要继续生成动态表格么？")
+       if(cell_text) {
+<!-- [Step3]: 这里可以设置JavaScript提示窗口中的信息 -->
+          d_cell=prompt("请输入第 "+x+" 行，第 "+y+" 列中的信息：")
+          if(!d_cell) return;
+          r_temp=r_temp+"<td align="+cellalign+" valign="+cellvalign+">"+d_cell+"</td>"
+          num_of_cols=num_of_cols-1;
+          y=y+1;  }
+       else window.alert("难道您想放弃么？？") }
+   tot=tot+"<tr>"+r_temp+"</tr>"
+   r_temp="";
+   num_of_cols=document.mytable.cols.value
+   var y=1;
+   num_of_rows=num_of_rows-1;
+   x=x+1;  }
+ var stl="<style type='text/css'>"+"#dyn {position:relative;"+"left:"+150+";top:"+150+"}"+"</style>"
+ var html="<html><head><title></title></head>"+stl+"<body>"+"<table border="+bor+" id=dyn "+" bgcolor="+ bgc+"'>"+tot+"</table></body></html>"
+<!-- [Step4]: 在此能够更改显示生成表格的页面网址 -->
+ window.open('../CH18/Ch18-258.html').document.write(html) 
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name="mytable">
+<!-- [Step5]: 在此能够更改页面表格的边界框和背景色 -->
+<table border="1" bgcolor="#66CC99" cellpadding="0" cellspacing="0">
+<!-- [Step6]: 这里可以修改表格中的信息 -->
+<tr><td align="middle" > 表 格 属 性</td></tr>
+<!-- [Step7]: 在此能够设置文本框的列长度和默认值 -->
+<tr><td align="left">表格行数：<input type="text" name="rows" size="3" value=" 2"></td></tr>
+<tr><td align="left">表格列数：<input type="text" name="cols" size="3" value=" 2"></td></tr>
+<tr><td align="left">表格背景色：
+    <select name="bgcolor">
+<!-- [Step8]: 这里可以更改下拉菜单中的颜色名称和代码 -->
+      <option value="#990000">红色</option>
+      <option value="#FFFF99" selected>黄色</option>
+      <option value="#FF0000">桔色</option>
+      <option value="#CC9900">灰色</option>
+      <option value="#000066">蓝色</option>
+      <option value="#006600">绿色</option>
+    </select>
+</td></tr>  
+<tr><td align="left">表格边界框：
+    <select name="border">
+      <option value="0">&nbsp;0&nbsp;&nbsp;</option>
+      <option value="1" selected>&nbsp;1</option>
+      <option value="2">&nbsp;2</option>
+      <option value="3">&nbsp;3</option>
+      <option value="4">&nbsp;4</option>
+    </select>
+</td></tr>
+<tr><td align="left">水平对齐：
+    <select name="cellalign">
+      <option value="left">左边</option>
+      <option value="center" selected>中间</option>
+      <option value="right">右边</option>
+    </select>
+</td></tr>
+<tr><td align="left">垂直对齐：
+    <select name="cellvalign">
+     <option value="top">上边</option>
+     <option value="middle" selected>中间</option>
+     <option value="bottom">下边</option>
+   </select>
+</td></tr>
+<!-- [Step9]: 在此能够更改按钮的名称 -->
+<tr><td align="center"><input type="button" value="生 成" onclick="ProduceTable()">
+</td></tr>
+</table></form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

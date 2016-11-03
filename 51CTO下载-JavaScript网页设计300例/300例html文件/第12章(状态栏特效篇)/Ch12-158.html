@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--提示窗口</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=scrollon()>
+
+<br><br>
+<center>
+<h2>状态栏特效篇--提示窗口</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以设置提示窗口的信息 -->
+Ret = prompt('请在此输入将在状态栏显示的信息：',"状 态 栏 信 息")
+var temp
+var f ="                                       "
+var f = f + (Ret)
+
+function scrollon() {        
+   temp  = f.substring(0,1);
+   f += temp
+   f    = f.substring(1,100);
+   window.status = f.substring(0,100);  
+   setTimeout("scrollon()",100);
+ }  
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

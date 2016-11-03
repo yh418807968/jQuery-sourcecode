@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--下落的文本</TITLE>
+</HEAD>
+<!-- [Step1]: 这里能够更改下落文本的初始高度、终止高度、速度 -->
+<BODY bgcolor="#fef4d2" onload=UpDownMessage('Message',0,150,2)>
+
+<br><br>
+<center>
+<h2>文本特效篇--下落的文本</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=javascript>
+
+layerRef="document.all";
+styleRef=".style";
+     
+function UpDownMessage(which, StartPoint, finishPoint, speed){  
+   if (StartPoint < finishPoint){ 
+      eval(layerRef + '["' + which +'"]' + styleRef + '.top = StartPoint');
+      eval(layerRef + '["' + which +'"]' + styleRef + '.top = StartPoint');
+      StartPoint=StartPoint+2; 
+      setTimeout("UpDownMessage('"+which+"',"+StartPoint+","+finishPoint+","+speed+")",speed);
+    }       
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step2]: 在此能够修改下落文本的左右位置 -->
+<div id=Message style="position: absolute; left: 231; z-index: 0; top:171"> 
+<!-- [Step3]: 在此能够修改下落文本的大小 -->
+<!-- [Step4]: 这里可以更改下落文本的颜色 -->
+<!-- [Step5]: 在此能够改动下落文本的内容 -->
+   <font face="Helvetica" size=2 color="#FF0099">传统的 HTML 语言不能<br></font>
+   <font face="Helvetica" size=3 color="#33FF33">开发交互式的动态网页<br></font>
+   <font face="Helvetica" size=4 color="#FF9933">而JavaScript却能很<br></font>
+   <font face="Helvetica" size=5 color="#996633">好的做到这一点<br></font>
+</div>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

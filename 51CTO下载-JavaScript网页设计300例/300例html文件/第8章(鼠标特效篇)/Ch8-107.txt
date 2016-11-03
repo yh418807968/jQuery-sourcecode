@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE>鼠标特效篇--右键自动链接页面</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>鼠标特效篇--右键自动链接页面</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+if (navigator.appName.indexOf("Internet Explorer") != -1)   document.onmousedown = RightButtonExplorer;
+    
+function RightButtonExplorer(){
+   if (event.button == 2 | event.button == 3)  {
+<!-- [Step1]: 在此能够更改弹出窗口的警告信息 -->
+      window.alert("正在打开 263 在线的首页！");
+<!-- [Step2]: 这里可以设置链接到的网址 -->
+      location.replace("http://www.263.net.cn");  }
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

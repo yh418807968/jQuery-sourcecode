@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--显示登陆时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background3.jpg"  >
+<br>
+<br>
+<center>
+<font color="ffaafa">
+  <h2><font color="#FF0000"><b>时间日期篇--显示登陆时间</b></font></h2>
+  </font> 
+  <hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<form name=forms> <CENTER><div align=center><p><font size=3></font>
+<!-- [Step1]:这里可以设置页面显示的内容、颜色及大小 -->
+<font color=red size=3>您已登录本站</font>
+<font color=#80FF80><br> <input type=text name=input1 size=10></font></p></div></center>
+<SCRIPT language=javascript>
+
+var sec=0;
+var min=0;
+var hou=0;flag=0;idt=window.setTimeout("UpDate();",1000);
+
+function UpDate(){
+sec++;
+if(sec==60){sec=0;min+=1;}
+if(min==60){min=0;hou+=1;}
+if((min>0)&&(flag==0))
+<!-- [Step2]: 在此可以设置弹出窗口的显示信息 -->
+{window.alert("您已经逗留了1分钟!可别忙着走呀，还有很多好东东等着您呢!");flag=1;}
+document.forms.input1.value=hou+"时"+min+"分"+sec+"秒";
+idt=window.setTimeout("UpDate();",1000);}
+
+</SCRIPT>
+</form>
+
+<!-- 案例代码结束 -->
+
+</center></BODY>
+
+</HTML>

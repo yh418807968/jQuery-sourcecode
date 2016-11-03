@@ -1,0 +1,160 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--基本信息</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=startclock()>
+
+<br><br>
+<center>
+<h2>技巧篇--基本信息</h2>
+<hr width=300>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var timerID = null;
+var timerRunning = false;
+
+function startclock() {
+  stopclock();
+  showtime();
+}
+
+function stopclock (){
+  if(timerRunning)
+  clearTimeout(timerID);
+  timerRunning = false;
+}
+
+function showtime () {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds()
+  var timeValue = "" + ((hours >12) ? hours -12 :hours)
+  if (timeValue == "0") timeValue = 12;
+  timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+  timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+  timeValue += (hours >= 12) ? " Pm" : " Am"
+  document.clock.face.value = timeValue;
+  timerID = setTimeout("showtime()",1000);
+  timerRunning = true;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 在此能够修改整个表格的宽度和背景色 -->
+<table border=0 width=300 bgcolor="#99FF00">
+<tr><td COLSPAN="2" BGCOLOR="#CCCC99">
+<!-- [Step2]: 这里可以更改表格中的提示信息 -->
+    <center><font face="Arial,Helvetica" size=3>本地基本信息</font></center>
+</td></tr>
+<!-- [Step3]: 在此能够设置单个表格的宽度和背景色 -->
+<tr><td width=200 bgcolor="#996600">
+    <font face="Helvetica" color="#FFFFFF" size=-1>系统当前时间：</font>
+</td>
+<td WIDTH="200" BGCOLOR="#FF9933"><script language=JavaScript>
+  var months=new Array(13);
+  months[1]="Jan";
+  months[2]="Feb";
+  months[3]="Mar";
+  months[4]="Apr";
+  months[5]="May";
+  months[6]="Jun";
+  months[7]="Jul";
+  months[8]="Aug";
+  months[9]="Sep";
+  months[10]="Oct";
+  months[11]="Nov";
+  months[12]="Dec";
+  var time=new Date();
+  document.write(""+ months[time.getMonth() + 1] + " ");
+  document.write(time.getDate() + ", " + time.getYear());
+</script>
+<!-- [Step4]: 这里能够设置文本框的列长度 -->
+<form name="clock"><input type="text" name="face" size=10 value=""></form>
+</td></tr>
+
+<tr><td BGCOLOR="#3399CC"><font face="Arial,Helvetica" color="#FFFFFF" size=-1>您已经到此：</font></td>
+<td BGCOLOR="#993399"><script language=Javascript>
+function getCookieVal (offset) {
+  var endstr = document.cookie.indexOf (";", offset);
+  if (endstr == -1)    endstr = document.cookie.length;
+  return unescape(document.cookie.substring(offset, endstr));
+}
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg)    return getCookieVal (j);
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0)     break;  }
+  return null;
+}
+function SetCookie (name, value) {
+  var argv = SetCookie.arguments;
+  var argc = SetCookie.arguments.length;
+  var expires = (argc > 2) ? argv[2] : null;
+  var path = (argc > 3) ? argv[3] : null;
+  var domain = (argc > 4) ? argv[4] : null;
+  var secure = (argc > 5) ? argv[5] : false;
+  document.cookie = name + "=" + escape (value) + ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +  ((path == null) ? "" : ("; path=" + path)) +  ((domain == null) ? "" : ("; domain=" + domain)) +  ((secure == true) ? "; secure" : "");
+}
+function DeleteCookie(name) {
+  var exp = new Date();
+  FixCookieDate (exp); 
+  exp.setTime (exp.getTime() - 1);  
+  var cval = GetCookie (name);
+  if (cval != null)  document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+}
+var expdate = new Date();
+var num_visits;
+expdate.setTime(expdate.getTime() + (5*24*60*60*1000));
+if (!(num_visits = GetCookie("num_visits")))
+  num_visits = 0;
+num_visits++;
+SetCookie("num_visits",num_visits,expdate);
+document.write(num_visits+" 次。");
+
+</script></td></tr>
+
+<tr><td BGCOLOR="#666699"><font face="Helvetica" color="#FFFFFF" size=-1>浏览器类型：</font></td>
+<td BGCOLOR="#CC0099"><script language=JavaScript>
+  var version = 0;
+  if (navigator.userAgent.indexOf('MSIE 5.5') != -1) document.write("IE 5.5");
+   else if (navigator.userAgent.indexOf('MSIE 5') != -1) document.write("IE 5.0");    
+	else if (navigator.userAgent.indexOf('MSIE 4') != -1)  document.write("IE 4.0");
+     else  document.write("You are not running IE")   
+</script></td></tr>
+
+<tr><td BGCOLOR="#99CC99"><font face="Arial,Helvetica" color="#FFFFFF" size=-1>是否支持Cookie：</font></td>
+<td BGCOLOR="#33CC99"><script language=JavaScript>
+  var oneDay= 1*24*3600*1000;
+  var expDate = new Date();
+  expDate.setTime (expDate.getTime() + oneDay);
+  var cookieExpires = expDate.toGMTString();
+  document.cookie="verifyCookie=test; expires="+cookieExpires
+  if (document.cookie.length>0)  document.write("Yes.");
+  else {  
+    document.write("No.")
+    document.write(document.cookie.substring(0,document.cookie.length)+"<BR><BR>");}
+</script></td></tr>
+
+</table>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

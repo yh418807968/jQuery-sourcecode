@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--大小渐变的文本</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>文本特效篇--大小渐变的文本</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+ 
+<script language="JavaScript">
+
+var i = 0;
+var j = 0;
+var TheText, size;
+var esize = "</font>";
+
+function FirstTextArray() {
+this.length = FirstTextArray.arguments.length;
+for (var i = 0; i < this.length; i++) {
+this[i] = FirstTextArray.arguments[i];
+   }
+}
+<!-- [Step1]: 这里可以更改大小渐变的文本内容 -->
+var TheText2 = new FirstTextArray(
+"文本特效篇", "大小渐变的文本" );
+
+if (navigator.appVersion.indexOf("IE") != -1)
+document.write('<span id="wds"></span><br>');
+
+function UpTexts(){ 
+TheText = TheText2[j];
+if (i < 20) {i++; setTimeout("UpTexts()",100);}
+else setTimeout("DownTexts()",2000);
+if (navigator.appVersion.indexOf("IE") != -1){
+   wds.innerHTML = "<center>"+TheText+"</center>";
+   wds.style.fontSize=i+'px'   }
+} 
+
+function DownTexts(){
+if (i > 1) {i--; setTimeout("DownTexts()",100);}
+else {setTimeout("UpTexts()",2000);j++;
+    if (j > TheText2.length - 1) j = 0;}
+if (navigator.appVersion.indexOf("IE") != -1){
+wds.innerHTML = "<center>"+TheText+"</center>";
+wds.style.fontSize=i+'px'   }
+}
+
+setTimeout("UpTexts()",100);
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

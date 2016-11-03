@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--定制窗口大小</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>技巧篇--定制窗口大小</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function AddRight(){
+   window.resizeBy(20,0)
+}
+
+function AddUp(){
+   window.resizeBy(0,20)
+}
+
+function RedRight(){
+   window.resizeBy(-20,0)
+}
+
+function RedUp(){
+   window.resizeBy(0,-20)
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name="myform">
+<!-- [Step1]: 这里可以更改按钮的名称 -->
+<input type="button" name="redright" value="水平减少" onclick="RedRight()">
+<input type="button" name="addright" value="水平增加" onclick="AddRight()"><br>
+<input type="button" name="redup"    value="垂直减少" onclick="RedUp()" >
+<input type="button" name="addup"    value="垂直增加" onclick="AddUp()" >
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

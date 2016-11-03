@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>Cookie脚本篇--屏蔽Copy</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onmousemove="event.returnValue=false">
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Cookie脚本篇--屏蔽Copy</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 这里可以设置表格的边界框和边界框颜色 -->
+<!-- [Step2]: 在此能够设置表格的宽度和高度 -->
+<table border=1 borderColor=#0088cc width=300 height=80 cellPadding=15 cellSpacing=0>
+   <TR><TD><DIV align=center>屏蔽了页面的 Ctrl+C 功能，使您的鼠标不再能捕捉信息了。</DIV></TD></TR>
+</table>
+
+<!-- 案例代码结束 -->
+
+
+
+</BODY>
+
+</HTML>

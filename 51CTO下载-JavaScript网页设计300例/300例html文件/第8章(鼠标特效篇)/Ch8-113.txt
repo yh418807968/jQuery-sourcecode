@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>鼠标特效篇--播放声音</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=PreloadSound()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>鼠标特效篇--播放声音</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<bgsound ID="auContainer">
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改播放音乐的名称 -->
+var SoundName = "Music01.mid";
+
+function PreloadSound() {
+  Str = "<div ID='auEmb' style='position:absolute;'></div>";
+  document.body.insertAdjacentHTML("BeforeEnd",Str);
+  var Str = '';
+  Str += "<embed src='"+SoundName+"' autostart='false' hidden='true'>"
+  auEmb.innerHTML = Str;
+  auCon =  document.all.auContainer;
+  auCon.control = ControlSound;
+}
+
+function ControlSound(SoundNum,play) {
+ this.src = play? SoundName:'';
+}
+
+function PlSoundName(SoundNum) { if (window.auCon) auCon.control(SoundNum,true); }
+function StopSound(SoundNum) { if (window.auCon) auCon.control(SoundNum,false); }
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step2]: 在此能够设置链接对应的网址 -->
+<!-- [Step3]: 这里可以更改页面的链接信息 -->
+<a href="http://www.263.net.cn" onMouseOver="PlSoundName(0)" onMouseOut="StopSound(0)">把鼠标放在这里</a> 
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

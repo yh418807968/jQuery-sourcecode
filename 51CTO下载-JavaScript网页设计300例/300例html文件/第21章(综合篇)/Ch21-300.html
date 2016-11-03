@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--页面加载进度</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>综合篇--页面加载进度</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<form name="loading">
+  <div align="center">
+   <font>
+<!-- [Step1]: 这里可以修改显示进度条区域的列长度 -->
+<!-- [Step2]: 在此能够设置进度条的背景和本身的颜色 -->
+     <input name="chart" size=42 style="background-color: #fef4d2; color: #FF0000; font-family: Arial; font-weight: bolder; border-style: none; padding: 0px"><br>
+	 <input name="percent" size=5 style="background-color: #fef4d2;color: #0000FF; text-align: center; border-style: none; border-width: medium"> 
+   </font> 
+  </div>
+</form>  
+<script language=JavaScript>  
+var bar = 0  
+<!-- [Step3]: 这里可以更改进度条的符号 -->
+var line = ">"  
+var amount =">"  
+LoadBar()  
+
+function LoadBar(){  
+  bar= bar+3  
+  amount =amount  +  line  
+  document.loading.chart.value=amount  
+  document.loading.percent.value=bar+"%"  
+<!-- [Step4]: 在此能够设置进度条加载的速度，数值大速度慢 -->
+  if (bar<99)  {setTimeout("LoadBar()",1000);} 
+<!-- [Step5]: 这里可以更改加载页面的网址 -->
+  else  {window.location = "http://www.263.net.cn";}  
+}  
+
+</script> 
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

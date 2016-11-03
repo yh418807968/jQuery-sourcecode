@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--鼠标变换链接色</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>页面背景篇--鼠标变换链接色</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function MouseBGColor(){
+    document.bgColor = getColor()
+}
+
+function getColor(){
+    currentdate = new Date()
+    bkc = currentdate.getSeconds()
+    if (bkc > 44)   bkc = bkc - 45
+    else if (bkc > 29)  bkc = bkc - 30
+         else if (bkc > 14)  bkc = bkc - 15
+<!-- [Step1]: 这里可以设置链接的背景颜色 -->
+    if (bkc == 0 )     return "fuschia";
+     else if (bkc == 1 )  return "teal";
+      else if (bkc == 2 )  return "yellow";
+       else if (bkc == 3 )  return "blue";
+        else if (bkc == 4 )  return "white";
+         else if (bkc == 5 )  return "silver";
+          else if (bkc == 6 )  return "lime";
+           else if (bkc == 7 )  return "olive";
+            else if (bkc == 8 )  return "green";
+             else if (bkc == 9 )  return "purple";
+              else if (bkc == 10 ) return "gray";
+               else if (bkc == 11 ) return "red";
+                else if (bkc == 12 ) return "aqua";
+                 else if (bkc == 13 ) return "black";
+                  else if (bkc == 14 ) return "maroon";
+                    else                return "navy";
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step2]: 这里可以设置链接对应的网址 -->
+<!-- [Step3]: 在此能够更改页面显示的链接信息 -->
+<a href="http://www.263.net.cn/"  onMouseOver=MouseBGColor()>鼠标变换链接色</a>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

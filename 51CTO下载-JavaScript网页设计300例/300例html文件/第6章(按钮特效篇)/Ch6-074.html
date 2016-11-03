@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--站点栏目跑马灯</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background8.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>按钮特效篇--站点栏目跑马灯</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+if (!document.layers&&!document.all) event="test"
+
+function ShowTip(current,e,text){
+if (document.all&&document.readyState=="complete"){
+document.all.ShowHideTip.innerHTML='<marquee style="border:1px solid black">'+text+'</marquee>'
+document.all.ShowHideTip.style.pixelLeft=event.clientX+document.body.scrollLeft+10
+document.all.ShowHideTip.style.pixelTop=event.clientY+document.body.scrollTop+10
+document.all.ShowHideTip.style.visibility="visible"}
+else if (document.layers){
+document.ShowHideTip.document.nstip.document.write('<b>'+text+'</b>')
+document.ShowHideTip.document.nstip.document.close()
+document.ShowHideTip.document.nstip.left=0
+currentscroll=setInterval("ScrollTip()",100)
+document.ShowHideTip.left=e.pageX+10
+document.ShowHideTip.top=e.pageY+10
+document.ShowHideTip.visibility="show"}
+}
+
+function ScrollTip(){
+if (document.ShowHideTip.document.nstip.left>=-document.ShowHideTip.document.nstip.document.width)
+document.ShowHideTip.document.nstip.left-=5
+else
+document.ShowHideTip.document.nstip.left=150
+}
+
+function HideTip(){
+if (document.all)
+document.all.ShowHideTip.style.visibility="hidden"
+else if (document.layers){
+clearInterval(currentscroll)
+document.ShowHideTip.visibility="hidden"}
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以更改跑马灯的矩形框大小 -->
+<!-- [Step2]: 在此能够设置矩形框的背景色 -->
+<div id="ShowHideTip" style="position:absolute;visibility:hidden;clip:rect(0 150 50 0);width:150px;background-color:#66FF00">
+</div>
+<table>
+    <tr>
+<!-- [Step3]: 这里可以更改按钮的名称 -->
+<!-- [Step4]: 在此能够设置页面站点信息对应的网址 -->
+<!-- [Step5]: 这里可以修改页面站点的跑马灯信息 -->
+      <td><input name=button type=button value="263 在线"  onClick="window.open('http://www.263.net.cn/')" onMouseOver="ShowTip(this,event,'263在线__中国人的网上家园!')" onMouseOut="HideTip()"></td>
+        <td><input name=button type=button value="新 浪 网" onClick="window.open('http://www.sina.com.cn')" onMouseOver="ShowTip(this,event,'全球最大华人网站!')" onMouseOut="HideTip()"></td>
+    </tr>
+    <tr>
+        <td><input name=button type=button value="搜 狐 网" onClick="window.open('http://www.sohu.com')" onMouseOver="ShowTip(this,event,'中国互联网第一品牌!')" onMouseOut="HideTip()"></td>
+        <td><input name=button type=button value="雅 虎 网" onClick="window.open('http://cn.yahoo.com')" onMouseOver="ShowTip(this,event,'雅虎中国: 力争找到任何事，沟通所有人!')" onMouseOut="HideTip()"></td>
+	</tr>
+</table>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

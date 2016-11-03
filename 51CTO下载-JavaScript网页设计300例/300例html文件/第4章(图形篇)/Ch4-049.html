@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--自由运动</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=FreeMovePicture() background="../images/background8.jpg">
+<br>
+<br>
+<center>
+<font color="ffaafa">
+  <h2><font color="#FF0000">图形篇--自由运动</font></h2>
+  </font> 
+  <hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var x = 1;
+var y = 1;
+var ydir = '++';
+var xdir = '++';
+var wwidth, wheight;
+var id1, id2, id3;
+
+function FreeMovePicture() {
+clearTimeout(id1);
+clearTimeout(id2);
+clearTimeout(id3);
+wwidth = document.body.clientWidth - 55;
+wheight = document.body.clientHeight - 50;
+id3 = setTimeout('RandomDirection()', 10000);
+AnimationPicture();
+}
+
+function AnimationPicture() {
+eval('x'+xdir);
+eval('y'+ydir);
+Picture1.pixelLeft = x+document.body.scrollLeft;
+Picture1.pixelTop = y+document.body.scrollTop;
+if (Picture1.pixelTop <= 5+document.body.scrollTop) ydir = '++';
+if (Picture1.pixelTop >= wheight+document.body.scrollTop) ydir = '--';
+if (Picture1.pixelLeft >= wwidth+document.body.scrollLeft) xdir = '--';
+if (Picture1.pixelLeft <= 5+document.body.scrollLeft) xdir = '++';
+id1 = setTimeout('AnimationPicture()', 40);
+}
+
+function RandomDirection() {
+if (Math.floor(Math.random()*2)) {(Math.floor(Math.random()*2)) ? xdir='--': xdir='++';} 
+else {(Math.floor(Math.random()*2)) ? ydir='--': ydir='++';}
+id2 = setTimeout('RandomDirection()', 10000);
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以更改运动图形的初始位置 -->
+  <div id="Picture1" style="position:absolute; visibility:visible; left:0px; top:0px; z-index:-1"> 
+    <!-- [Step2]: 在此能够修改运动的图形名称 -->
+    <!-- [Step3]: 这里可以设置图形的宽度、高度 -->
+    <!-- [Step4]: 在此能够更改图形的边界框 -->
+    <img src="gif1.GIF"  width=161 height= 143 border=2> </div>
+
+<script language=JavaScript>
+
+var Picture1=eval('document.'+'all.'+'Picture1'+'.style');
+
+</script>
+
+<!-- 案例代码2结束 -->
+
+
+</center></BODY>
+
+</HTML>

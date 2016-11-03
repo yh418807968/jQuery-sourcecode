@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--闪动的文本</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>文本特效篇--闪动的文本</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+ 
+<script language="JavaScript">
+
+function StarFirstArray() {
+this.length = StarFirstArray.arguments.length;
+for (var i = 0; i < this.length; i++) {
+this[i] = StarFirstArray.arguments[i];   }
+}
+
+<!-- [Step1]: 在此可以改变文本的内容 -->
+var ctext = "文本特效篇--闪动的文本";
+var x = 0;
+<!-- [Step2]: 这里能够变换文本显示的颜色 -->
+var color = new StarFirstArray("#FF0000", "#FFCC33", "#0000FF","#33CC00","#CC6666","#6699FF");
+
+document.write('<div id="c"><center>'+ctext+'</center></div>');
+
+function Changecolor(){ 
+document.all.c.style.color = color[x];
+(x < color.length-1) ? x++ : x = 0;  }
+
+setInterval("Changecolor()",100);
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+
+</BODY>
+
+</HTML>

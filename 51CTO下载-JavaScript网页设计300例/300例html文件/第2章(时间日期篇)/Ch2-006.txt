@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--按日期显示提示</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+<br><br>
+<center>
+<font color="ffaafa"><h2>时间日期篇--按日期显示提示</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language="JavaScript">  
+
+var Daymsg = new Array();
+MyStamp = new Date();
+today = MyStamp.getDate();
+<!-- [Step1]: 这里可以设置每天显示的提示 -->
+
+Daymsg[0]="一月之计在于初"
+Daymsg[1]="msg 2"
+Daymsg[2]="msg 3"
+Daymsg[3]="msg 4"
+Daymsg[4]="msg 5"
+Daymsg[5]="msg 6"
+Daymsg[6]="msg 7"
+Daymsg[7]="msg 8"
+Daymsg[8]="msg 9"
+Daymsg[9]="msg 10"
+Daymsg[10]="msg 11"
+Daymsg[11]="今天是任务的最后期限"
+Daymsg[12]="msg 13"
+Daymsg[13]="msg 14"
+Daymsg[14]="msg 15"
+Daymsg[15]="msg 16"
+Daymsg[16]="msg 17"
+Daymsg[17]="msg 18"
+Daymsg[18]="msg 19"
+Daymsg[19]="msg 20"
+Daymsg[20]="msg 21"
+Daymsg[21]="msg 22"
+Daymsg[22]="msg 23"
+Daymsg[23]="msg 24"
+Daymsg[24]="msg 25"
+Daymsg[25]="msg 26"
+Daymsg[26]="msg 27"
+Daymsg[27]="msg 28"
+Daymsg[28]="msg 29"
+Daymsg[29]="msg 30"
+Daymsg[30]="msg 31"
+document.write(Daymsg[today-1]);
+</script>
+
+<!-- 案例代码结束 -->
+
+</BODY>
+
+</HTML>

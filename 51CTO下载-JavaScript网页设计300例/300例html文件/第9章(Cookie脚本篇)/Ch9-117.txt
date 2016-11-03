@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>Cookie脚本篇--链接弹出警告框</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Cookie脚本篇--链接弹出警告框</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function AlertWindow(){
+<!-- [Step1]: 这里可以更改弹出警告框的信息 -->
+   question = confirm("您确认要登陆 263在线 么？")  
+<!-- [Step2]: 在此能够设置链接对应的网址 -->
+<!-- [Step3]: 这里可以修改新窗口的各种参数 -->
+<!-- [Step4]: 在此能够设置新窗口的宽度和高度 -->
+   if (question != "0"){ window.open("http://www.263.net.cn", "NewWin", "status=yes, width=400, height=200 ")    }
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step5]: 这里可以更改页面显示的链接信息 -->
+<a href="" onClick="AlertWindow(); return false;">263 在线</a>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

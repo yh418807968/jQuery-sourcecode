@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--显示时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--显示时间</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+function ButtonClock() {
+day = new Date();
+HourNow = day.getHours();
+MinuteNow = day.getMinutes();	
+SecondNow = day.getSeconds();
+TimeNow = day.getTime();
+if (HourNow == 0) {hour = 12;ap = " am";} 
+else if(HourNow <= 11) {ap = " am";hour = HourNow;}
+     else if(HourNow == 12) {ap = " pm";hour = 12;} 
+          else if (HourNow >= 13) {hour = (HourNow - 12);ap = " pm";}
+if (HourNow >= 13) {hour = HourNow - 12;}
+if (MinuteNow <= 9) {minute = "0" + MinuteNow;}
+else (minute = MinuteNow)
+if (SecondNow <= 9) {second = "0" + SecondNow;}
+else {second = SecondNow;}
+time = hour + ":" + minute + ":" + second + ap;
+document.form.button.value = time;
+self.status = time;
+setTimeout('ButtonClock()', 1000);
+}
+
+document.write("<form name=\"form\">" + "<input type=button value=\"alertmessage\"" + " name=button onClick=\"AlertWindow()\"></form>");
+onError = null;
+
+function AlertWindow() {
+<!-- [Step1]: 这里可以设置弹出窗口的警告信息 -->
+alert("按钮可以显示时间！");
+}
+
+ButtonClock();
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>Cookie脚本篇--记录页面更新时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Cookie脚本篇--记录页面更新时间</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改页面显示的信息 -->
+document.write("本页最近更新时间:" + "<br>" + document.lastModified + "")
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

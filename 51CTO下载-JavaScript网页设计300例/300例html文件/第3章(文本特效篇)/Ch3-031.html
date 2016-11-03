@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--文本自动滚屏</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=ScrollerSelectText(0)>
+
+<br><br>
+<center>
+<h2>文本特效篇--文本自动滚屏</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+ 
+<script language="JavaScript">
+
+function ScrollerSelectText(n) {
+ObjectList = document.ScrollerSelectMessage.ScrollerSelect;
+ObjectList[ObjectList.length] = new Option(ObjectList[0].text, "", false, false);
+ObjectList[0] = null;
+ObjectList.selectedIndex = -1;
+n = (n + 1) % ObjectList.length;
+<!-- [Step1]: 这里可以更改文本滚屏的速度 -->
+setTimeout("ScrollerSelectText("+n+")",900);
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form name="ScrollerSelectMessage">
+<!-- [Step2]: 这里可以改变文本显示的行数 -->
+   <select name="ScrollerSelect" size=6>
+<!-- [Step3]: 在此能够更改滚屏的文本信息-->
+   <option>
+   <option>
+   <option>传统的HTML语言不能开发  
+   <option>交互式的动态网页，但是 
+   <option>JavaScript 却能很好的
+   <option>做到这一点。
+   <option>
+   <option>
+   <option>JavaScript是一门相当简
+   <option>单易学的网络化编程语言，
+   <option>通过与 HTML语言相互结合
+   <option>起来，能够实现实时的动态
+   <option>网页特效，这给网页浏览者
+   <option>在浏览网页的同时也提供了
+   <option>某些乐趣。
+   <option>
+   <option>
+   <option>
+   <option>
+   </select>
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

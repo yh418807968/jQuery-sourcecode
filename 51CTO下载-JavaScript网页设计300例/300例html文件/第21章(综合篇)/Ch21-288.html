@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--Ftp 登录页面</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>综合篇--FTP 登录页面</h2>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function goFtpSite() {
+  document.location.href = "ftp://" + document.ftp.login.value + ":" + document.ftp.password.value + "@" + document.ftp.url.value;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name="ftp">
+  <table border=1><tr><td>
+     <table>
+<!-- [Step1]: 这类可以设置文本框的列长度 -->
+       <tr><td>FTP 地址：</td><td><input type="text" size=15 name="url"></td></tr>
+       <tr><td>用 户 名：</td><td><input type="text" size=15 name="login"></td></tr>
+       <tr><td>登录密码：</td><td><input type="password" size=15 name="password"></td></tr>
+       <tr><td colspan="2" align="center">
+         <input type=button  value="登 录" onclick=goFtpSite()>
+         <input type=reset   value="重 置">
+       </td></tr>
+     </table>
+   </td></tr></table>
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

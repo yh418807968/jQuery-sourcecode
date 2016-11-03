@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>警报对话框篇--点击OK后才可继续</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>警报对话框篇--点击OK后才可继续</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+function OKGoOn(){
+<!-- [Step1]: 这里可以更改弹出窗口的信息 -->
+  if (!confirm("警报对话框篇--点击OK后才可继续！")) history.go(-1);
+  return " "
+}
+ 
+document.writeln(OKGoOn())
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--闪动的图形</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=ShowPicture()>
+
+<br><br>
+<center>
+<h2>图形篇--闪动的图形</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var i_strngth=1
+var i_image=0
+
+<!-- [Step1]: 这里可以按序添加要闪动的图形 -->
+var PictureName = new Array()
+PictureName[0] ="Picture001.jpg"
+PictureName[1] ="Picture002.jpg"
+
+
+function ShowPicture() { 
+if(document.all) {
+if (i_strngth <=110) {
+<!-- [Step2]: 在此可以修改图形的宽度、高度 -->
+<!-- [Step3]: 这里能够修改图形的边界框 -->
+picture.innerHTML="<img style='filter:alpha(opacity="+i_strngth+")' src="+PictureName[i_image]+" width=150 height=100 border=2>";
+i_strngth=i_strngth+10
+<!-- [Step4]: 在此可以更改闪动的速度，数值小速度快 -->
+var timer=setTimeout("ShowPicture()",100)}
+else {
+clearTimeout(timer)
+var timer=setTimeout("HidePicture()",100)}
+}       
+if(document.layers) {
+clearTimeout(timer)
+document.picture.document.write("<img src="+PictureName[i_image]+" width=150 height=100 border=2>")
+document.close()
+i_image++
+if (i_image >= PictureName.length) 
+{i_image=0}     
+var timer=setTimeout("ShowPicture()",100)
+ }
+}
+
+function HidePicture() {
+if (i_strngth >=-10) {
+picture.innerHTML="<img style='filter:alpha(opacity="+i_strngth+")'src="+PictureName[i_image]+" width=150 height=100 border=2>";
+i_strngth=i_strngth-10
+var timer=setTimeout("HidePicture()",100)}       
+else {
+clearTimeout(timer)
+i_image++
+if (i_image >= PictureName.length) {i_image=0}
+i_strngth=1
+var timer=setTimeout("ShowPicture()",100) 
+}
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step5]: 这里可以更改图形的闪动位置 -->
+<div id="picture" style="position:absolute;visibility:visible;top:130px;left:200px;">
+</div>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

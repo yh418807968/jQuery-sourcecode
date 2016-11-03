@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--发送定制信件</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>技巧篇--发送定制信件</h2></font>
+<hr width=300>
+
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function EmailToMe(form) {
+     return true;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 在此能够更改邮箱地址 -->
+<form name="email" action="mailto:yourname@sohu.com" method="post" onsubmit="return EmailToMe(this.form)" enctype="text/plain">
+<!-- [Step2]: 这里可以修改文本框的列长度 -->
+  <b>您的名字 ：</b><input type="text" name="submited by" size=20><br>
+  <b>Email地址：</b><input type="text" name="email address" size=20><br>
+<!-- [Step3]: 在此能够设置文本区域的行数和列数 -->
+  <b>邮件内容：<br><textarea name="comments" rows=5 cols=32 wrap="virtual"></textarea><br>
+<!-- [Step4]: 这里可以更改按钮的名称 -->
+  <input type="submit" value="发 送"><input type="reset" value="取 消">
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

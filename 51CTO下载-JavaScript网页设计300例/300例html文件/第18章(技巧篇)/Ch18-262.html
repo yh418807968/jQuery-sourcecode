@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--页面缩放</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>技巧篇--页面缩放</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 这里可以更改缩放页面的背景色 -->
+<style>
+.intro{position:absolute;left:0;top:0;background-color:#FFCCCC;layer-background-color:white;border:0.1px solid #FF99CC}
+</style>
+<div id="minpage" class="intro"></div>
+<script language=JavaScript>
+if (document.layers){
+  var reference=window.innerWidth/window.innerHeight
+  var temp=eval("document.minpage.clip")
+  temp.left=temp.top=0
+  temp.right=window.innerWidth
+  temp.bottom=window.innerHeight }
+else if (document.all){
+  var reference=document.body.clientWidth/document.body.clientHeight
+  var rightclip,leftclip,topclip,bottomclip
+  var temp=document.all.minpage.style
+  topclip=leftclip=0
+  rightclip=temp.width=document.body.clientWidth
+  bottomclip=temp.height=document.body.clientHeight
+}
+
+function Reducewindow(){
+  window.scrollTo(0,0)
+  if (document.layers){
+   if (temp.left>window.innerWidth/2)
+     clearInterval(stopit)
+     temp.left+=reference*5
+     temp.top+=5
+     temp.right-=reference*5
+     temp.bottom-=5 }
+   else if (document.all){
+     if (leftclip>document.body.clientWidth/2)
+     clearInterval()
+     temp.clip="rect( "+topclip+" "+rightclip+" "+bottomclip+" "+leftclip+")"
+     leftclip+=reference*5
+     topclip+=5
+     rightclip-=reference*5
+     bottomclip-=5  }
+}
+<!-- [Step2]: 在此能够设置页面缩放的速度 -->
+setInterval("Reducewindow()",100)
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

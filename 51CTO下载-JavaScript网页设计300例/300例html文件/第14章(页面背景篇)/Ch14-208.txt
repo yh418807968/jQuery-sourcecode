@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--平铺背景图形</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面背景篇--平铺背景图形</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function BGPicture(picture) {
+   document.write("<body background="+picture+">"+"</body>");
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+<!-- [Step1]: 这里可以更改页面显示的提示信息 -->
+  浏览要平铺的背景图形： <br>
+<!-- [Step2]: 在此能够设置地址栏的列长度 -->
+ <input type="file" size="20" name="url"><br>
+<!-- [Step3]: 这里可以更改按钮的名称 -->
+ <input TYPE="button" VALUE="平铺背景图形" onClick="BGPicture(&quot;file:///&quot;+ document.forms[0].url.value)"> 
+</form>
+   
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

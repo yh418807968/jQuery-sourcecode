@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>播放音乐篇--音乐播放器</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>播放音乐篇--音乐播放器</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+IndexLayer = (document.layers) ? 1:0
+IndexAll = (document.all) ? 1:0
+
+function PlayMusic() {
+  if (IndexLayer)   document.Music.play(true)
+  if (IndexAll) {	document.Music.stop();document.Music.play()	}
+}
+
+function StopMusic() {
+   document.Music.stop()
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 在此可以更改页面显示的提示信息 -->
+<a href="#" onclick="PlayMusic()">播 放</a>
+<a href="#" onclick="StopMusic()">停 止</a>
+<!-- [Step2]: 这里能够修改播放的音乐名称 -->
+<embed src="Music01.mid" name=Music autostart=false loop=true hidden=true>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

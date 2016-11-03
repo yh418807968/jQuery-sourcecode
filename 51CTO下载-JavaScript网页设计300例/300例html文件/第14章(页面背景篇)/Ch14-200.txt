@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--百叶窗页面</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面背景篇--百叶窗页面</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<!-- [Step1]: 这里可以设置百叶窗的颜色 -->
+<style>
+  .intro{position:absolute;
+  left:0;
+  top:0;
+  layer-background-color:#CC0033;
+  background-color:#66CC00;
+  border:0.2px solid green}
+</style>
+<!-- [Step2]: 在此能够按序增加百叶窗的个数 -->
+<div id="index1" class="intro"></div>
+<div id="index2" class="intro"></div>
+<div id="index3" class="intro"></div>
+<div id="index4" class="intro"></div>
+<div id="index5" class="intro"></div>
+<div id="index6" class="intro"></div>
+<div id="index7" class="intro"></div>
+<div id="index8" class="intro"></div>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<script language=JavaScript>
+
+var temp1=new Array()
+var temp2=new Array()
+
+if (document.layers){
+  for (i=1;i<=8;i++){
+     temp1[i]=eval("document.index"+i+".clip")
+     temp2[i]=eval("document.index"+i)
+     temp1[i].width=window.innerWidth/8-0.3
+     temp1[i].height=window.innerHeight
+     temp2[i].left=(i-1)*temp1[i].width  }  }
+else if (document.all){
+  var clipbottom=document.body.offsetHeight,cliptop=0
+  for (i=1;i<=8;i++){
+     temp1[i]=eval("document.all.index"+i+".style")
+     temp1[i].width=document.body.clientWidth/8
+     temp1[i].height=document.body.offsetHeight
+     temp1[i].left=(i-1)*parseInt(temp1[i].width)  }  }
+
+function ShutterBackGround(){
+<!-- [Step3]: 这里可以更改显示百叶窗的速度 -->
+   StopShutter=setInterval("OpenShutter()",100)
+}
+
+function OpenShutter(){
+   window.scrollTo(0,0)
+   if (document.layers){
+      for (i=1;i<=8;i=i+2)   temp1[i].bottom-=5
+      for (i=2;i<=8;i=i+2)   temp1[i].top+=5
+      if (temp1[2].top>window.innerHeight) clearInterval(StopShutter) }
+   else if (document.all){
+      clipbottom-=5
+      for (i=1;i<=8;i=i+2){ temp1[i].clip="rect(0 auto+"+clipbottom+" 0)" }
+      cliptop+=5
+      for (i=2;i<=8;i=i+2){ temp1[i].clip="rect("+cliptop+" auto auto)"  }
+      if (clipbottom<=0) clearInterval(StopShutter)  } 
+}
+
+ShutterBackGround()
+
+</script>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--按钮显示背景色</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>页面背景篇--按钮显示背景色</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function ButtonColor(bgc) {
+   document.bgColor = bgc
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+<!-- [Step1]: 在此能够更改按钮的名称 -->
+<!-- [Step2]: 这里可以设置按钮对应的背景颜色 -->
+   <input type="button" value="粉红色" onclick="ButtonColor('pink')">
+   <input type="button" value="橄榄绿" onclick="ButtonColor('olive')"> 
+   <input type="button" value="黄褐色" onclick="ButtonColor('khaki')">    
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--重要信息说明</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面导航篇--重要信息说明</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var index=0
+<!-- [Step1]: 这里可以更改说明信息的背景颜色 -->
+var bgcolor="#FF0033"
+<!-- [Step2]: 在此能够设置说明信息变换的颜色 -->
+var flashcolor="#33FF00"
+<!-- [Step3]: 这里可以修改说明信息的大小 -->
+<!-- [Step4]: 在此能够设置信息链接对应的网址 -->
+<!-- [Step5]: 这里可以更改页面显示的说明信息 -->
+var message ='<b><font size=5 face=arial><a href="http://www.263.net.cn">重要信息说明</a></font></b>'
+
+if (document.all) { window.onload=SetInfo; document.write('<span id="topmsg" style="position:absolute;visibility:hidden">'+ message +'</span>')
+}
+
+function SetInfo(){
+   document.all.topmsg.style.left = document.body.scrollLeft+ document.body.clientWidth/2- document.all.topmsg.offsetWidth/2
+   document.all.topmsg.style.top = document.body.scrollTop+ document.body.clientHeight- document.all.topmsg.offsetHeight-4
+   document.all.topmsg.style.backgroundColor=bgcolor
+   document.all.topmsg.style.visibility="visible"
+<!-- [Step6]: 在此能够设置说明信息变色的速度，数值小速度快 -->
+   setInterval("InfoFlash()",1000)
+   window.onresize=new Function("window.location.reload()")
+}
+
+function InfoFlash(){
+    if (index==0){
+       if (document.layers) topmsg.bgColor=flashcolor
+       else  topmsg.style.backgroundColor=flashcolor
+       index=1 }
+    else{
+       if (document.layers) topmsg.bgColor=bgcolor
+       else  topmsg.style.backgroundColor=bgcolor
+       index=0 }
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

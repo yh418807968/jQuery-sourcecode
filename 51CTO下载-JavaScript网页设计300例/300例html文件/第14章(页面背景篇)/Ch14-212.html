@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--获取色彩模式</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>页面背景篇--获取色彩模式</h2>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function GetBGColor(form, ColorName) { 
+   document.bgColor = ColorName;
+   form.CName.value = ColorName;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form METHOD="POST" NAME="bgcolor">
+   当前颜色是：
+<!-- [Step1]: 在此能够更改文本框的列长度 -->
+   <input TYPE="text" NAME="CName" VALUE="aquamarine" size="10"><br> 
+   <table border="1" cellpadding="5" cellspacing="3" >
+<!-- [Step2]: 这里可以设置颜色名称的大小 -->
+     <tr><td><font size="3" color="navy">
+<!-- [Step3]: 在此能够设置颜色名称对应的颜色 -->
+<!-- [step4]: 这里可以更改单选框中的颜色名称 -->
+	   <input NAME="bgcolor" TYPE="radio" onclick="GetBGColor(this.form,'deeppink')" >粉红色<br>
+       <input NAME="bgcolor" TYPE="radio" ONCLICK="GetBGColor(this.form,'aquamarine')"checked>碧绿色<br>
+       <input NAME="bgcolor" TYPE="radio" ONCLICK="GetBGColor(this.form,'tan')">棕褐色<br>
+       <input NAME="bgcolor" TYPE="radio" ONCLICK="GetBGColor(this.form,'wheat')">淡黄色<br>
+       <input NAME="bgcolor" TYPE="radio" ONCLICK="GetBGColor(this.form,'slateblue')">蓝灰色<br>
+       <input NAME="bgcolor" TYPE="radio" ONCLICK="GetBGColor(this.form,'turquoise')">青绿色<br>
+       <input NAME="bgcolor" TYPE="radio" ONCLICK="GetBGColor(this.form,'darkkhaki')">黄褐色<br>
+     </font></td></tr>
+   </table>
+  
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--隐现导航</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=GlimpseLink()>
+
+<br><br>
+<center>
+<h2>页面导航篇--隐现导航</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<div id="tickertape"><div id="subtickertape" class="subtickertapefont"></div></div>
+<script language=JavaScript>
+
+var i=0
+var Linkmenu=new Array()
+<!-- [Step1]: 在此能够按序增加隐现导航的链接名称和网址 -->
+Linkmenu[0]='<a href="http://www.263.net.cn">263 在线</a>'
+Linkmenu[1]='<a href="http://www.sina.com.cn">新 浪 网</a>'
+Linkmenu[2]='<a href="http://cn.yahoo.com">雅 虎 网</a>'
+Linkmenu[3]='<a href="http://www.sohu.com">搜 狐 网</a><br>'
+
+if (document.all) tickerobject=document.all.subtickertape.style
+else tickerobject=document.tickertape.document
+
+function GlimpseLink(){
+   BGColor(0xaf,0xcf,0xff, 0x00,0x10,0x00,20);
+   if (document.layers){
+     document.tickertape.document.subtickertape.document.write('<span class="subtickertapefont">'+ Linkmenu[i] +'</span>')
+     document.tickertape.document.subtickertape.document.close() }
+   else document.all.subtickertape.innerHTML=Linkmenu[i]
+   if (i<Linkmenu.length-1) i++
+   else i=0
+<!-- [Step2]: 在此能够设置链接之间显示的时间间隔 -->
+   setTimeout("GlimpseLink()",500)
+}
+
+function BGColor(red1, grn1, blu1, red2, grn2, blu2, steps) {
+   sred = red1; sgrn = grn1; sblu = blu1; 
+   ered = red2; egrn = grn2; eblu = blu2; 
+   inc = steps; 
+   step = 0; 
+   StartChange();
+}
+
+function StartChange() {
+   var epct = step/inc; 
+   var spct = 1 - epct; 
+   if (document.layers) tickerobject.bgColor =Math.floor(sred * spct + ered * epct)*256*256 + Math.floor(sgrn * spct + egrn * epct)*256 + Math.floor(sblu * spct + eblu * epct); 
+   else  tickerobject.backgroundColor= Math.floor(sred * spct + ered * epct)*256*256 + Math.floor(sgrn * spct + egrn * epct)*256 + Math.floor(sblu * spct + eblu * epct); 
+   if ( step < inc ) { setTimeout('StartChange()',50);  }
+  step++;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step3]: 这里可以更改导航链接的背景色 -->
+<!-- [Step4]: 在此能够设置导航链接的位置 -->
+<!-- [Step5]: 这里可以修改导航链接的大小 -->
+<style> 
+  #subtickertape{background-color:#99CC00;position:absolute; top=140;left=220; border: 0px solid black;width:100;height:12;; font-family: "宋体"; font-size: 15pt}
+</style>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

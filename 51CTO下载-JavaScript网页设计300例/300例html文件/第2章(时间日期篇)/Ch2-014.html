@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--倒计时1</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onLoad=DownCount()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>时间日期篇--倒计时1</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以设置倒计时的月日年 -->
+var theDay = new Date("January 1, 2008")  
+var DayALL    
+
+function DownCount(){
+var today = new Date() 
+var seconds = Math.floor((theDay.getTime() - today.getTime())/1000)
+var minutes = Math.floor(seconds/60)  
+var hours = Math.floor(minutes/60)  
+var days = Math.floor(hours/24)   
+CDay= days    
+CHour= hours % 24   
+CMinute= minutes % 60   
+CSecond= seconds % 60    
+DayALL =  CDay + " 天 , " + CHour + " 小时 , " + CMinute + " 分钟 , " + CSecond + " 秒 "
+document.clock.DownCount.value = DayALL
+var counter = setTimeout("DownCount()", 1000)
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name = "clock">
+<!-- [Step2]: 这里可以更该页面上显示的提示信息 -->
+距离 2008 年 1 月 1 日，您将还有 <br>
+<!-- [Step3]: 这里可以改变时间的列长度 -->
+<input type="TEXT" name= "DownCount" size= "35">
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--模拟文本框</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>综合篇--模拟文本框</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<div align="center">
+<!-- [Step1]: 这里可以更改文本输入区域的列长度 -->
+<!-- [Step2]: 在此能够设置下划线的粗细度 -->
+  <B>用户名称：</B><input name="reviewone" size=10 style="color: rgb(255,0,0); border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 2px solid"><br> 
+  <B>登录密码：</B><input name="password" size=10 type="password" style="color: rgb(255,0,0); border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 2px solid">
+</div>         
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

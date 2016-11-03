@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--设计多选框特效</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>技巧篇--设计多选框特效</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function ShowCheckBox(){
+   networkname1="新浪"
+   networkname2="263"
+   networkname3="搜狐"
+   networkname4="雅虎"
+   Allname="您常登陆的是："
+   var netname=""
+   if(document.myform.checkbox1.checked){  netname=netname+networkname1+" " }
+   if(document.myform.checkbox2.checked){  netname=netname+networkname2+" " }
+   if(document.myform.checkbox3.checked){  netname=netname+networkname3+" " }
+   if(document.myform.checkbox4.checked){  netname=netname+networkname4 }
+   if(netname!='')    window.alert(Allname+netname)  
+<!-- [Step1]: 这里可以更改警告框中的信息 -->
+   else window.alert("原来您不常上网呀！！！")
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name="myform" method="post" action="">
+<!-- [Step2]: 在此能够按序增加多选框的名称 -->
+   <input type="checkbox" name="checkbox1" value="checkbox"> 新浪
+   <input type="checkbox" name="checkbox2" value="checkbox"> 263
+   <input type="checkbox" name="checkbox3" value="checkbox"> 搜狐
+   <input type="checkbox" name="checkbox4" value="checkbox"> 雅虎
+   <input type="button"   name="button1"   value="选 中" onclick="ShowCheckBox()">
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

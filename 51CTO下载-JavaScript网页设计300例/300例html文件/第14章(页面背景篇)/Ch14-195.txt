@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--背景图形</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面背景篇--背景图形</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+image_directory = "";
+clear = new Image();  clear.src = image_directory + "";
+pic1 = new Image();  pic1.src = image_directory + "Picture001.jpg";
+pic2 = new Image();  pic2.src = image_directory + "Picture003.gif";
+pic3 = new Image();  pic3.src = image_directory + "Picture002.jpg";
+function imagechange(imgName) {
+document.body.background = eval(imgName + ".src");
+}
+</script>
+
+<!-- [Step1]: 在此能够修改图形的名称 -->
+<!-- [Step2]: 这里可以设置图形的宽度和高度 -->
+<a href="#" onMouseOver="imagechange('pic1');" onMouseOut="imagechange('clear');"><img src="Picture001.jpg" width=80 height=60></a> 
+<a href="#" onMouseOver="imagechange('pic2');" onMouseOut="imagechange('clear');"><img src="Picture003.gif" width="80" height="60"></a> 
+<a href="#" onMouseOver="imagechange('pic3');" onMouseOut="imagechange('clear');"><img src="Picture002.jpg" width="80" height="60"></a> 
+         
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

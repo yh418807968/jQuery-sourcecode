@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--地址确认</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--地址确认</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var index
+
+function Checked(){
+if (document.layers||document.all)  return ValidationEmail()
+else return true
+}
+
+function ValidationEmail(){
+var str=document.validation.emailAddress.value
+var filter=/^.+@.+\..{2,3}$/
+if (filter.test(str)) index=true
+else{ 
+<!-- [Step1]: 这里可以设置弹出窗口的警告信息 -->
+   alert("输入的 Email 地址不正确！")
+   index=false  }
+return (index)
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step2]: 在此能够更改页面显示的提示信息 -->
+<form name="validation" onSubmit="return Checked()">请输入您的 Email 地址:<br>
+<!-- [Step3]: 这里可以设置文本框的列长度 -->
+   <input type="text" size=18 name="emailAddress">
+<!-- [Step4]: 在此能够修改按钮的名称 -->
+   <input type="submit" value="登 录">
+</form>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

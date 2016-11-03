@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>Cookie脚本篇--控制窗口打开日期</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=ControlWindowDate() >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Cookie脚本篇--控制窗口打开日期</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript> 
+
+function ControlWindowDate() { 
+  var now = new Date()
+  var Today = now.getYear()*10000 +(now.getMonth()+1)*100+ now.getDate() 
+<!-- [Step1]: 这里可以修改打开窗口的开始和结束日期，年月日 -->
+  if (Today < "20020701" || Today > "20020731") {  self.close() }
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step2]: 在此能够更改页面信息的大小 -->
+<!-- [Step3]: 这里可以设置页面信息的颜色 -->
+<!-- [Step4]: 在此能够修改页面显示的信息 -->
+<font size="3" color="#ff0033">此窗口仅在2002年7月份才会显示</font>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

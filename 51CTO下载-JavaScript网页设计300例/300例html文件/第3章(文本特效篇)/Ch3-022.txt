@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--随日期变换文本</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>文本特效篇--随日期变换文本</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language="JavaScript"> 
+
+  var today = new Date();
+  var month = today.getMonth() + 1;
+  var date = today.getDate();
+  var year = today.getYear();        
+  DateMessage = new Array
+<!-- [Step1]: 这里可以更改每天的信息内容 -->
+  DateMessage[1] = "本月1号的信息"
+  DateMessage[2] = "本月2号的信息"
+  DateMessage[3] = "本月3号的信息"
+  DateMessage[4] = "本月4号的信息"
+  DateMessage[5] = "本月5号的信息"
+  DateMessage[6] = "本月6号的信息"
+  DateMessage[7] = "本月7号的信息"
+  DateMessage[8] = "本月8号的信息"
+  DateMessage[9] = "本月9号的信息"
+  DateMessage[10] = "本月10号的信息"
+  DateMessage[11] = "本月11号的信息"
+  DateMessage[12] = "本月12号的信息"
+  DateMessage[13] = "本月13号的信息"
+  DateMessage[14] = "本月14号的信息"
+  DateMessage[15] = "本月15号的信息"
+  DateMessage[16] = "本月16号的信息"
+  DateMessage[17] = "本月17号的信息"
+  DateMessage[18] = "本月18号的信息"
+  DateMessage[19] = "本月19号的信息"
+  DateMessage[20] = "本月20号的信息"
+  DateMessage[21] = "本月21号的信息"
+  DateMessage[22] = "本月22号的信息"
+  DateMessage[23] = "本月23号的信息"
+  DateMessage[24] = "本月24号的信息"
+  DateMessage[25] = "本月25号的信息"
+  DateMessage[26] = "本月26号的信息"
+  DateMessage[27] = "本月27号的信息"
+  DateMessage[28] = "本月28号的信息"
+  DateMessage[29] = "本月29号的信息"
+  DateMessage[30] = "本月30号的信息"
+  DateMessage[31] = "本月31号的信息"
+  var Nowmsg = DateMessage[date]
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<script language=JavaScript>
+document.write(Nowmsg);
+</script>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

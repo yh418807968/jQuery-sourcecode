@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--窗口开关</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--窗口开关</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function OpenWindow() {
+<!-- [Step1]: 这里可以设置窗口打开的网址 -->
+onewindow=open('http://www.263.net.cn','NewWindow');
+}
+
+function CloseWindow() {
+onewindow.close();
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+<!-- [Step2]: 在此能够更改按钮的名称 -->
+   <input type="button" name="open"  value="打开263在线" onClick="OpenWindow()">
+   <input type="button" name="close" value="关闭263在线" onClick="CloseWindow()">
+</form>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

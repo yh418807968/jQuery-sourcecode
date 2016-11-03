@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>页面特效篇--自动滚屏效果</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=AutoScroll()>
+
+<br><br>
+<center>
+<h2>页面特效篇--自动滚屏效果</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function AutoScroll(){ 
+   for (i=1; i<=400; i++){ parent.scroll(1,i) }
+} 
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以修改文本信息的位置 -->
+<!-- [Step2]: 在此能够设置文本信息的大小 -->
+<!-- [Step3]: 这里可以更改页面显示的文本信息 -->
+<div id="scrolltext" style="position:absolute; top:140px;left:140px; font-size:20pt; visibility:visible; ">自动滚屏效果1</div>
+<div id="scrolltext" style="position:absolute; top:440px;left:140px; font-size:20pt; visibility:visible; ">自动滚屏效果2</div>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

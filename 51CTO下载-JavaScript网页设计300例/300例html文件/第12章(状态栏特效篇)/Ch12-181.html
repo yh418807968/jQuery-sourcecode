@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--逐字飞出效果</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload="window.setTimeout('FlyingMessage()',700)">
+
+<br><br>
+<center>
+<h2>状态栏特效篇--逐字飞出效果</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改飞出的状态栏信息 -->
+var message = "状态栏特效篇----逐字飞出效果" 
+var index = " " 
+var msg = " " 
+var leftmsg = " " 
+
+
+function FlyingMessage(){
+   if (msg == " ")   {
+      index = " "         
+      msg = message    
+      leftmsg = " "       }    
+   if (index.length == 1)  {
+      while (msg.substring(0, 1) == " ")   {
+         leftmsg = leftmsg + index            
+         index = msg.subindexing(0, 1)           
+         msg = msg.substring(1, msg.length)     }
+      leftmsg = leftmsg + index            
+      index = msg.substring(0, 1)           
+      msg = msg.substring(1, msg.length) 
+      for (var ii = 0; ii < 120; ii++)    {index = " " + index} 	}
+   else   {  index = index.substring(10, index.length)   }
+   window.status = leftmsg + index
+<!-- [Step2]: 在此能够设置飞出的速度 -->
+   window.setTimeout('FlyingMessage()',100)
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

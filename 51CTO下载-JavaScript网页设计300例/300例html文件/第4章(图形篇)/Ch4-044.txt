@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--选择图形</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>图形篇--选择图形</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以增减要显示的图形 -->
+image1= new Image();
+image1.src = "Picture002.jpg";
+image2= new Image();
+image2.src = "Picture001.jpg";
+
+function ChangePicture(){
+    var imageNum =  document.form.selImage.selectedIndex + 1;
+    fname = eval("image" + imageNum + ".src")
+    document.img.src = fname
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form name="form">
+<!-- [Step2]： 在此能够设置选择框的大小 -->
+   <select name="selImage" size=1 >
+      <option>图形 1
+      <option>图形 2
+   </select>
+   <input type="button" value="欣赏" onClick="ChangePicture()">
+</form>
+<!-- [Step3]: 这里能够修改图形的宽度、高度 -->
+<!-- [Step4]: 在此可以更改图形的边界框 -->
+<IMG SRC="Picture002.jpg" name="img" width=150 height=100 border=2>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

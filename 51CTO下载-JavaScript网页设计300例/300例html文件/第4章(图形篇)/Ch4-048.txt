@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--响应鼠标变换</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=SwapPicture()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>图形篇--响应鼠标变换</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var index = 0;
+var SPIndex = 0;
+images = new Array;
+<!-- [Step1]: 这里可以按序增加要进行变换的图形 -->
+images[1] = new Image();
+images[1].src = "Picture001.jpg";
+images[2] = new Image();
+images[2].src = "Picture002.jpg";
+
+function SwapPicture() {
+var imgnumber = images.length - 1;
+do {
+var randnumber = Math.random();
+index = Math.round((imgnumber - 1) * randnumber) + 1;
+} while (index == SPIndex);
+SPIndex = index;
+document.randimg.src = images[SPIndex].src;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<a onClick="SwapPicture();">
+<!-- [Step2]: 在此能够设置变换图形的缺省图形 -->
+<!-- [Step3]: 这里可以修改变换图形的宽度、高度 -->
+<!-- [Step4]: 在此能够更改变换图形的边界框 -->
+<img name="randimg" src="Picture001.jpg" width=150 height=100 border=2></a>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

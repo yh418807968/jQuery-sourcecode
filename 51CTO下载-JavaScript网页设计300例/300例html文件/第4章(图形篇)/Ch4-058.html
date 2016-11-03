@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--动态修改</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2">
+
+<br><br>
+<center>
+<h2>图形篇--动态修改</h2>
+<hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以按序增加动态显示的图形 -->
+var images = new Array(
+"Picture001.jpg", "图形一",
+"Picture002.jpg", "图形二",
+"Picture001.jpg", "图形三",
+"Picture002.jpg", "图形四");
+
+function displayImage(){
+var IFname = document.f.s.options[document.f.s.selectedIndex].value;
+document.im.src = IFname;
+}
+
+<!-- [Step2]: 在此能够修改图形的边界框 -->
+<!-- [Step3]: 这里可以更改图形的宽度、高度 -->
+document.writeln('<img name="im" SRC="',images[0],'" border=2 width=150 height=100>');
+document.writeln('<form name="f" method="POST">');
+document.writeln('<p><select name ="s" onChange ="displayImage()">');
+document.write('<option selected value="',images[0],'"> ');
+document.writeln(images[1],' </option>');
+for (i=2; i<images.length; i+=2)
+document.writeln('<option  value="',images[i],'"> ',images[i+1],' </option>');
+document.writeln('</select></p></form>');
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

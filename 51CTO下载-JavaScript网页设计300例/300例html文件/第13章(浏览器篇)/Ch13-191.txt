@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>浏览器篇--显示占用区域</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>浏览器篇--显示占用区域</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+function GetWinSize() {
+  if (navigator.userAgent.indexOf("MSIE") > 0) {
+     var sSize = (document.body.clientWidth * document.body.clientHeight);
+     return sSize;}
+  else {                                                
+     var sSize = (window.outerWidth * window.outerHeight);
+     return sSize;}
+  return;      
+}
+
+var percent = Math.round((GetWinSize()/(screen.width * screen.height)*100) * Math.pow(10, 0));
+document.write("此窗口占用当前显示器大约 " + "<FONT COLOR=#CC0033>"+percent+"%</FONT>" + " 的区域。");
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

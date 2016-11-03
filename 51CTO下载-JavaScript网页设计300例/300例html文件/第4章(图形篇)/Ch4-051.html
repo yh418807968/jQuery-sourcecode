@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--雷达扫描</TITLE>
+</HEAD>
+
+<BODY bgColor="#fef4d2" onload=RadarPicture()>
+
+<br><br>
+<center>
+<h2>图形篇--雷达扫描</h2>
+<hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var deg=0;
+var r=125;
+var Light_X=20
+var Light_Y=20
+var Light_Z=40
+var conversion=(2*3.1415926)/360
+
+function RadarPicture(){
+   Body1.filters.light.addCone(100,100,0,Light_X,Light_Y,10,155,100,150,20);
+   Body1.filters.light.addAmbient(150,155,150,100)
+   var x=0;
+   RadarMove();
+}
+
+function RadarMove() {
+   Light_X=r+r*Math.cos(deg*conversion);
+   Light_Y=r+r*Math.sin(deg*conversion);
+   deg+=10;
+   if(deg==360)   deg=0;
+   Body1.filters[0].moveLight(0,Light_X,Light_Y,Light_Z,1);
+   mytimeout=setTimeout('RadarMove()',100);
+}
+
+</script>
+<!-- [Step1]: 这里可以设置雷达扫描的图形名称 -->
+<!-- [Step2]: 在此能够更改图形的宽度和高度 -->
+<img id=Body1 src="Picture002.jpg"  style="filter: light(); width:200px; height:200px" >
+
+<!-- 案例代码结束 -->
+
+</BODY>
+
+</HTML>

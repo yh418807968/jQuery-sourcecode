@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--当前时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onLoad=showTheCurrentTime()>
+<br><br>
+<center>
+<font color="ffaafa"><h2>时间日期篇--当前时间</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script LANGUAGE="JavaScript">
+
+function showMilitaryTime() {
+if (document.form.showMilitary[0].checked) {
+return true;
+}
+return false;
+}
+function showTheHours(theHour) {
+if (showMilitaryTime() || (theHour > 0 && theHour < 13)) {
+return (theHour);
+}
+if (theHour == 0) {
+return (12);
+}
+return (theHour-12);
+}
+function showZeroFilled(inValue) {
+if (inValue > 9) {
+return "" + inValue;
+}
+return "0" + inValue;
+}
+function showAmPm() {
+if (showMilitaryTime()) {
+return ("");
+}
+if (now.getHours() < 12) {
+return (" am");
+}
+return (" pm");
+}
+function showTheCurrentTime() {
+now = new Date
+document.form.showTime.value = showTheHours(now.getHours()) + ":" + showZeroFilled(now.getMinutes()) + ":" + showZeroFilled(now.getSeconds()) + showAmPm()
+setTimeout("showTheCurrentTime()",1000)
+}
+</script>
+
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name="form">
+      <div align="center">
+	  <center><p>
+<!-- [Step1]: 这里可以改变显示列的长度 -->
+	  <input type="text" name="showTime" size="11"></p>
+      </center></div><div align="center"><center><p><input type="radio" name="showMilitary"
+      checked>24 Hour Time<br>
+      <input type="radio" name="showMilitary">12 Hour Time<br>
+      </p>
+      </center></div>
+</form>
+
+<!--案例代码2结束 -->
+
+</BODY>
+
+</HTML>

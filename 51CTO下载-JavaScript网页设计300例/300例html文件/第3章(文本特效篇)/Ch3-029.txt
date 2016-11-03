@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--打字机式文本输出</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=PrinterText()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>文本特效篇--打字机式文本输出</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+ 
+<script language="JavaScript">
+
+function PrinterText() {
+        TextTyper(DisplayTextString[0], 0, 'PText1', 'PText2', '#365933', '#9daF33', 50, 0);
+    }
+
+function TextTyper(TString, idx, idTObject, spTObject, clr1, clr2, delay, plysnd) {
+      var tmp0 = tmp1 = '', skip = 0;
+        if (document.all && idx <= TString.length) {
+        if (TString.charAt(idx) == '<') { while (TString.charAt(idx) != '>') idx++; idx++; }
+        if (TString.charAt(idx) == '&' && TString.charAt(idx+1) != ' ') { while (TString.charAt(idx) != ';') idx++; idx++; }
+        tmp0 = TString.slice(0,idx);
+        tmp1 = TString.charAt(idx++);  
+        WriteText(idTObject, "<span class="+spTObject+"><font color='"+clr1+"'>"+tmp0+"</font><font color='"+clr2+"'>"+tmp1+"</font></span>");
+        setTimeout("TextTyper('"+TString+"', "+idx+", '"+idTObject+"', '"+spTObject+"', '"+clr1+"', '"+clr2+"', "+delay+" ,"+plysnd+")",delay);
+      }
+    }
+  
+function WriteText(TObject, TString) {
+   if  (document[TObject]) { document.open();  document.write(TString); document.close(); }
+   if (document.all) eval(TObject+'.innerHTML= TString');
+    }
+   
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改输出文本的颜色 -->
+<!-- [Step2]: 这里可以更改输出文本的大小 -->
+<!-- [Step3]: 这里可以更改输出文本的内容 -->
+ var DisplayTextString = new Array(       "<font color=#333333 size=3>文本特效篇--打字机式文本输出</font><br><font color=#0033FF size=3>文本特效篇--打字机式文本输出</font><br><font color=#33FF00 size=3>文本特效篇--打字机式文本输出</font><br><font color=#FF9933 size=3>文本特效篇--打字机式文本输出</font><br><font color=#FF00FF     size=3>文本特效篇--打字机式文本输出</font>"    )
+
+</script>
+
+<DIV class=PText2 id=PText1><SPAN class=PText2></SPAN></DIV>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

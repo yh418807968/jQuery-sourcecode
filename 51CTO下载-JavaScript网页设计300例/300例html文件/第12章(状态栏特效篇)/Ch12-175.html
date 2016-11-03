@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--逐词打出效果</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=startskip()>
+
+<br><br>
+<center>
+<h2>状态栏特效篇--逐词打出效果</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var skipRunning = false
+var currentMessage = 0
+var index = 0
+<!-- [Step1]: 在此能够更改状态栏显示的打字信息 -->
+message = "状态栏特效篇----逐词打出效果"
+
+function startskip() {
+   stopskip()
+   showskip()
+}
+
+function stopskip() {
+   if (skipRunning)    clearTimeout()
+   skipRunning = false
+}
+
+function showskip() {
+   var text = message
+   if (index < text.length) {
+       if (text.charAt(index) == " ")    index++                        
+       var partialMessage = text.substring(0, index + 1) 
+       window.status = partialMessage
+       index++ 
+<!-- [Step2]: 这里可以设置打字速度 -->
+       setTimeout("showskip()", 150)
+       skipRunning = true    } 
+   else {
+       index = 0
+       currentMessage++
+       if (currentMessage == message.length)     currentMessage = 0
+       setTimeout("showskip()", 1000)
+       skipRunning = true     }
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

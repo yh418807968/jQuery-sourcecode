@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>页面特效篇--振动页面</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>页面特效篇--振动页面</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function WindowShake() {
+  for (i = 20; i > 0; i--) {
+    for (j = i; j > 0; j--) {
+        self.moveBy(i,0);
+		self.moveBy(0,i);
+        self.moveBy(-i,0); 
+        self.moveBy(0,-i);   }   } 
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+<!-- [Step1]: 这里可以更改按钮的名称 -->
+  <input type=button value="振 动" onClick="WindowShake()">
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

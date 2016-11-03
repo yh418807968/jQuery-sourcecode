@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--层的显示和隐藏</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>技巧篇--层的显示和隐藏</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function Show(index){
+   example.style.visibility=index;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以更改层的位置 -->
+<div id="example" style="position:absolute;top:200;left:200;z-index:2;visibility:hidden;">
+<!-- [Step2]: 在此能够设置层信息的大小和颜色 -->
+<!-- [Step3]: 这里可以修改层中的信息 -->
+   <font size=4 color="#990033">技巧篇----层的显示和隐藏</font>
+</div>
+<!-- [Step4]: 在此能够更改链接的名称 -->
+  <a href="#" onclick="Show('visible')">显 示</a>
+  <a href="#" onclick="Show('hidden')">隐 藏</a>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--动态显示信息</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>状态栏特效篇--动态显示信息</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var x = 0
+var index=0
+
+function StatuDynamicMessage() {
+<!-- [Step1]: 这里可以更改动态显示的文本 -->
+  var Message = "状态栏特效篇----动态显示信息"
+  window.status = Message.charAt(x++)
+  if (x == Message.length + 1) {
+     x = 0   
+	 index++
+     window.status = Message
+     if (index > Message.length - 1) {index = 0 }
+     setTimeout("StatuDynamicMessage()", 3000) }
+<!-- [Step2]: 在此能够设置动态显示的速度 -->
+  else { setTimeout("StatuDynamicMessage()", 100) }
+}
+
+StatuDynamicMessage()
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

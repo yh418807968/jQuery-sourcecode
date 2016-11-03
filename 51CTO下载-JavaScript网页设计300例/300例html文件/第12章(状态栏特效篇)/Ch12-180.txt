@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--跑马灯</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=StatuMsgMarquee()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>状态栏特效篇--跑马灯</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改跑马灯的信息 -->
+var ShowString = "状态栏特效篇----跑马灯！" +  "状态栏特效篇----跑马灯！"
+var ShowHead=0
+var ShowTail=100
+
+function StatuMsgMarquee()  {
+   var DisplayString
+   if (ShowHead < ShowTail)   DisplayString = ShowString.substring(ShowHead, ShowTail)
+   else DisplayString = ShowString.substring(ShowHead, ShowString.length) + ShowString.substring(0, ShowTail)
+   ShowHead = (ShowHead + 2 ) % ShowString.length
+   ShowTail = (ShowTail + 2 ) % ShowString.length
+   window.status = DisplayString
+<!-- [Step2]: 在此可以设置跑马灯的速度 -->
+   setTimeout("StatuMsgMarquee()", 200) 
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--文本不停变色</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background4.jpg" >
+<br>
+<br>
+<center>
+<font color="ffaafa">
+  <h2><font color="#FF0000">文本特效篇--文本不停变色</font></h2>
+  </font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+ 
+<script language=JavaScript>
+
+function initArray() 
+{
+this.length = initArray.arguments.length;
+for (var i = 0; i < this.length; i++) {
+this[i] = initArray.arguments[i];
+   }
+}
+
+function ChangeColor()
+{ 
+document.all.c.style.color = color[index];
+(index < color.length-1) ? index++ : index = 0;
+}
+<!-- [Step1]: 这里可以更改变色的文本信息 -->
+var ChangeMessage = "文本自身不停的改变颜色";
+var speed = 2000;
+var index = 0;
+<!-- [Step2]: 在此可以设置文本能够改变的颜色 -->
+var color = new initArray("#f00ff0", "#ff0000","#0ff000","#00ff00", "#000ff0", "#0000ff","#fff000","#0fff00");
+setInterval("ChangeColor()",1000);
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<script language=JavaScript>
+document.write('<div id="c"><center><b>'+ChangeMessage+'</b></center></div>');
+</script>
+
+<!-- 案例代码2结束 -->
+
+
+</center></BODY>
+
+</HTML>

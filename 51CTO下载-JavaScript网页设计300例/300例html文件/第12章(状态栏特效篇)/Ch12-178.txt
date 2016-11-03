@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--显示时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=StatuClockStart()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>状态栏特效篇--显示时间</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var timerRunning = false;
+
+function StatuClockStart () {
+   StatuClockStop();
+   StatuClockShow();
+}
+
+function StatuClockStop (){
+   if(timerRunning)  clearTimeout();
+   timerRunning = false;
+}
+
+function StatuClockShow () {
+   var today = new Date();
+   var hours = today.getHours();
+   var minutes = today.getMinutes();
+   var seconds = today.getSeconds()
+   var timeValue = " " + ((hours >12) ? hours -12 :hours)
+   timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+   timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+   timeValue += (hours >= 12) ? " pm" : " am"
+   window.status = timeValue;
+   setTimeout("StatuClockShow()",1000);
+   timerRunning = true;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name="statusclock" onSubmit="0">
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

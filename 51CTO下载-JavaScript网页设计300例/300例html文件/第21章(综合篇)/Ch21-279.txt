@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0041)http://yeships.myrice.com/technic/083.htm -->
+<HTML><HEAD><TITLE>HTML转换为javascript</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312"><!--代码开始-->
+<SCRIPT language=JavaScript>
+<!--
+var ls="";
+var dq='"';
+var sq="'";
+var rr="\r";
+function jsPars(){ 
+        ls=document.isn.txt.value; 
+        if (ls==""){  
+                alert("对不起，还没有HTML代码");  
+        } 
+        else{  
+                htmlPar();  
+        } 
+}
+function htmlPar(){ 
+        document.isn.txt.value="Working......."; 
+        pos=ls.indexOf(dq); 
+        pos1=ls.indexOf(sq); 
+        if ((pos>-1)&&(pos1>-1)){  
+                reWrt();  
+        } 
+        if (pos>-1){  
+                qt=sq;  
+        } 
+        else{  
+                qt=dq;  
+        } 
+        while (ls.indexOf(rr)>-1){  
+                lc=ls.indexOf(rr);  
+                ls=ls.substring(0,lc)+" "+ls.substring(lc+1,ls.length);  
+        } 
+        nls="<SCRIPT LANGUAGE="+qt+"JavaScript"+qt+">"+rr +"<!-- "+rr +"  document.write("+qt+ls.substring(0,36)+qt; 
+        ls=ls.substring(36,ls.length); 
+        lsl=ls.length 
+                pp=50;  
+                if (pp>lsl) {   
+                        pp=lsl;   
+                } 
+                while (lsl>0){  
+                        nls+="\r +"+qt+ls.substring(0,pp)+qt;  
+                        ls=ls.substring(pp,lsl);  
+                        lsl=ls.length;  
+                if (pp>lsl){   
+                        pp=lsl;   
+                }  
+        } 
+        nls+=");"+rr+"// -->"+rr+"</SC" +"RIPT>"; 
+        document.isn.txt.value=nls+rr+"<!--长度"+nls.length +"字节--> "+rr; 
+}
+function reWrt(){ 
+        pos=-1; 
+        while (ls.indexOf(dq)>-1){  
+                lc=ls.indexOf(dq);  
+                ls=ls.substring(0,lc)+sq+ls.substring(lc+1,ls.length);  
+        } 
+}
+function iA(){ 
+        this.length=iA.arguments.length; 
+        for (var i=0;i<this.length;i++){  
+                this[i]=iA.arguments[i]; 
+        }
+}
+// -->
+</SCRIPT>
+<!--代码结束-->
+<META content="Microsoft FrontPage 5.0" name=GENERATOR></HEAD>
+<BODY><!--转换对话框开始-->
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 border=0 borderlight="green">
+  <TBODY>
+  <TR>
+    <TD align=middle>
+      <FORM name=isn>
+      <DIV align=center>
+      <P align=center><b><font size="5">综</font><SPAN style="FONT-SIZE: 18pt">合篇——<FONT face="Times New Roman">HTML</FONT>转换为<FONT 
+      face="Times New Roman">javascript</FONT></SPAN></b></P>
+      <P align=center><span style="font-weight: 700">
+      <font face="Times New Roman" style="font-size: 11pt">（</font></span><SPAN style="FONT-SIZE: 11pt; font-weight:700">兼容<FONT 
+      face="Times New Roman">IE</FONT>和<FONT face="Times New Roman">NS）</FONT></SPAN></P>
+        <TEXTAREA name=txt rows=10 cols=80></TEXTAREA> <BR><INPUT onclick=jsPars() type=button value=" 转换按钮" name=but> 
+      </DIV></FORM><BR></TD></TR></TBODY></TABLE></CENTER><!--转换对话框结束-->
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD width="100%">
+      　</TD></TR></TBODY></TABLE></CENTER></DIV></BODY></HTML>

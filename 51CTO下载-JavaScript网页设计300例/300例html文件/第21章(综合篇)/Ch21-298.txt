@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--登录页面验证</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>综合篇--登录页面验证</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+function CheckLogo(){
+<!-- [Step1]: 这里可以更改弹出窗口的提示信息 -->
+ if (!confirm("您确认要登陆该页面么？")) {history.go(-1); window.close()}
+ return " "
+}
+
+document.writeln(CheckLogo())
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

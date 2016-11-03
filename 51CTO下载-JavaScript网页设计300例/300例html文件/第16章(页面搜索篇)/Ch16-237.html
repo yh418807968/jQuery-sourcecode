@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<TITLE>页面搜索篇--调用搜索引擎</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>页面搜索篇--调用搜索引擎</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var index = false
+current_site = "sina"
+
+function LinkUrl() {
+  tmp = document.SearchForm.Search.value;
+  stmp = "";
+  for (i=0 ; i <= tmp.length ; i++) {
+	if (tmp.charAt(i) == " ") {	stmp = stmp + "+"; 	} 
+	else {  stmp = stmp + tmp.charAt(i); 	}	}
+  if (current_site == "yahoo") {
+	top.location.href = "http://cn.search.yahoo.com/search/cn?p=" + document.SearchForm.Search.value }
+  if (current_site == "sina") {
+	top.location.href = "http://202.130.245.213/cgi-bin/newspage.exe?word=" + document.SearchForm.Search.value }
+  if (current_site == "sohu") {
+    top.location.href = "http://page.search.sohu.com/cgi-bin/pagesearch.cgi?tn=sohu&si=gi&word=" + document.SearchForm.Search.value }
+  return false;
+}
+
+function toggle_setdef() {
+   index = !(index);
+}
+
+function SetUrl(sitenow) {
+   current_site = sitenow;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form method="GET" name="SearchForm" onsubmit="return LinkUrl()">
+<!-- [Step1]: 这里可以设置文本框的列长度 -->
+  关键词：<input type="Text" name="Search" size=12><br>
+<!-- [Step2]: 在此能够按序增加搜索引擎的名称 -->
+  <input type="radio" name="SITE" value="sina"  onclick="SetUrl('sina')" checked >新 浪 网<br>
+  <input type="radio" name="SITE" value="sohu"  onclick="SetUrl('sohu')">搜 狐 网<br>
+  <input type="radio" name="SITE" value="yahoo" onclick="SetUrl('yahoo')">雅 虎 网<br><br>
+<!-- [Step3]: 这里可以更改按钮的名称 -->
+  <input type="Submit" name="Submit" value="调用搜索引擎">
+</form>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

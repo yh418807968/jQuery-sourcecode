@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>Java Applet篇--变形图形</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Java Applet篇--变形图形</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 这里可以修改页面的宽度和高度 -->
+<applet archive="Deform.jar" code="Deform.class" width=300 height=120>
+<!-- [Step2]: 在此能够设置变形图形的名称 -->
+   <param name=image value="Picture004.jpg">
+<!-- [Step3]: 这里可以更改图形变形的强度，数值小强度大 -->
+   <param name=distval value=400>
+<!-- [Step4]: 在此能够修改图形变形的速度，数值大速度快 -->
+   <param name=dspeed value=3>
+   <param name=memdelay value=100>
+   <param name=priority value=3>
+   <param name=doffset value=146>
+   <param name=dfact value=85>
+   <param name=overimg value="NO">
+   <param name=overimgX value=0>
+   <param name=overimgY value=0>
+   <param name=regnewframe value="YES">
+   <param name=credits value="Applet by Fabio Ciucci (www.anfyteam.com)">
+</applet>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

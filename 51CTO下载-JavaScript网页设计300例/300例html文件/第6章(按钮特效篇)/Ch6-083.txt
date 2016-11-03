@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--组合框跳转</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--组合框跳转</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<form name="a">
+  <p>
+    <select name="b" size="1" >
+<!-- [Step1]: 在此能够更改链接对应的网址 -->
+<!-- [Step2]: 这里可以设置页面显示的链接信息 -->
+        <option value="http://www.263.net.cn" selected>263 在线</option>
+        <option value="http://www.sohu.com">搜 狐 网</option>
+        <option value="http://www.sina.com.cn">新 浪 网</option>
+        <option value="http://cn.yahoo.com">雅 虎 网</option>
+    </select>
+<!-- [Step3]: 在此能够修改按钮的名称 -->
+    <input type="button" value="登 陆"  onClick="location=document.a.b.options[document.a.b.selectedIndex].value">
+  </p>
+</form> 
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

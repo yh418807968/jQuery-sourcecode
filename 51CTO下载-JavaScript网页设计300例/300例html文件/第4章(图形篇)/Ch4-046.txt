@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--定期消失</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>图形篇--定期消失</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<script language="JavaScript">
+
+function TimeLimit(maxdays, addDate){
+    var oldDate = new Date(addDate);
+    var newDate = new Date();
+    var maxdaysold = maxdays*24*3600*1000;
+    var psj=0;    
+    if ((newDate.getTime()-oldDate.getTime()) <= maxdaysold) {
+<!-- [Step1]: 这里可以更改定期消失的图形 -->
+<!-- [Step2]: 在此能够修改图形的宽度、高度 -->
+<!-- [Step3]: 这里可以更改图形的对齐方式 -->
+<!-- [Step4]: 在此能够修改图形的边界框 -->
+      document.write("<img src=Picture001.jpg width=240 height=150 align=center border=2>");
+    }
+}
+
+<!-- [Step5]: 这里可以修改保留天数，及初始日期-->
+TimeLimit(7,"07/13/2002")
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

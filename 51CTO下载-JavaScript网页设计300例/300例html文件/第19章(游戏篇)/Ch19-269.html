@@ -1,0 +1,175 @@
+<HTML>
+<HEAD>
+<TITLE>游戏篇--模拟跳舞游戏</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=Dancer()>
+
+<br><br>
+<center>
+<h2>游戏篇--模拟跳舞游戏</h2>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var x=0;
+var max=0;
+if (navigator.userAgent.toLowerCase().indexOf("mac") != -1) var a="\r"; 
+else var a="\n";
+
+function Dancer() {
+  document.animation.dancer.value = " " + a +
+  tl[x];
+  x++;
+<!-- [Step1]: 这里可以设置跳舞的节奏 -->
+  if (x != max) setTimeout("Dancer()", 400);
+  else x = 0;
+}
+
+function DanceList() {
+  max=DanceList.arguments.length;
+  for (i=0; i<max; i++)
+  this[i]=DanceList.arguments[i];
+}
+
+tl = new DanceList(
+"   o"+a+
+"  /|\\"+a+
+" */ \\*        "+a,
+
+"   o_"+a+
+"  \<| *"+a+
+"  *\>\\         "+a,
+
+"  _o/*"+a+
+" * |"+a+
+"  / \\         "+a,
+
+" *\o_"+a+
+"  /  *"+a+
+" \<\\           "+a,
+
+"  _o/*"+a+
+" * |"+a+
+"  / \\         "+a,
+
+" *\\c/*"+a+
+"   )"+a+
+"  / \>         "+a,
+
+"     *"+a+
+"  \\__/c"+a+
+"   \> \\*       "+a,
+
+"   __/"+a+
+"    (o_*"+a+
+"     \\*       "+a,
+
+"      \\ /"+a+
+"       |"+a+
+"     */o\\*    "+a,
+
+"       \\_"+a+
+"       ("+a+
+"     */o\\*    "+a,
+
+"        \<_"+a+
+"      __("+a+
+"     * o|*    "+a,
+
+"         /_"+a+
+"      __("+a+
+"     * o|*   "+a,
+
+"         ___"+a+
+"      *\/ \>"+a+
+"       o|*    "+a,
+
+"        *"+a+
+"       o|_/"+a+
+"      */  \\   "+a,
+
+"        *"+a+
+"      _o|_"+a+
+"     *   \>\\   "+a,
+
+"       _o/*"+a+
+"      * |"+a+
+"       / \\    "+a,
+
+"      *\\o/*"+a+
+"        |"+a+
+"       / \\    "+a,
+
+"      c/*"+a+
+"      \<\\"+a+
+"      */\\     "+a,
+
+"      c__"+a+
+"      \<\ *"+a+
+"      */\\     "+a,
+
+"      c__"+a+
+"      /\ *"+a+
+"     * /\>     "+a,
+
+"      c/*"+a+
+"     /(__"+a+
+"    * /       "+a,
+
+"    __o/*"+a+
+"    * (__"+a+
+"      \<       "+a,
+
+"      __o_"+a+
+"     * /  *"+a+
+"      \<\\      "+a,
+
+"     *_o_"+a+
+"       | *"+a+
+"      \< \\     "+a,
+
+"     *_c_*"+a+
+"       |"+a+
+"       \>\\     "+a,
+
+"     *_c_*"+a+
+"       |__"+a+
+"       \>      "+a,
+
+"     *_c_*"+a+
+"     __|__"+a+
+"              "+a,
+
+" "+a+
+"     *_c_*"+a+
+"     __)__    "+a,
+
+" "+a+
+"     *\\c/*"+a+
+"     __)__    "+a
+
+);
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name=animation>
+<!-- [Step2]: 在此能够更改文本区域的行数和列数 -->
+  <textarea name=dancer rows=5 cols=16></textarea><br><br>
+  <input type=button value="开始跳舞" onClick = "Dancer()">
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

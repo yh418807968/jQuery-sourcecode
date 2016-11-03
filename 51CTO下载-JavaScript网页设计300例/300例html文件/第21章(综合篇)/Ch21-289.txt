@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--改变文本框大小</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>综合篇--改变文本框大小</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+请在下面的文本框中输入信息：<br>
+<!-- [Step1]: 这里可以更改文本框的列长度 -->
+<input size=6 onkeydown='if(this.value.length>this.size)this.size=this.value.length+2'>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

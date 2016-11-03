@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--定制色彩间隔</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>页面背景篇--定制色彩间隔</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以按序增加背景颜色集合 -->
+sunset = new Array("skyblue", "slateblue", "violet", "darkorange", "red", "darkred");
+
+function BGColor(color){
+    scheme = color;
+    document.bgColor = scheme.c1;
+    setTimeout('document.bgColor = scheme.c2', document.selector.interval.value * 20);
+    setTimeout('document.bgColor = scheme.c3', document.selector.interval.value * 30);
+    setTimeout('document.bgColor = scheme.c4', document.selector.interval.value * 40);
+    setTimeout('document.bgColor = scheme.c5', document.selector.interval.value * 50);
+    setTimeout('document.bgColor = scheme.c6', document.selector.interval.value * 60);
+}
+
+function Array(c1, c2, c3, c4, c5, c6){
+    this.c1 = c1;  this.c2 = c2;  this.c3 = c3;
+    this.c4 = c4;  this.c5 = c5;  this.c6 = c6;
+}
+
+</script> 
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name="selector">
+<!-- [Step2]: 在此能够设置按钮的名称 -->
+   <input type="button" value="日落美景" onclick="BGColor(sunset)"><br>
+	设置颜色间隔：
+<!-- [Step3]: 这里可以修改文本框的列长度 -->
+<!-- [Step4]: 在此能够设置时间间隔的默认值 -->
+   <input type="text" size="3" name="interval" value="50"> 
+</form>
+ 
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

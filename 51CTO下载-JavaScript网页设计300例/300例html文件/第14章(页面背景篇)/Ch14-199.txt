@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--页面转换</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2">
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面背景篇--页面转换</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<meta HTTP-EQUIV="Page-Enter" CONTENT="revealtrans(duration=6.0, transition=23)">
+<meta HTTP-EQUIV="Page-Exit" CONTENT="revealtrans(duration=6.0, transition=23)">
+<!-- [Step1]: 这里可以更改转换的页面名称 -->
+<A href="Ch14-200.html" target=_self>转换页面</A>
+<!-- 案例代码结束 -->
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--滚动导航链接</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>页面导航篇--滚动导航链接</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var a,b,go,word;
+
+function Start(word){
+<!-- [Step1]: 这里可以设置导航链接的滚动信息 -->
+    a="页面导航篇----滚动导航链接";
+    word.style.color="#660033";
+    linkSwitch();
+}  
+
+function linkSwitch(){
+    clearTimeout(go);
+    b=a;
+    a=a.substring(1,100)+a.charAt(0);
+    esh.innerText=a;
+    go=setTimeout("linkSwitch()",100);
+}
+
+function Stop(word){
+    clearTimeout(go);
+    esh.innerText="滚动导航链接";
+    word.style.color="blue";
+}
+
+</script>
+
+<!-- [Step2]: 在此能够更改导航链接对应的网址 -->
+<a href="http://www.263.net.cn" onmouseout=Stop(this) onmouseover=Start(this) ;><SPAN id=esh>滚动导航链接</SPAN></a>
+<!-- 案例代码结束 -->
+
+</BODY>
+
+</HTML>

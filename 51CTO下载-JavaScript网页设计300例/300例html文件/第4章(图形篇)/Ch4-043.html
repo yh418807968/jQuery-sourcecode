@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--左右晃动</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background3.jpg" >
+<br>
+<br>
+<center>
+<font color="ffaafa">
+  <h2><font color="#FF0000">图形篇--左右晃动</font></h2>
+  </font> 
+  <hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language="JavaScript">
+
+step = 0;
+Object = new Image();
+
+function LRMovePicture(ObjectID,movingarea_width,c){
+  window_width = document.body.offsetWidth;
+  Object = document.images[ObjectID];   
+  image_width = Object.width;  
+  x1 = Object.style.left;
+  x = Number(x1.substring(0,x1.length-2));   
+  if (c == 0) {
+       if (movingarea_width == 0) { 
+	     right_margin = window_width - image_width;   
+	     anim(x,right_margin,1);      }            
+       else {
+         right_margin = x + movingarea_width - image_width; 
+         anim(x,right_margin,1);
+        }
+   }
+  else {
+       if (movingarea_width == 0) right_margin = window_width - image_width;
+       else {
+         x = Math.round((window_width-movingarea_width)/2);
+         right_margin = Math.round((window_width+movingarea_width)/2)-image_width;
+         }
+      anim(x,right_margin,1);
+   }         
+}
+
+function anim(xp,xk,smer) {
+ Object.style.left = x;
+ x += step*smer; 
+ if (x>=(xk+xp)/2) {  if (smer == 1) step--;   else step++;    }
+ else {               if (smer == 1) step++;   else step--;    }
+ if (x >= xk) {    x = xk;    smer = -1;    }
+ if (x <= xp) {    x = xp;    smer = 1;     }
+ setTimeout('anim('+xp+','+xk+','+smer+')', 100);
+}
+  
+setTimeout("LRMovePicture('Movepicture',300,1)",100);
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以修改移动图形的名称 -->
+<!-- [Step2]: 在此能够更改移动图形的初始位置 -->
+<!-- [Step3]: 这里可以改动移动图形的宽度、高度 -->
+<!-- [Step4]: 在此能够修改移动图形的边界框 -->
+<img name="Movepicture" src="Picture003.jpg" style='position: absolute; top: 130px; left: 30px;' width=150 height=70 border=2 >
+
+<!-- 案例代码2结束 -->
+
+
+</center></BODY>
+
+</HTML>

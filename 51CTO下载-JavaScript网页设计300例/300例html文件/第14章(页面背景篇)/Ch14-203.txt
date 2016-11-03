@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--背景图形居中</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面背景篇--背景图形居中</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 这里可以设置居中的背景图形名称 -->
+<style type="text/css">
+body {background-image: url(Picture003.gif);
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;}
+</style>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

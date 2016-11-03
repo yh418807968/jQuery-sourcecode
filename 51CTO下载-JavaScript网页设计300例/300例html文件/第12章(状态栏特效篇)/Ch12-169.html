@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--文字逐个弹出</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=StatuPopupMessage()>
+
+<br><br>
+<center>
+<h2>状态栏特效篇--文字逐个弹出</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var smessage=" "
+var index=0;
+var message= new Array();
+<!-- [Step1]: 这里可以按序增加弹出的状态栏消息 -->
+message[0]='状态栏特效篇'
+message[1]='----'
+message[2]='文字逐个弹出'
+
+function StatuPopupMessage(){
+   for (y=0; y<message[index].length; y++){
+       for (x=0; x<20; x++){
+          rnum=Math.random();
+          rnum=Math.round(rnum*20)
+          window.status=smessage
+          for (del=0; del<20; del++){}  }
+       smessage+=message[index].substring(y,y+1)
+       window.status=smessage; }
+<!-- [Step2]: 在此能够设置弹出的速度 -->
+   window.setTimeout('MessageDisplay()',2000);
+}
+
+function MessageDisplay(){
+   smessage=" ";
+   window.status=" ";
+   if (index<message.length-1){ index++; StatuPopupMessage(); }
+   else{ index=0; window.setTimeout('StatuPopupMessage()',1000) }
+}
+
+</Script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

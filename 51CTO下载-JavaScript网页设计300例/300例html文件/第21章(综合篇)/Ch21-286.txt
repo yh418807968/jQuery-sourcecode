@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--首字母转为大写</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>综合篇--首字母转为大写</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function ConvertCase(frmObj) {
+   var index;
+   var tmpStr;
+   var tmpChar;
+   var strlen;
+   tmpStr = frmObj.value.toLowerCase();
+   strLen = tmpStr.length;
+   if (strLen > 0)  {
+      for (index = 0; index < strLen; index++)  {
+         if (index == 0) { tmpStr = tmpStr.substring(0,1).toUpperCase() + tmpStr.substring(1,strLen); }
+         else {
+            tmpChar = tmpStr.substring(index, index+1);
+            if (tmpChar == " " && index < (strLen-1))  { tmpStr = tmpStr.substring(0, index+1) + tmpStr.substring(index+1, index+2).toUpperCase() + tmpStr.substring(index+2,strLen);  } } } }
+   frmObj.value = tmpStr;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name=form>
+<!-- [Step1]: 这里可以设置文本框的初始值 -->
+   <input type=text name=box value="input your text">
+   <input type=button value="转 换" onClick="ConvertCase(this.form.box)">
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

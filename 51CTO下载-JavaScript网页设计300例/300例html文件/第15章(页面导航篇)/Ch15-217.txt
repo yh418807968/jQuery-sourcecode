@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--页面内部导航</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面导航篇--页面内部导航</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<form>
+<!-- [Step1]: 这里可以设置按钮的名称 -->
+   <input TYPE="button" value="页面下移" onClick="parent.location='#code'"> 
+</form>
+<br><br><br><br><br><br><br><br>
+<!-- [Step2]: 在此能够修改页面显示的提示信息 -->
+<a name="code">页面到此</a> 
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

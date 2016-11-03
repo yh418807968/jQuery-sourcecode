@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--卷帘方式显示</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=SlidePicture()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>图形篇--卷帘方式显示</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var counter = 0;
+function SlidePicture()
+{
+if (document.all) { picture.style.clip = "rect(0," + counter + ",80,0)"; }
+if (document.layers)
+{ document.picture.clip.top = 0;
+  document.picture.clip.right = counter;
+  document.picture.clip.bottom = 80;
+  document.picture.clip.left = 0; }
+counter += 2;
+time_out = setTimeout("SlidePicture()", 50);
+if (counter >400){ clearTimeout(time_out); }
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以更改卷帘图形的初始位置 -->
+<div id="picture" style="position: absolute; top: 130; left:80; clip:rect(0,0,0,0)">
+
+<!-- [Step2]: 在此能够更换卷帘的图形 -->
+<!-- [Step3]: 这里可以更改图形的宽度、高度 -->
+<!-- [Step4]: 在此能够设置图形的边界框 -->
+   <img src="Picture002.jpg" width=390 height=75 border=2>
+</div>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

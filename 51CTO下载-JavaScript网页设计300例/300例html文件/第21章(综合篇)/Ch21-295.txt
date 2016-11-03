@@ -1,0 +1,183 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--计算器</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=StartCal()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>综合篇--计算器</h2></font>
+<hr width=300>
+
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var opStack = new Array(4)
+  opStack[0]  = 0
+  opStack[1]  = ''
+  opStack[2]  = ''
+  opStack[3]  = ''
+
+function StartCal(){
+  document.PAD.SUM.value= "0"
+}
+
+function KeyinNum()  {
+  if (opStack[0] >= 2) { opStack[0] = 3 }
+  else { opStack[0] = 1 }
+  opStack[opStack[0]] = '' + document.PAD.SUM.value
+}
+
+function resetNum ()  {
+  opStack[0] = 0
+  opStack[1] = 0
+  document.PAD.CAL.value = ''
+  document.PAD.SUM.value = '0'
+}
+
+function calc1 (x)  {
+  var opFlag = opStack[0]
+  if (opFlag == -1 || opFlag == 1)   { count(x)  }
+  else if (opFlag == 3)  {
+    opStack[1] = '' + eval(opStack[1] + opStack[2] + opStack[3])
+    count(x)   }
+}
+
+function count (x)  {
+  if (x == 'Si') { opStack[1] = '' + Math.sin (opStack[1])  }
+  else if (x == 'aS') { opStack[1] = '' + Math.asin(opStack[1])  }
+   else if (x == 'Co') { opStack[1] = '' + Math.cos (opStack[1])  }
+     else if (x == 'aC') { opStack[1] = '' + Math.acos(opStack[1])  }
+      else if (x == 'Ta') { opStack[1] = '' + Math.tan (opStack[1]) }
+       else if (x == 'aT') { opStack[1] = '' + Math.atan(opStack[1]) }
+        else if (x == '≡') { opStack[1] = '' + Math.pow (opStack[1],.5) }
+         else if (x == '^2') { opStack[1] = '' + Math.pow (opStack[1], 2) }
+          else if (x == '^3') { opStack[1] = '' + Math.pow (opStack[1], 3) }
+           else if (x == '^4') { opStack[1] = '' + Math.pow (opStack[1], 4) }
+            else if (x == 'AB') { opStack[1] = '' + Math.abs (opStack[1])    }
+              else if (x == '∽') { }
+  document.PAD.CAL.value = ''
+  opStack[0] = -1
+  display()
+  document.PAD.SUM.focus()
+  document.PAD.SUM.select()
+}
+
+function display ()  {
+  var sum  = parseFloat(opStack[1])
+  document.PAD.SUM.value = '' + Math.round (sum * Math.pow(10,14)) / Math.pow(10,14)
+}
+
+function fra(){
+  var i
+  var j = 1
+  var k = document.PAD.SUM.value
+  if (k >= 70) {opStack[1] = 0; document.PAD.SUM.value = "---Error---"; return}
+  for (i = 1; i <= k; i++){j = j * i}
+  opStack[1] = document.PAD.SUM.value = j
+  document.PAD.SUM.focus()
+  document.PAD.SUM.select()
+}
+
+function entry (x) {
+  if (opStack[0] == -1) { opStack[0] = 1; opStack[1] = ''}
+  if (opStack[0] == 0)  { opStack[0] = 1; opStack[1] = ''}
+  if (opStack[0] == 2)  { opStack[0] = 3; opStack[3] = ''}
+  var result = result = opStack[opStack[0]]
+  if (result == '0')    { result = ''  }
+  if (x>='1' && x<='9') { result = '' + result + x }
+  else if  (x == 'P') { result = '' + Math.PI  }
+       else if  (x == '0') { if (result != '') result = '' + result  + '0' }
+           else if  (x == 'B') { if (result != '') result = result.substring(0, result.length - 1) }
+                else if  (x == '.') {
+                   if (result != '')  { if (result.indexOf(".") == -1) result += "." }
+                   else    { result = '0.'    }   }
+  if (result =='') result = '0'
+  opStack[opStack[0]] = result
+  document.PAD.SUM.value = result
+}
+
+function calc2 (x)  {
+  var opFlag = opStack[0]
+  if (opFlag != 2)  {
+    if (opFlag == 3)  {
+       opStack[1]=''+eval(opStack[1]+opStack[2]+opStack[3])
+       display()    }
+    opStack[0] = 2
+    opStack[2] = x
+    document.PAD.CAL.value = x
+    document.PAD.SUM.focus()
+    document.PAD.SUM.select()  }
+}
+
+function neg()  {
+  if (opStack[0] != 2  && opStack[0] != 0)  {
+     opStack[0] = Math.abs(opStack[0])
+     var result = opStack[opStack[0]]
+     if (result != '0' && result != '') {
+        if (result.charAt(0) == '-')  { result = result.substring(1, result.length) }
+        else  { result = '-' + result   }
+        opStack[opStack[0]] = result
+        document.PAD.SUM.value = result  }  }
+}
+
+function TurnOff(){
+  var ask = confirm("您确定要关闭计算器么？")
+  if (ask == true) {window.close()}
+  else {return}
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<FORM NAME="PAD">
+  <TABLE BORDER>
+   <TR><TD COLSPAN=8>
+     <INPUT NAME="CAL" TYPE="TEXT" SIZE=1 VALUE="">结果：
+     <INPUT NAME="SUM" TYPE="TEXT" SIZE=16 VALUE="" onChange="KeyinNum()">
+     <TR>
+       <TD><INPUT TYPE="BUTTON" VALUE="重置" onClick="resetNum()">
+       <TD><INPUT TYPE="BUTTON" VALUE="开方" onClick="calc1('≡')">
+       <TD><INPUT TYPE="BUTTON" VALUE="平方" onClick="calc1('^2')">
+       <TD><INPUT TYPE="BUTTON" VALUE="X !" onClick="fra()"  >
+     <TR>
+       <TD><INPUT TYPE="BUTTON" VALUE=" 7 " onClick="entry('7')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" 8 " onClick="entry('8')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" 9 " onClick="entry('9')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" * " onClick="calc2('*')">
+     <TR>
+       <TD><INPUT TYPE="BUTTON" VALUE=" 4 " onClick="entry('4')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" 5 " onClick="entry('5')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" 6 " onClick="entry('6')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" / " onClick="calc2('/')">
+     <TR>
+       <TD><INPUT TYPE="BUTTON" VALUE=" 1 " onClick="entry('1')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" 2 " onClick="entry('2')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" 3 " onClick="entry('3')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" - " onClick="calc2('-')">
+     <TR>
+       <TD><INPUT TYPE="BUTTON" VALUE=" 0 " onClick="entry('0')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" . " onClick="entry('.')">
+       <TD><INPUT TYPE="BUTTON" VALUE="+/-" onClick="neg()"    >
+       <TD><INPUT TYPE="BUTTON" VALUE=" + " onClick="calc2('+')">
+     <TR>
+       <TD><INPUT TYPE="BUTTON" VALUE="关闭" onClick="TurnOff()">
+       <TD><INPUT TYPE="BUTTON" VALUE="后退" onClick="entry('B')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" Pi "onClick="entry('P')">
+       <TD><INPUT TYPE="BUTTON" VALUE=" = " onClick="calc1('=')" >
+   </TABLE>
+</FORM>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>Cookie脚本篇--显示器分辨率检测</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Cookie脚本篇--显示器分辨率检测</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改页面显示的信息 -->
+document.write("当前显示器的分辨率是:" + "<br>" + screen.width + "*" + screen.height)
+
+</script>
+
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<TITLE>播放音乐篇--播放Midi音乐</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=MidiMusicList()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>播放音乐篇--播放Midi音乐</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var x = 0
+Music = new Array()
+<!-- [Step1]: 这里可以按序增加播放的Midi音乐 -->
+Music[1] = "   Music01.mid"
+Music[2] = "   Music02.mid"
+Music[3] = "   Music03.mid"
+
+
+function MidiMusicList(){
+<!-- [Step2]: 在此能够设置文本框的缺省文本 -->
+document.MidiMusic.typein.value=" 请按键选择 Midi 格式的音乐 "
+}
+
+function PlayMusic(){
+<!-- [Step3]: 这里可以更改Midi音乐所在的绝对位置 -->
+if (x != 0){location.href='Music0'+x+'.mid'}
+}
+
+function FirstMusic(){
+x=1;document.MidiMusic.typein.value=Music [x]
+}
+
+function EndMusic(){
+x=Music.length-1;document.MidiMusic.typein.value=Music [x]
+}
+
+function PrevoiusMusic(){
+if (x>1){ x--;document.MidiMusic.typein.value=Music [x];}
+}
+
+function NextMusic(){
+var max= Music.length-1
+if (x<max){ x++;document.MidiMusic.typein.value=Music [x];}
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<Form Name="MidiMusic">
+<!-- [Step4]: 在此可以更改文本框的列长度-->
+   <input Name="typein" type="text" size=25 align=top><br>
+   <font size=5 face="Helvetica">
+      <input type=Button Value="|<<"   Align=center onclick="FirstMusic()"    >
+      <input type=Button Value="<<"    Align=center onclick="PrevoiusMusic()" >
+      <input type=Button Value="播放"  Align=center  onclick="PlayMusic()"     >
+      <input type=Button Value=">>"    Align=center onclick="NextMusic()"     >
+      <input type=Button Value=">>|"   Align=center onclick="EndMusic()"      >
+   </font>
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

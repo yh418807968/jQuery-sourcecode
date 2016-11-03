@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--波动文本</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>综合篇--波动文本</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript> 
+
+<!-- [Step1]: 这里可以更改文本波动的速度，数值大速度慢 -->
+var speed=80
+<!-- [Step2]: 在此能够修改波动的文本信息 -->
+var wavetext="综合篇--波动文本" 
+<!-- [Step3]: 这里可以设置文本区域的行数和列数 -->
+var rows=5,cols=40 
+var i;
+var times=20 
+var spc=10 
+var len=spc*2;
+var text=wavetext;
+var stop=false;
+var stopped;
+for (i=0;i<spc;i++){text=text+" "}
+
+document.writeln('<FORM NAME="F">')
+document.writeln('<TEXTAREA ROWS='+rows+' COLS='+cols+' NAME="D" WRAP=SOFT</TEXTAREA>')
+document.writeln('</FORM>')
+
+function array(n) {
+  this.length = n
+  for (i=1; i <= n; i++){this[i] ="";}
+  return this
+}
+
+var l=text.length
+var ll=wavetext.length;
+var lb=new array(l)
+var lr=new array(spc*2+1)
+var lg=new array(ll)
+var lk=new array(ll)
+lb[0]=text;
+lb[l]=text;
+for (j=1;j<l;j++){
+   for (i=1;i<=l;i++){lb[j]=lb[j]+lb[j-1].charAt(i); if(i==l){lb[j]=lb[j]+lb[j-1].charAt(0) } } }
+
+lr[0]=wavetext;
+lr[spc*2]=wavetext;
+for (i=1;i<=spc;i++){ lr[i]=" "+lr[i-1]  }
+for (i=spc*2-1;i>=spc+1;i--){ lr[i]=" "+lr[i+1]  }
+
+lg[0]=wavetext;
+var ll=wavetext.length;
+for (j=1;j<ll;j++){
+   for (i=lg[j-1].length-2;i>=0;i--){  lg[j]=lg[j-1].charAt(i)+lg[j];  } }
+
+lk[ll]=wavetext;
+for (j=ll-1;j>=0;j--){
+   for (i=1;i<=l;i++){   lk[j]=lk[j]+lk[j+1].charAt(i);    }  }
+
+var lge="";
+var lbe="";
+var rle="";
+for (i=0;i<rows;i++){lge=lge+lg[i]+unescape('%0D%0A')}
+for (i=0;i<rows;i++){ lbe=lbe+lb[l-i]+unescape('%0D%0A')}
+for (i=1;i<=rows;i++){ rle=rle+lr[spc*2-i]+unescape('%0D%0A')}
+
+var c=1;
+var i=ll;
+var j=0;
+var f=0;
+
+function lgf(){
+  if(stop==false){
+     if(i>ll){j=0;i=i-2};
+     if(i==0&&j==0){c++;j=1};
+     if(j!=0){document.F.D.value=lg[i]+unescape('%0D%0A')+document.F.D.value;i++}
+     if(j==0){document.F.D.value=lg[i]+unescape('%0D%0A')+document.F.D.value;i--}
+     if(c<=times){setTimeout("lgf()",speed)}else{document.F.D.value=lge;i=0;j=0;c=0;t()  }  }
+}
+
+function t(){
+  if(stop==false){
+    if(i>l){i=1};
+    document.F.D.value=lb[i]+unescape('%0D%0A')+document.F.D.value;i++;j++
+    if(j<=l*times){setTimeout("t()",speed)}else{document.F.D.value=lbe;i=0;j=0;rl() } }
+ }
+
+function rl(){
+  if (stop==false){
+    if(i>=spc*2){i=0};
+    document.F.D.value=lr[i]+unescape('%0D%0A')+document.F.D.value;
+    i++;j++;
+    if(j<len*times){setTimeout("rl()",speed)}else{document.F.D.value=rle;i=ll-1;j=0;trans() } }
+}
+ 
+function trans(){
+  if(stop==false){
+    document.F.D.value=lk[i]+unescape('%0D%0A')+document.F.D.value;i--;
+    if(i!=1){setTimeout("trans()",speed)}else{i=ll;lgf() } }
+}
+
+function stopstart(){
+  stopped=stop;
+  if(stopped==false){stop=true;document.F.SS.value=startvalue}
+  if(stopped==true){ stop=false; document.F.SS.value=stopbuttonvalue; document.F.D.value=""; i=11; j=0;c=0; lgf() }
+ }
+
+if (rows<=spc&&rows<=ll&&spc+ll<=cols){ lgf() }
+
+ </script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

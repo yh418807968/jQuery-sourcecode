@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE>鼠标特效篇--选择颜色变换背景</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background3.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>鼠标特效篇--选择颜色变换背景</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+index=0;
+
+function MouseColor(SelectColor){
+  if ( index == 0 ) { document.bgColor=SelectColor; }
+}
+
+function ChangeColor(){
+  if ( index == 0){ index = 1; }
+  else { index = 0; }
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以设置页面信息的大小 -->
+<!-- [Step2]: 在此能够更改页面显示的信息 -->
+<a><font face="Helvetica" size=2>选择背景的颜色：</font></a>
+<!-- [Step3]: 这里可以设置表格的边界框，数值大边框粗 -->
+<table border=1 cellpadding="0">
+  <tr>
+<!-- [Step4]: 在此能够按序增加背景选择的颜色 -->
+<!-- [Step5]: 这里可以更改背景的颜色 -->
+    <td bgcolor="#663333"><a href="JavaScript:ChangeColor()" onmouseover="MouseColor('#663333'); return true"><img src="" border="0" width="10" height="10"></a></td>
+    <td bgcolor="#663399"><a href="JavaScript:ChangeColor()" onmouseover="MouseColor('#663399'); return true"><img src="" border="0" width="10" height="10"></a></td>
+    <td bgcolor="#669933"><a href="JavaScript:ChangeColor()" onmouseover="MouseColor('#669933'); return true"><img src="" border="0" width="10" height="10"></a></td>
+    <td bgcolor="#990033"><a href="JavaScript:ChangeColor()" onmouseover="MouseColor('#990033'); return true"><img src="" border="0" width="10" height="10"></a></td>
+    <td bgcolor="#339900"><a href="JavaScript:ChangeColor()" onmouseover="MouseColor('#339900'); return true"><img src="" border="0" width="10" height="10"></a></td>
+  </tr>
+</table>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

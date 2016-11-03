@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--显示链接</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>状态栏特效篇--显示链接</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function StatuLink(msgStr) { 
+  status=msgStr;
+  document.returenValue = true;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以设置链接对应的网址 -->
+<!-- [Step2]: 在此能够修改状态栏显示的链接信息 -->
+<!-- [Step3]: 这里可以更改页面显示的链接名称 -->
+<a href="javascript:if(confirm('http://www.sina.com.cn/  '))window.location='http://www.sina.com.cn/'" onMouseOver="StatuLink('全球最大华人网站！'); return document.returenValue">新 浪 网</a> <br><br>
+<a href="javascript:if(confirm('http://www.263.net.cn/ '))window.location='http://www.263.net.cn/'" onMouseOver="StatuLink('中国人的网上家园！'); return document.returenValue">263 在线</a>             
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

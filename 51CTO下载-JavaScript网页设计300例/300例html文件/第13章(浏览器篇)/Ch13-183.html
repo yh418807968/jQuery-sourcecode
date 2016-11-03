@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>浏览器篇--图形淡入淡出</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>浏览器篇--图形淡入淡出</h2>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function PictureOpacity(pointer,index){
+   if (index)  pointer.filters.alpha.opacity=20
+   else        pointer.filters.alpha.opacity=100
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以修改图形的名称 -->
+<!-- [Step2]: 在此能够更改图形的边界框 -->
+<!-- [Step3]: 这里可以设置图形的宽度和高度 -->
+<img src="Picture001.jpg" border=1 width=150 height=100  onMouseout="PictureOpacity(this,true)" onMouseover="PictureOpacity(this,false)" style="filter:alpha(opacity=40)" >
+ 
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

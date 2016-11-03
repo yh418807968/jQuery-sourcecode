@@ -1,0 +1,139 @@
+<HTML>
+<HEAD>
+<TITLE>游戏篇--动脑小游戏</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>游戏篇--动脑小游戏</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里能够设置网格的大小 -->
+var size=5
+var moves = 0
+var on = 0
+var off = size*2
+var current = null
+	
+function StartGame() {
+   size = document.all.gameSize.value
+   if (size<3)    size=3
+   if (size>10)   size=10
+   document.all.gameSize.value = size
+   document.all.board.outerHTML = BuildTable()
+   moves=0
+   document.all.moves.innerText = moves
+   CountTable()
+}
+  
+function BuildTable() {
+   var str = "<table id=board border=5 onselectstart=\"return false\" onclick=\"WhenClick()\" onmouseover=\"WhenOver()\" cellspacing=0 cellpadding=0 >"
+   for (var x=0; x < size; x++) {
+       str+="<TR>"
+       for (var y=0; y < size; y++) {  str+="<TD> </TD>"    } 
+       str+="</TR>"     }
+   str+="</TABLE>"
+   return str
+}
+  
+function WhenClick() {
+   SetTableColor(current)     
+   var cellIdx = current.cellIndex
+   var rowIdx = current.parentElement.rowIndex
+   if (rowIdx>0)       SetTableColor(board.rows[rowIdx-1].cells[cellIdx])
+   if (rowIdx<size-1)  SetTableColor(board.rows[rowIdx+1].cells[cellIdx])
+   if (cellIdx>0)      SetTableColor(board.rows[rowIdx].cells[cellIdx-1])
+   if (cellIdx<size-1) SetTableColor(board.rows[rowIdx].cells[cellIdx+1])
+   moves++
+   document.all.moves.innerText = moves
+   if (CountTable()) {
+        board.onclick = null
+        board.onmouseover = null
+        current.style.background = "#990066"     }
+ }
+
+function WhenOver() {
+  if ((event.srcElement.tagName=="TD") && (current!=event.srcElement)) {
+      if (current!=null)  current.style.backgroundColor = current._background
+      event.srcElement._background = event.srcElement.style.backgroundColor
+      event.srcElement.style.backgroundColor = "lightgrey"
+      current = event.srcElement     }
+}
+
+function SetTableColor(el) {
+  if ((el._background=="") || (el._background==null)) {
+     el.style.backgroundColor = "#990066"
+     el._background = "#990066"      } 
+  else {
+     el.style.backgroundColor = ""
+     el._background = ""     }
+}
+
+function CountTable() {
+  off = 0; on = 0
+  for (var x=0; x < size; x++) 
+    for (var y=0; y < size; y++) {
+        var p = board.rows[x].cells[y]
+        if (p._background=="#990066")     on++
+        else    off ++      }
+     document.all.on.innerText = on
+     if (off!=0)     document.all.off.innerText = off
+     else  document.all.off.innerText = "0"
+     return (off==0)
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<style>
+A.cOn {text-decoration:none;font-weight:bolder}
+#article {font: 12pt Verdana, geneva, arial, sans-serif;  background: white; color: black; padding: 10pt 15pt 0 5pt}
+#article P.start {text-indent: 0pt}
+#article P {margin-top:0pt;font-size:10pt;text-indent:12pt}
+#article #author {margin-bottom:5pt;text-indent:0pt;font-style: italic}
+#pageList P {padding-top:10pt}
+#article H3 {font-weight:bold}
+#article DL, UL, OL {font-size: 10pt}
+#board {cursor: default}    
+#board TD {width: 25px; height: 25px; }
+</style>
+
+<table border="1">
+  <tr>
+    <td><div>
+	   <table ID="score"><tr>
+         <td><font  color="#FF3366">次数：</font></td><td id="moves">0</td>
+         <td><FONT  COLOR="#FF3366">未占：</FONT></td><td id="off" >25</td>
+         <td><FONT  COLOR="#FF3366">已占：</FONT></td><td id="on" >0</td>
+      </tr></table>
+    </div></td>
+    <td ><div>
+	   <table><tr>
+         <td><FONT  COLOR="#FF3366">大小: </FONT></td>
+<!-- [Step2]: 在此可以更改文本框的初始值和列长度 -->
+         <td><input type="text" ID="gameSize" value=" 5" size="2"></td>
+         <td><input type="button" value="开 始" onclick="StartGame()"></td>
+       </tr></table>
+    </div></td>
+  </tr>
+</table>
+<br>
+<script>document.write(BuildTable())</script>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

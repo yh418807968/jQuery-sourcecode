@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--输入并删除效果</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>状态栏特效篇--输入并删除效果</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改状态栏中的信息 -->
+var StatuMessage="状态栏特效篇----输入并删除效果"
+InputDeleteback=0
+InputDeleteto=0
+
+function InputDeleteMsg(){
+   window.status=StatuMessage.substring(0,InputDeleteto)
+   if(InputDeleteback==1){
+     InputDeleteto--;
+     if(InputDeleteto==0) {  InputDeleteback=0  }   }
+   else { 
+     InputDeleteto++;
+	 if(InputDeleteto==StatuMessage.length){  InputDeleteback=1  }  }
+   window.status=StatuMessage.substring(0,InputDeleteto)+"|"
+   if(InputDeleteto==StatuMessage.length){ window.setTimeout("InputDeleteMsg()",600); } 
+<!-- [Step2]: 在此能够设置输入删除的速度 -->   
+   else {window.setTimeout("InputDeleteMsg()",50); }
+}
+
+InputDeleteMsg()
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

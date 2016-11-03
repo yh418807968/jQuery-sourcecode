@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--显示站点信息</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>页面导航篇--显示站点信息</h2>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function DisplayLinkMsg(){
+<!-- [Step1]: 在此能够更改要显示的链接信息 -->
+  document.form.linkMsg.value="这里不仅有精彩瞬间、闲言碎语，也有工作中的体会与心得。要想知道更多，请点击下面的按钮。";
+}
+
+function MoreLinkInfo(){
+<!-- [Step2]: 这里可以设置按钮对应的网址 -->
+   window.location="http://www.263.net.cn"; 
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name=form>    
+<!-- [Step3]: 在此能够设置页面显示的链接名称 -->
+   <a href=javascript:DisplayLinkMsg();>显示站点信息</a><br>
+<!-- [Step4]: 这里可以更改文本区域的行数和列数 -->
+<!-- [Step5]: 在此能够修改文本区域的初始信息 -->
+   <textarea name=linkMsg rows=4 cols=30 wrap=virtual>点击上面的链接显示概要信息</textarea><br> 
+   <input type=button name=button value="更 多" onClick=MoreLinkInfo()> 
+</form>
+ 
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--处理点击事件</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>技巧篇--处理点击事件</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function MouseClick(){
+   for(i=0;i<document.myform.elements.length;i++){
+<!-- [Step1]: 这里可以设置弹出警告框中的信息 -->
+       if(document.myform.mouseradio[i].checked){  window.alert("您选中了第 "+(i+1)+" 个单选按钮！") }  }
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form name="myform">
+<!-- [Step2]: 在此能够按序增加单选按钮的名称 -->
+  <input type="radio" name="mouseradio" onclick="MouseClick()">单选按钮1<br>
+  <input type="radio" name="mouseradio" onclick="MouseClick()">单选按钮2<br>
+  <input type="radio" name="mouseradio" onclick="MouseClick()">单选按钮3
+</form>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

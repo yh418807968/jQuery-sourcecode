@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--闪动的状态栏</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=StatuFlashMessage()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>状态栏特效篇--闪动的状态栏</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>       
+
+var index=1; 
+function StatuFlashMessage() { 
+   if (index == 1)   { 
+<!-- [Step1]: 在此能够更改闪动的状态栏信息 -->
+      window.status = "状态栏特效篇----闪动的状态栏"; 
+      index=0;  } 
+   else   { 
+      window.status = " "; 
+      index=1;    } 
+<!-- [Step2]: 这里可以设置闪动的速度 -->
+   setTimeout("StatuFlashMessage()",500); 
+} 
+     
+</script> 
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

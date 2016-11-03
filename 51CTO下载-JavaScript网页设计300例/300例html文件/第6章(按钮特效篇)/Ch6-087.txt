@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--显示滚动字段</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--显示滚动字段</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=Javascript>
+
+var s = 0
+<!-- [Step1]: 这里可以更改滚动字段的信息 -->
+var ScrollMessage = " 按钮上显示滚动的字段 "
+document.write("<form name='Button1'><input type='button' " + "name='ScMessage' value='" + ScrollMessage + "'></form>")
+
+function ScrollButton() {
+document.Button1.ScMessage.value = ScrollMessage.substring(s,ScrollMessage.length) + ScrollMessage.substring(0,s)
+s++
+if (s >= ScrollMessage.length) {s = 0}
+<!-- [Step2]: 在此能够设置滚动的速度，数值大速度慢 -->
+setTimeout("ScrollButton()",100)
+}
+
+ScrollButton();
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+
+</BODY>
+
+</HTML>

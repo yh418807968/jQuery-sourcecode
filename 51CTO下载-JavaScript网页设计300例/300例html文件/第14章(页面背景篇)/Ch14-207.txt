@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<TITLE>Ò³Ãæ±³¾°Æª--ÉÁË¸ÐÇ¿Õ</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=Start() onunload=End()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Ò³Ãæ±³¾°Æª--ÉÁË¸ÐÇ¿Õ</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- °¸Àý´úÂë¿ªÊ¼ -->
+
+<script language=JavaScript>
+
+hexa = new Array(16);
+for(var i = 0; i < 10; i++) hexa[i] = i; 
+hexa[10]="a";
+hexa[11]="b"; 
+hexa[12]="c";
+hexa[13]="d"; 
+hexa[14]="e"; 
+hexa[15]="f";
+function hex(i){
+if (i < 0) return "00";
+else if (i > 255) return "ff"; 
+else return "" + hexa[Math.floor(i/16)] + hexa[i%16];
+}
+
+for(i=1;i<=10;i++){
+document.write("<div id=\"Picture004"+i+"\" style=\"position:absolute;top:80%;left:"+(Math.floor(Math.random()*5)+9*(i-1))+"%;width:21;height:21;visibility:hidden;\"><dd><img src=\"Picture004.gif\" WIDTH=\"21\" HEIGHT=\"21\"></dd></div>");
+}	
+
+function Start(){
+setInterval("randommove()",1000);
+set_visible();
+setTimeout("bar_show()",2000);
+}
+
+function randommove(){	
+	for(i=1;i<=10;i++)
+	eval("Picture004"+i+".style.top=get_top()");	
+}		
+
+function get_top(){
+var t,t2;
+t=Math.floor(Math.random()*380);
+t2=t.toString()+"px";
+return(t2);
+}
+
+function bar_show(){	
+bar.style.visibility="visible";
+}
+
+function set_visible(){
+	for(i=1;i<=10;i++)
+	eval("Picture004"+i+".style.visibility=\"visible\"");
+	banner.style.visibility="visible";
+	friends.style.visibility="visible";
+	high(pic);		
+}
+
+function End(){
+banner.style.visibility="hidden";
+friends.style.visibility="hidden";
+pic.style.visibility="hidden";
+}
+
+function killErrors() {
+return true;
+}
+
+window.onerror = killErrors;
+
+</script>
+
+<!-- °¸Àý´úÂë½áÊø -->
+
+
+</BODY>
+
+</HTML>

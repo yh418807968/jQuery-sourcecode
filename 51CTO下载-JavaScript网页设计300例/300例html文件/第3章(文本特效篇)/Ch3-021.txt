@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE>文本特效篇--鼠标经过时文本变色</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>文本特效篇--鼠标经过时文本变色</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<!-- [Step1]: 在此可以更改要变色的文本信息 -->
+<p onMouseMove="CColor()">鼠标经过时文本变色</p>
+<script language="VBScript">
+sub CColor
+document.fgColor=int(256*256*256*rnd)
+end sub
+}
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>播放音乐篇--设置控制页面</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background7.jpg" >
+<br>
+<br>
+<center>
+<font color="ffaafa">
+  <h2><font color="#FF0000">播放音乐篇--设置控制页面</font></h2>
+  </font> 
+  <hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里能够设置播放音乐的总数目 -->
+var MidiMusicNum = 3
+Now = new Date()
+index = Now.getTime()
+RandomNum = parseInt(((index - (parseInt(index/1000,10) * 1000))/10)/100*MidiMusicNum + 1,10)
+
+<!-- [Step2]: 在此可以按序增加播放的音乐 -->
+if (RandomNum == (1))  MidiMusic=("Music01.mid") 
+if (RandomNum == (2))  MidiMusic=("Music02.mid") 
+if (RandomNum == (3))  MidiMusic=("Music03.mid")  
+
+<!-- [Step3]: 这里能够更改控制页面的宽度、高度 -->
+document.write('<embed src= "' + MidiMusic + '" width=210 height=60 autostart=true>')
+document.write('<bgsound src= "' + MidiMusic + '"  autostart=true>')
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</center></BODY>
+
+</HTML>

@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<TITLE>菜单导航篇--左面滑出的左右菜单</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>菜单导航篇--左面滑出的左右菜单</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var moveOnScroll=true
+var tim;
+var ltop;
+
+function moveMenu(){
+        if(!oMenu.state){  clearTimeout(tim);  MenuIn()  }
+		else{    clearTimeout(tim);   MenuOut()    }
+}
+
+function makeMenu(obj,nest){
+    nest=(!nest) ? '':'document.'+nest+'.'
+    this.css=(document.layers?1:0) ? eval(nest+'document.'+obj):eval(obj+'.style')  
+	    this.state=1
+        this.go=0
+        this.width=(document.layers?1:0)?this.css.document.width:eval(obj+'.offsetWidth')
+        this.left=b_getleft
+    this.obj = obj + "Object";  eval(this.obj + "=this")        
+}
+
+function MenuIn(){
+    if(oMenu.left()>-oMenu.width+50){
+         oMenu.go=1
+         oMenu.css.left=oMenu.left()-10
+         tim=setTimeout("MenuIn()",40)  }
+   else{    oMenu.go=0;   oMenu.state=1    }       
+}
+
+function MenuOut(){
+    if(oMenu.left()<0){
+      oMenu.go=1
+      oMenu.css.left=oMenu.left()+10
+      tim=setTimeout("MenuOut()",40)   }
+	else{   oMenu.go=0;    oMenu.state=0     }       
+}
+
+function b_getleft(){
+        var gleft=(document.layers?1:0) ? eval(this.css.left):eval(this.css.pixelLeft);
+        return gleft;
+}
+
+function checkScrolled(){
+   if(!oMenu.go) oMenu.css.top=eval(scrolled)+ltop
+   if(document.layers?1:0) setTimeout('checkScrolled()',30)
+}
+
+function menuInit(){
+    oMenu=new makeMenu('divMenu')
+    scrolled=(document.layers?1:0)?"window.pageYOffset":"document.body.scrollTop"
+    oMenu.css.left=-oMenu.width+60
+    ltop=(document.layers?1:0)?oMenu.css.top:oMenu.css.pixelTop;
+    oMenu.css.visibility='visible'
+    if(moveOnScroll) (document.all?1:0)?window.onscroll=checkScrolled:checkScrolled();
+}
+
+onload=menuInit;
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以设置菜单条的初始位置 -->
+<!-- [Step2]: 在此能够设置菜单条的宽度 -->
+<div id="divMenu" style="position:absolute; top:140; left:100; width:356; visibility:hidden">
+<!-- [Step3]: 这里可以更改菜单的名称 -->
+        <a href="javascript://" onclick="window.focus()">页面导航</a> --- 
+        <a href="javascript://" onclick="window.focus()">精彩收藏</a> --- 
+        <a href="javascript://" onclick="window.focus()">主人寄语</a> ---  
+        <a href="javascript://" onclick="moveMenu(); window.focus()" >菜单开关</a>
+</div>
+
+<style>
+TD{font-family:arial,helvetica; font-size:10pt}
+<!-- [Step4]: 在此能够设置菜单名称的颜色 -->
+{  }
+A{color:#CC6600; text-decoration:none}
+A:hover{color:red}
+A:visited:{color:#808080}
+DIV{font-family:arial,helvetica; font-size:12pt; font-weight:bold}
+</style>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

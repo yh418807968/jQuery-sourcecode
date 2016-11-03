@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE>图形篇--循环渐显</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=FadePicture()>
+
+
+<br><br>
+<center>
+<h2>图形篇--循环渐显</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+var b = 1;
+var c = true;
+
+function FadePicture(){
+if(document.all);
+if(c == true)  {b++;}
+if(b==100)     {b--;c = false}
+if(b==10)      {b++;c = true;}
+if(c == false) {b--;}
+picture.filters.alpha.opacity=0 + b;
+<!-- [Step1]: 这里可以更改图形渐显的速度，数值小速度快 -->
+setTimeout("FadePicture()",50);
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step2]: 在此能够更换渐显的图形 -->
+<!-- [Step3]: 这里可以设置图形的宽度、高度 -->
+<!-- [Step4]: 在此能够更改图形的边界框 -->
+<img name="picture" src="Picture001.jpg" width=150 height=100 border=2 style="filter:alpha(opacity=0)"> 
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

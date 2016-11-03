@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--限制访问时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onload=LimitTimer()>
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>综合篇--限制访问时间</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以设置限制访问的时间 -->
+var limit="02:00"
+if (document.images){
+   var parselimit=limit.split(":")
+   parselimit=parselimit[0]*60+parselimit[1]*1
+}
+
+function LimitTimer(){
+   if (!document.images) return
+<!-- [Step2]: 在此能够更改到时间后打开的页面 -->
+   if (parselimit==1) window.location="http://www.263.net.cn"
+   else{ 
+      parselimit-=1
+      currentmin=Math.floor(parselimit/60)
+      currentsec=parselimit
+<!-- [Step3]: 这里可以修改状态栏显示的信息 -->
+      if (currentmin!=0) currenttime="您只剩 "+currentmin+" 分"+currentsec+" 秒的时间保存该页面。"
+      else  currenttime="您只剩 "+currentsec+" 秒的时间访问该页面。"
+      setTimeout("LimitTimer()",1000)
+      window.status=currenttime  }
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

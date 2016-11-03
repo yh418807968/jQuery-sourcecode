@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--改变按钮</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background8.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>按钮特效篇--改变按钮</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function ChangeButton(s) {
+  if ("INPUT"==event.srcElement.tagName)   event.srcElement.className=s
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<style>
+  .bigChange {color:blue; font-weight:bolder; font-size:175%; letter-spacing:4px; text-transform: uppercase; background:yellow}
+<!-- [Step1]: 在此能够更改按钮上的字体颜色和背景色 -->
+  .start {color:#FFFF33; background:#CC0099}
+</style>
+<!-- [Step2]: 这里可以设置按钮的名称 -->
+<input type="button" Value="改变按钮的颜色" name="highlight" onmouseover="ChangeButton('start')" onmouseout="ChangeButton('')">
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

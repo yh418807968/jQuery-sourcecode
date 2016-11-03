@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--变化弹出标题栏</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>状态栏特效篇--变化弹出标题栏</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以更改标题栏的显示信息 -->
+var Titlestring = "状态栏特效篇----变化弹出标题栏 ";
+var Titlelength = Titlestring.length;
+var index = 0;
+var killlength = 0;
+
+function scrollTheTitle(){
+   var doctitle = Titlestring.substring((Titlelength - index - 1),Titlelength);
+   document.title = doctitle;
+   index++;
+}
+
+function loopTheScroll(){
+   scrollTheTitle();
+   if(killlength > Titlelength) { clearTimeout(); }
+   killlength++;
+<!-- [Step2]: 在此能够设置弹出标题的速度 -->
+   setTimeout("loopTheScroll();",100)
+}
+
+loopTheScroll();
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

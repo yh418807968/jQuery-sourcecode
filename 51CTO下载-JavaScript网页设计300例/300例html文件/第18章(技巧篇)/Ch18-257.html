@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>技巧篇--获取源代码</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>技巧篇--获取源代码</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<form name=pagesource>
+   输入要获取源代码的网址:<br>
+<!-- [Step1]: 在此能够设置文本框的列长度和默认值 -->
+   <input type=text name=url size=24 value="Http://">
+<!-- [Step2]: 这里可以更改按钮的名称 -->
+   <input type=button value="获 取" onclick="location='view-source:'+ document.pagesource.url.value">
+</form>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

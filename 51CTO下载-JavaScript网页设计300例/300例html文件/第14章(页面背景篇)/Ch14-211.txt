@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--调色板</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2"  >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面背景篇--调色板</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var indexcolor = new Array(6)
+indexcolor[0] = "00"
+indexcolor[1] = "33"
+indexcolor[2] = "66"
+indexcolor[3] = "99"
+indexcolor[4] = "CC"
+indexcolor[5] = "FF"
+
+function DrawBGColorCube() {
+   document.write('<TABLE CELLPADDING=3 CELLSPACING=0 BORDER=2><TR>')
+   for (var i = 0; i < 3; ++i) {
+       document.write('<td bgcolor="#ccffcc">')
+       DrawBGColorTable(indexcolor[i])
+       document.write('</TD>')   }
+   document.write('</TR></TABLE>')
+}
+
+function DrawBGColorTable(blue) {
+   document.write('<TABLE CELLPADDING=0 CELLSPACING=0 BORDER=0>')
+   for (var i = 0; i < 5; ++i) { DrawBGColorRow(indexcolor[i], blue)   }
+   document.write('</TABLE>')    
+}
+
+function DrawBGColorRow(red, blue) {
+   document.write('<TR>')
+   for (var i = 0; i < 5; ++i) { DrawBGColorCell(red, indexcolor[i], blue)  }
+   document.write('</TR>')
+}
+
+function DrawBGColorCell(red, green, blue) {
+   document.write('<TD BGCOLOR="#' + red + green + blue + '">')   
+   document.write('<A HREF="javascript:DisplayColor(\'' + (red + green + blue) + '\')">')
+   document.write('<IMG SRC="place.gif" BORDER=1 HEIGHT=12 WIDTH=12>')
+   document.write('</A>')
+   document.write('</TD>')
+}
+
+function DisplayColor(triplet) {
+   document.bgColor = '#' + triplet     
+}
+
+DrawBGColorCube()
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

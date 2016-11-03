@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<TITLE>综合篇--十二生肖</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>综合篇--十二生肖</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function GetBirthYear () {
+  var birthpet=" 丑牛"
+  x = (1997 - document.frm.inyear.value) % 12
+  if ((x == 1) || (x == -11)) { birthpet=" 子鼠" }
+  else {
+   if (x == 0) { birthpet=" 丑牛" }
+   else {
+    if ((x == 11) || (x == -1)) {birthpet=" 寅虎" }
+    else {
+     if ((x == 10) || (x == -2)) {birthpet=" 卯兔" }
+     else {
+      if ((x == 9) || (x == -3)) {birthpet=" 辰龙" }
+      else {
+       if ((x == 8) || (x == -4)) { birthpet=" 巳蛇" }
+       else {
+        if ((x == 7) || (x == -5)) { birthpet=" 午马" }
+        else {
+		 if ((x == 6) || (x == -6)) { birthpet=" 未羊" }
+         else {
+          if ((x == 5) || (x == -7)) {birthpet=" 申猴" }
+		  else {
+           if ((x == 4) || (x == -8)) {birthpet=" 酉鸡" }
+           else {
+            if ((x == 3) || (x == -9)) {birthpet=" 戌狗" }
+            else {
+              if ((x == 2) || (x == -10)) {birthpet=" 亥猪" } }}}}}}}}}}}
+   document.frm.birth.value = birthpet;
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<form NAME="frm">
+  请输入您的出生年份：<br><br>
+<!-- [Step1]: 在此能够设置文本框的列长度和初始值 -->
+  <input TYPE="text" size=5 NAME="inyear" value=" 1975"> 
+  <input TYPE="button" VALUE="属相" onClick="GetBirthYear()">
+  <input TYPE="text" SIZE=5 NAME="birth" value=" 卯兔"> 
+</form> 
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>鼠标特效篇--依据位置显示标志</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background3.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>鼠标特效篇--依据位置显示标志</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 在此可以更改位置标志的图形名称 -->
+function MouseOverPicture(PictureName){ PictureName.src = "Picture002.jpg" }
+function MouseOutPicture(PictureName) { PictureName.src = "gif1.gif" }
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step2]: 这里能够按序增加链接和网址 -->
+<!-- [Step3]: 在此可以更改图形的宽度和高度 -->
+<!-- [Step4]: 这里能够修改图形的边界框，数值大边框粗 -->
+<!-- [Step5]: 在此可以更改链接对应的网址 -->
+<!-- [Step6]: 这里能够设置页面显示的链接名称 -->
+<img name="pic1" src="gif1.gif" width=20 height=12 border=1>
+   <a href="http://www.263.net.cn" onmouseover="MouseOverPicture(pic1)" onmouseout="MouseOutPicture(pic1)">263 在线</a><br>
+<img name="pic2" src="gif1.gif" width=20 height=12 border=1>
+   <a href="http://www.sohu.com" onmouseover="MouseOverPicture(pic2)" onmouseout="MouseOutPicture(pic2)">搜 狐 网</a><br>
+<img name="pic3" src="gif1.gif" width=20 height=12 border=1>
+   <a href="http://www.sina.com.cn" onmouseover="MouseOverPicture(pic3)" onmouseout="MouseOutPicture(pic3)">新 浪 网</a><br>
+<img name="pic4" src="gif1.gif" width=20 height=12 border=1>
+   <a href="http://cn.yahoo.com" onmouseover="MouseOverPicture(pic4)" onmouseout="MouseOutPicture(pic4)">雅 虎 网</a>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

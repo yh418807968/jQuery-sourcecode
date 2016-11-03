@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>密码篇--访问相应页面的控制</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>密码篇--访问相应页面的控制</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function EnterPage() {
+   var password;
+   var location;
+   var root;
+   password=this.document.testform.inputbox.value
+<!-- [Step1]: 这里可以设置相应的页面控制 -->
+   location="http://www."+password+".com.cn"  
+   root=window.open('location', 'pass', 'toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no')
+   root.location.href = location;
+ }
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<center>
+<!-- [Step2]: 在此能够更改页面信息的大小 -->
+<!-- [Step3]: 这里可以修改页面显示的信息 -->
+  <font size=3>输入密码后进入相应的页面：</font>
+    <form name="testform">
+<!-- [Step4]: 在此能够更改文本框的列长度 -->
+      <input type="text" name="inputbox" value="" size=10>
+<!-- [Step5]: 这里可以修改按钮的名称 -->
+      <input type="button" name="button" value="登 陆" onclick="EnterPage(this.form)">
+    </form>
+  </font>
+</center>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

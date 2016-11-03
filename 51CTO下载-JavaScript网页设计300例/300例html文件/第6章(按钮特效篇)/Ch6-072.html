@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--按频道打开窗口</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background8.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>按钮特效篇--按频道打开窗口</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=Javascript>
+
+function ChannelWindow(){
+<!-- [Step1]: 这里可以设置打开窗口的网页地址 -->
+window.open("http://www.263.net.cn/","","Channelmode,scrollbars")
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+<!-- [Step2]: 在此能够更改按钮的名称 -->
+   <input type="button" value="263在线" onClick="ChannelWindow()" name="button">
+</form>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

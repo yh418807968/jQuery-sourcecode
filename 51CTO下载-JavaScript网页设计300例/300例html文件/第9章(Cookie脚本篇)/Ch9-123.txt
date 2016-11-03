@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE>Cookie脚本篇--离开启动收藏夹</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" onunload=OpenFavorite()> 
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>Cookie脚本篇--离开启动收藏夹</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+function OpenFavorite(){
+<!-- [Step1]: 这里可以更改收藏夹中的名称对应的网址 -->
+<!-- [Step2]: 在此能够设置添加到收藏夹中的名称 -->
+  window.external.AddFavorite('http://www.263.net.cn', '263 在线')
+}
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

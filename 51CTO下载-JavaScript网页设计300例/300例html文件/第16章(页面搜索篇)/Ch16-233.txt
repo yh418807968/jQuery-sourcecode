@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE>页面搜索篇--设计搜索引擎</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面搜索篇--设计搜索引擎</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里可以设置搜索引擎对应的网址 -->
+var searchurl = "http://www.263.net.cn";
+
+function SearchEngineer() {
+   if ((document.searchpage.keyword.value.length == 0)|| (document.searchpage.keyword.value == " "))  {
+<!-- [Step2]: 在此能够更改弹出警告框的信息 -->
+      alert("请输入关键词！");  } 
+   else {
+     sel = document.searchpage.and_or.selectedIndex;
+     location.href = searchurl + "?"+ escape(document.searchpage.keyword.value)+ (sel==0?"&or":(sel==2?"&exact":"&and"));  }
+   return false;
+}
+
+<!-- [Step3]: 这里可以设置文本框的列长度 -->
+<!-- [Step4]: 在此能够增减下拉菜单中的信息 -->
+document.write('<form name="searchpage" onSubmit="return SearchEngineer()">'+
+'关键词：<input type="text" size=17 name="keyword">'+
+'<input type="button" value="搜 索" onClick="SearchEngineer()"><br>'+
+'<select name="and_or" size=1><option>关键词或搜索<option>关键词与搜索'+ '<option>关键词异或搜索</select></form>');
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE>播放音乐篇--图形导航</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>播放音乐篇--图形导航</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+  
+function PictureMusic1(sound1) { document.sound1.play();}
+
+function PictureMusic2(sound2) { document.sound2.play();}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以更改图形对应的音乐名称 -->
+<embed name=sound1 src=Music01.mid autostart=false hidden=true mastersound loop=false>
+<a href="#" onclick=PictureMusic1(sound1)>
+<!-- [Step2]: 在此能够设置页面上显示的图形名称 -->
+<!-- [Step3]: 这里可以更改图形的宽度、高度 -->
+<!-- [Step4]: 在此能够修改图形的边界框的大小，数值大边框粗 -->
+<img src=Picture001.jpg width=100 height=80 border=2></a>
+<embed name=sound2 src=Music02.mid autostart=false hidden=true mastersound loop=false>
+<a href="#" onclick=PictureMusic2(sound2)>
+<img src=Picture002.jpg width=100 height=80 border=2></a>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

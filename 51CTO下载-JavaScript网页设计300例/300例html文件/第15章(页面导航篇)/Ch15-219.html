@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--打开窗口等待</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>页面导航篇--打开窗口等待</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function OpenWaitPages(){
+<!-- [Step1]: 这里可以设置等待打开的网址 -->
+    window.open('http://www.263.net.cn','')
+}
+
+<!-- [Step2]: 在此能够更改等待的时间 -->
+setTimeout("OpenWaitPages()",2002)
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step3]: 这里可以修改等待信息的大小 -->
+<!-- [Step4]: 在此能够设置等待信息的颜色 -->
+<!-- [Step5]: 这里可以更改页面显示的等待信息 -->
+<font size="3" color="#999900">页面正在下载中，请您耐心等待......</font>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

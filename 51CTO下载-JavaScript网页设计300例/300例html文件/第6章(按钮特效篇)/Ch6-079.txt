@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--按序点击按钮</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--按序点击按钮</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function SeqClickLink() { 
+  var i, visStr, args, theObj;
+  args = SeqClickLink.arguments;
+  for (i=0; i<(args.length-2); i+=3) { 
+     visStr = args[i+2];
+      if (document.all != null) { 
+         if (visStr == 'show') visStr = 'visible'; 
+         if (visStr == 'hide') visStr = 'hidden';
+         theObj = eval(args[i+1]);
+         if (theObj) theObj.style.visibility = visStr;  }
+	}
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<!-- [Step1]: 这里可以设置按钮的位置 -->
+<div id="Layer1" style="position:absolute; left:240px; top:150px; width:300px; height:60px; z-index:1; visibility: hidden">
+<!-- [Step2]: 在此能够更改按钮信息对应的网址 -->
+<!-- [Step3]： 这里可以更改按钮显示的信息 -->
+    <input type=button value="新 浪 网" onClick="window.open('http://www.sina.com.cn/')" onMouseDown = "SeqClickLink('document.layers[\'Layer1\']','document.all[\'Layer1\']','show')" >
+</div>
+<div id="Layer2" style="position:absolute; left:240px; top:200px; width:300px; height:60px; z-index:2; visibility: visible">
+    <input type=button value="263 在线" onClick="window.open('http://www.263.net.cn/')" onMouseDown = "SeqClickLink('document.layers[\'Layer1\']','document.all[\'Layer1\']','show')"  >
+  
+</div>
+
+<!-- 案例代码2结束 -->
+
+
+
+</BODY>
+
+</HTML>

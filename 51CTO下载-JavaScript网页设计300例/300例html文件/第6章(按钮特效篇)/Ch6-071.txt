@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--返回默认首页</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>按钮特效篇--返回默认首页</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function ReturnHomePage(){
+  if (document.layers) window.home()
+<!-- [Step1]: 这里可以设置默认首页的网址 -->
+  else window.location="http://www.263.net.cn/"
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+<!-- [Step2]: 在此能够更改按钮的名称 -->
+   <input type="button" value="返回默认首页" onClick="ReturnHomePage()" >
+</form>
+
+<!-- 案例代码2结束 -->
+
+</BODY>
+
+</HTML>

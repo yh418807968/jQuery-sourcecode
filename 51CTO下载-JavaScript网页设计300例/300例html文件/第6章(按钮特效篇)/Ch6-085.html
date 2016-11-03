@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>按钮特效篇--字段清除</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" background="../images/background8.jpg">
+
+<br><br>
+<center>
+<font color="red"><h2>按钮特效篇--字段清除</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+function ClearAll(TextMessage) {
+if (TextMessage.value == TextMessage.defaultValue) {TextMessage.value = ""}
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+
+<!-- 案例代码2开始 -->
+
+<form>
+<!-- [Step1]: 在此可以设置文本框的列长度 -->
+<!-- [Step2]: 这里能够更改文本框的缺省文本 -->
+  <input type="text" size=15 value="清除字段" onFocus="ClearAll(this)">
+</form> 
+
+<!-- 案例代码2结束 -->
+
+
+
+</BODY>
+
+</HTML>

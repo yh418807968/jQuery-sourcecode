@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>状态栏特效篇--显示工作进度</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<h2>状态栏特效篇--显示工作进度</h2>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+var currentmessage = 0
+message = new initArray(2)
+<!-- [Step1]: 这里可以按序增加显示的状态栏信息 -->
+message[0]="工作进度 1 已经完成"
+message[1]="现在是工作进度 2"
+
+function initArray(n) {
+   this.length = n;
+   for (var i =1; i <= n; i++) {  this[i] = ' ' }
+}
+
+function StatuMessageRotator() {
+   window.status = message[currentmessage]
+   if (currentmessage > message.length - 1) {
+        currentmessage = 0
+<!-- [Step2]: 在此能够设置显示的速度 -->
+        setTimeout("StatuMessageRotator()", 5000)  }
+   else {
+        currentmessage = currentmessage + 1
+        setTimeout("StatuMessageRotator()", 2000)   }
+}
+
+StatuMessageRotator();
+
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

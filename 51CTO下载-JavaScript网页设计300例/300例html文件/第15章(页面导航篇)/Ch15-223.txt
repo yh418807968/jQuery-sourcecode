@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>页面导航篇--显示导航信息</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面导航篇--显示导航信息</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码1开始 -->
+
+<script language=JavaScript>
+
+document.onclick = PopUpMenu 
+  
+function PopUpMenu() {
+   menu = document.all.Linkmenu
+   if ( menu.style.display == ""){  menu.style.display = "none" }
+   else {  menu.style.display = ""}   
+}
+
+</script>
+
+<!-- 案例代码1结束 -->
+
+
+<!-- 案例代码2开始 -->
+
+<table id="Linkmenu" class='box'  style='display:none'>  
+<!-- [Step1]: 这里可以按序增加导航菜单的名称和网址 -->
+  <tr><td><a href="http://www.263.net.cn">263 在线</a></td></tr>   
+  <tr><td><a href="http://www.sohu.com">搜 狐 网</a></td></tr>
+  <tr><td><a href="http://www.sina.com.cn">新 浪 网</a></td></tr>
+  <tr><td><a href="http://cn.yahoo.com">雅 虎 网</a></td></tr>
+</table>
+
+<!-- 案例代码2结束 -->
+
+
+</BODY>
+
+</HTML>

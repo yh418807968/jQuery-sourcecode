@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>页面背景篇--自制色彩模式</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>页面背景篇--自制色彩模式</h2></font>
+<hr width=300>
+<br>
+
+<!-- 案例代码开始 -->
+
+<form>
+<!-- [Step1]: 这里可以设置文本框的列长度 -->
+  <input type="text" name="color" size="20"><br><br>
+<!-- [Step2]: 在此能够更改按钮的名称 -->
+  <input  TYPE="button" value="输入色彩并点击" ONCLICK="document.bgColor=(this.form.color.value)">   
+</form>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>

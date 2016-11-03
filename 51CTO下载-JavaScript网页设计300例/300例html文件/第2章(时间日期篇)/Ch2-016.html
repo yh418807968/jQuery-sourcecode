@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>时间日期篇--计算站点的开业时间</TITLE>
+</HEAD>
+
+<BODY bgcolor="#fef4d2" >
+
+<br><br>
+<center>
+<font color="ffaafa"><h2>时间日期篇--计算站点的开业时间</h2></font>
+<hr width=300>
+<br><br>
+
+<!-- 案例代码开始 -->
+
+<script language=JavaScript>
+
+<!-- [Step1]: 这里能够改变站点的开业日期年月日 -->
+StartTime(2002,01,01)
+
+function StartTime(Y,M,D)
+{
+Now=new Date()
+Nowy=Now.getYear()
+Nowm=Now.getMonth()
+Nowd=Now.getDate()
+MA=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+Nowstring=MA[Nowm]+" "+Nowd+", "+Nowy
+Paststring=MA[M-1]+" "+D+", "+Y
+TotalDate=(Math.round((Date.parse(Nowstring)-Date.parse(Paststring))/(24*3600000))*1)
+<!-- [Step2]: 这里可以更该页面显示的提示信息 -->
+document.write("本网站已经正常开业 "+TotalDate+" 天了。")
+}
+</script>
+
+<!-- 案例代码结束 -->
+
+
+</BODY>
+
+</HTML>
